@@ -55,7 +55,7 @@ const calendarHref = computed(() => siteBase(`/assets/calendar/kcf-${active.valu
       <p class="submission-note">Dates shown are from the original 2026 poster. Check FilmFreeway for current submission availability and requirements.</p>
       <details class="submission-poster">
         <summary>View original poster</summary>
-        <img :src="assets['Call for submissions.png']" v-bind="imageAttributes(assets['Call for submissions.png'], 'auto, (max-width: 760px) calc(100vw - 48px), 900px')" alt="KCF Call for Submissions Flyer" loading="lazy" />
+        <img :src="assets['Call for submissions.png']" v-bind="imageAttributes(assets['Call for submissions.png'], 'auto, (max-width: 760px) calc(100vw - 48px), 900px', 'KCF Call for Submissions Flyer')" alt="KCF Call for Submissions Flyer" loading="lazy" />
       </details>
     </div>
   </section>

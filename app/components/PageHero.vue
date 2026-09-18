@@ -6,7 +6,7 @@ const heroImage = computed(() => assets[(props.image || (props.home ? 'home.jpg'
 </script>
 <template>
   <section class="hero" :class="{ 'home-hero': home }">
-    <img class="hero-image" :src="heroImage" v-bind="imageAttributes(heroImage, '100vw')" loading="eager" :alt="home ? 'Festival filmmakers celebrating with their awards' : 'Kilifi Creek Festival — ' + title" fetchpriority="high" />
+    <img class="hero-image" :src="heroImage" v-bind="imageAttributes(heroImage, '100vw', home ? 'Festival filmmakers celebrating with their awards' : 'Kilifi Creek Festival — ' + title)" loading="eager" :alt="home ? 'Festival filmmakers celebrating with their awards' : 'Kilifi Creek Festival — ' + title" fetchpriority="high" />
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="hero-content">
       <div class="hero-title">
@@ -39,14 +39,14 @@ const heroImage = computed(() => assets[(props.image || (props.home ? 'home.jpg'
 .home-hero { min-height:clamp(600px,85svh,880px); }
 .hero-image { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
 /* Leave the upper photograph clear; shade only the area behind the title. */
-.hero-shade { position:absolute; inset:0; background:linear-gradient(180deg,transparent 35%,#10111528 55%,#101115c7 100%); }
-.hero-content { position:relative; width:100%; max-width:1440px; margin:0 auto; padding:180px clamp(24px,5vw,72px) 32px; }
+.hero-shade { pointer-events:none; position:absolute; inset:0; background:linear-gradient(180deg,transparent 35%,#10111528 55%,#101115c7 100%); }
+.hero-content { pointer-events:none; position:relative; width:100%; max-width:1440px; margin:0 auto; padding:180px clamp(24px,5vw,72px) 32px; }
 .hero-title { padding-bottom:26px; }
 .hero h1 { color:#fff; font:400 clamp(64px,7.5vw,110px)/.98 var(--font-display); letter-spacing:.015em; margin:0; text-shadow:0 2px 20px #00000035; overflow-wrap:anywhere; }
 .home-hero h1 { font-size:clamp(72px,8.5vw,128px); }
 .hero h1 span { color:#fff; }
 .festival-lockup { margin:0 0 16px; font:500 11px/1.6 var(--font-interface); letter-spacing:.15em; color:var(--brand-yellow); }
-.hero-details { display:flex; align-items:center; gap:28px; padding:12px 16px; border:1px solid #ffffff30; border-radius:12px; background:#17181d50; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+.hero-details { pointer-events:auto; display:flex; align-items:center; gap:28px; padding:12px 16px; border:1px solid #ffffff30; border-radius:12px; background:#17181d50; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
 .hero:not(.home-hero) .hero-details { width:fit-content; max-width:100%; }
 .hero .eyebrow { color:var(--brand-yellow); font:500 11px/1.7 var(--font-interface); letter-spacing:.12em; margin:0; }
 .hero-location { display:flex; align-items:center; gap:9px; margin:0; color:#fff; font:400 12px/1.7 var(--font-interface); }

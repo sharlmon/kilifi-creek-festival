@@ -77,3 +77,7 @@ CHECK_URL=http://127.0.0.1:4317 npm run check
 This checks the original text phrases on every rendered page, image-file references, internal navigation, placeholder links, legacy `.html` redirects, replacement of the old standalone festival logo, and 404 handling. See `AUDIT.md` for the findings and browser review.
 
 The site is ready for local review and has not been published.
+
+## Full-image viewer
+
+Hero photos, galleries, team portraits and disclosed posters open in a native modal image viewer on tap/click or Enter/Space. The full image is displayed with `object-fit: contain` and its original alt text, without cropping. The full-size optimized source is requested only when opened; page thumbnails retain their responsive/lazy loading. The viewer supports the close button, Escape, tapping the backdrop, focus containment, focus return and scroll locking. Logos remain navigation/brand artwork. Home image tiles now open photos; the existing text links and navigation still lead to the related pages.
