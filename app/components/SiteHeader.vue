@@ -26,8 +26,19 @@ onBeforeUnmount(() => { if(import.meta.client) { document.body.style.overflow=''
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header" :class="{ scrolled }" @keydown="keydown">
     <div class="header-inner"><NuxtLink to="/" class="home-logo" aria-label="Kilifi Creek Festival home"><BrandLogo /></NuxtLink>
-      <nav id="site-navigation" ref="menu" :class="{open}" aria-label="Main navigation"><NuxtLink v-for="[label,url] in links" :key="url" :to="url" :aria-current="route.path===url ? 'page' : undefined">{{ label }}</NuxtLink><a class="button" href="https://filmfreeway.com/KilifiCreekFestival" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🎬</span> SUBMIT FILM</a></nav>
+      <nav id="site-navigation" ref="menu" :class="{open}" aria-label="Main navigation"><NuxtLink v-for="[label,url] in links" :key="url" :to="url" :aria-current="route.path===url ? 'page' : undefined">{{ label }}</NuxtLink><a class="submit-link" href="https://filmfreeway.com/KilifiCreekFestival" target="_blank" rel="noopener noreferrer">SUBMIT FILM <span class="submit-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 18 18 6M6 6h12v12" /></svg></span></a></nav>
       <div class="header-actions"><ThemeControl /><button ref="toggle" class="menu-toggle" :aria-expanded="open" aria-controls="site-navigation" :aria-label="open ? 'Close navigation' : 'Open navigation'" @click="open=!open">{{ open ? '×' : '☰' }}</button></div>
     </div>
   </header>
 </template>
+
+<style scoped>
+.site-header nav .submit-link { display:inline-flex; align-items:center; gap:14px; min-height:44px; margin-left:6px; padding:6px 6px 6px 16px; border:1px solid #ffffff50; border-radius:999px; background:#ffffff0c; color:#fff; font:500 11px/1.4 var(--font-interface); letter-spacing:.02em; white-space:nowrap; transition:background .2s,border-color .2s; }
+.site-header nav .submit-link:hover { color:#fff; background:#ffffff1c; border-color:var(--brand-yellow); }
+.submit-arrow { display:grid; place-items:center; width:30px; height:30px; flex-shrink:0; border-radius:50%; background:var(--brand-yellow); color:var(--brand-teal); }
+.submit-arrow svg { width:16px; height:16px; transition:transform .2s; }
+.submit-link:hover .submit-arrow svg { transform:translate(1px,-1px); }
+.submit-link:focus-visible { outline:3px solid var(--brand-yellow); outline-offset:4px; }
+@media(max-width:1023px) { .site-header nav.open .submit-link { margin:18px 0 0; padding-left:20px; gap:24px; font-size:12px; } }
+@media(prefers-reduced-motion:reduce) { .site-header nav .submit-link,.submit-arrow svg { transition:none; } }
+</style>
