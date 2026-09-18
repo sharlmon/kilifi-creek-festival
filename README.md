@@ -81,3 +81,5 @@ The site is ready for local review and has not been published.
 ## Full-image viewer
 
 Hero photos, galleries, team portraits and disclosed posters open in a native modal image viewer on tap/click or Enter/Space. The full image is displayed with `object-fit: contain` and its original alt text, without cropping. The full-size optimized source is requested only when opened; page thumbnails retain their responsive/lazy loading. The viewer supports the close button, Escape, tapping the backdrop, focus containment, focus return and scroll locking. Logos remain navigation/brand artwork. Home image tiles now open photos; the existing text links and navigation still lead to the related pages.
+
+The two poster controls now open the viewer directly: “View original poster” and “View original programme poster”. They no longer expand a large inline image. Both original assets load only after activation, and the viewer returns focus to the poster button when dismissed.

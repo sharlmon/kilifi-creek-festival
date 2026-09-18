@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import fonts from '~/assets/fonts.json'
-const photoViewer = ref<{ open: (image: HTMLImageElement) => void }>()
+const photoViewer = ref<{ open: (trigger: HTMLElement) => void }>()
 function expandPhoto(event: MouseEvent | KeyboardEvent) {
   if (event instanceof KeyboardEvent && !['Enter', ' '].includes(event.key)) return
-  const image = (event.target as Element).closest<HTMLImageElement>('img[data-expand-image]')
+  const image = (event.target as Element).closest<HTMLElement>('[data-expand-image]')
   if (!image) return
+  // Native buttons activate through click; image controls need keyboard handling.
+  if (event instanceof KeyboardEvent && image.tagName !== 'IMG') return
   event.preventDefault()
   photoViewer.value?.open(image)
 }

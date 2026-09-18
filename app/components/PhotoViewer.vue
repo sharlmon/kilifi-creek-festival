@@ -4,13 +4,13 @@ const photo = ref<{ src: string, alt: string }>()
 const loading = ref(false)
 const failed = ref(false)
 const route = useRoute()
-let trigger: HTMLImageElement | undefined
+let trigger: HTMLElement | undefined
 let previousOverflow = ''
 
-async function open(image: HTMLImageElement) {
+async function open(image: HTMLElement) {
   if (dialog.value?.open) return
   trigger = image
-  photo.value = { src: image.dataset.expandImage!, alt: image.alt }
+  photo.value = { src: image.dataset.expandImage!, alt: image.dataset.imageAlt || image.getAttribute('alt') || '' }
   loading.value = true
   failed.value = false
   previousOverflow = document.body.style.overflow

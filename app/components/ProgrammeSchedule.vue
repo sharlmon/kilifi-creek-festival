@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { imageAttributes } from '~/utils/images'
 import sessions from '~/assets/programme.json'
 import assets from '~/assets/asset-map.json'
 
@@ -92,7 +91,7 @@ onMounted(() => {
       <div v-else class="programme-empty"><h3>No sessions match these filters.</h3><p>{{ savedOnly && !saved.length ? 'Save a session to create your shortlist.' : 'Try another day, venue or search.' }}</p><button class="button" type="button" @click="reset">Show all sessions</button></div>
       <p class="programme-archive">Explore the archived 2025 programme. Saved sessions are a personal shortlist on this device.</p>
       <div class="programme-original-note"><p>All screenings are FREE, but RSVP is required on<br /><a href="https://www.kilificreekfestival.com/" target="_blank" rel="noopener noreferrer">https://www.kilificreekfestival.com/</a></p><small>This notice is preserved from the 2025 poster. The 2026 programme is coming soon.</small></div>
-      <details class="programme-poster"><summary>View original programme poster</summary><img :src="assets['2025prog.jpg.png']" v-bind="imageAttributes(assets['2025prog.jpg.png'], 'auto, (max-width: 760px) calc(100vw - 48px), 900px', 'KCF 2025 Programming')" alt="KCF 2025 Programming" loading="lazy" /></details>
+      <div class="programme-poster"><PosterModalButton :src="assets['2025prog.jpg.png']" alt="KCF 2025 Programming" label="View original programme poster" /></div>
     </div>
   </section>
 </template>
@@ -157,8 +156,6 @@ input::placeholder { color:var(--muted); opacity:1; }
 .programme-original-note a { color:var(--link); text-decoration:underline; overflow-wrap:anywhere; }
 .programme-original-note small { color:var(--muted); font-size:11px; }
 .programme-poster { margin-top:16px; }
-.programme-poster summary { cursor:pointer; color:var(--link); width:fit-content; font-size:12px; padding:12px 0; }
-.programme-poster img { max-width:min(100%,600px); border-radius:var(--radius); margin-top:16px; }
 @media(max-width:1000px) {
   .programme-tools { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
   .programme-search { grid-column:1 / -1; }

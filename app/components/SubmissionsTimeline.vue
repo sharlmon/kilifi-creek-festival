@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { imageAttributes } from '~/utils/images'
 import assets from '~/assets/asset-map.json'
 import milestones from '~/assets/submissions.json'
 
@@ -53,10 +52,9 @@ const calendarHref = computed(() => siteBase(`/assets/calendar/kcf-${active.valu
         <a class="button" :href="submissionUrl" target="_blank" rel="noopener noreferrer">Submit on FilmFreeway →</a>
       </div>
       <p class="submission-note">Dates shown are from the original 2026 poster. Check FilmFreeway for current submission availability and requirements.</p>
-      <details class="submission-poster">
-        <summary>View original poster</summary>
-        <img :src="assets['Call for submissions.png']" v-bind="imageAttributes(assets['Call for submissions.png'], 'auto, (max-width: 760px) calc(100vw - 48px), 900px', 'KCF Call for Submissions Flyer')" alt="KCF Call for Submissions Flyer" loading="lazy" />
-      </details>
+      <div class="submission-poster">
+        <PosterModalButton :src="assets['Call for submissions.png']" alt="KCF Call for Submissions Flyer" label="View original poster" />
+      </div>
     </div>
   </section>
 </template>
@@ -101,8 +99,6 @@ h3 { font-size:clamp(24px,2.5vw,34px); margin:0; }
 .submission-bottom .button { flex-shrink:0; font-size:13px; }
 .submission-note { font-size:12px; color:#c4d8cf; margin:24px 0; max-width:760px; }
 .submission-poster { border-top:1px solid #ffffff25; padding-top:18px; }
-.submission-poster summary { cursor:pointer; font-size:13px; width:fit-content; padding:6px 0; }
-.submission-poster img { max-width:450px; border-radius:var(--radius); margin:24px 0 0; }
 @media(max-width:1000px) {
   .submission-timeline { grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px 0; }
   .submission-timeline li:nth-child(3) button::before,.submission-timeline li:last-child button::before { right:calc(100% - 24px); }

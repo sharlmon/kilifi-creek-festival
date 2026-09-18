@@ -19,7 +19,9 @@ for(const [file,path] of Object.entries(routes)) {
       assert(html.includes(phrase), `Missing original poster text: ${phrase}`)
     }
     assert.equal([...html.matchAll(/aria-controls="submission-detail"/g)].length,6,'Six interactive milestones must render')
-    assert(/<details[^>]*class="submission-poster"[\s\S]*?<img[\s\S]*?<\/details>/.test(html),'Original poster must remain available')
+    assert(/<button[^>]*data-expand-image="\/assets\/Call for submissions.png.webp"[^>]*>[\s\S]*?View original poster[\s\S]*?<\/button>/.test(html),'Original submissions poster must open from its modal button')
+    assert(!(clean(html).includes('<details class="submission-poster"')),'Poster must not expand inline')
+    assert.equal((await fetch(origin+assetMap['Call for submissions.png'])).status,200,'Modal submissions poster must remain downloadable')
     assert(html.includes('href="/assets/calendar/kcf-20260303.ics"'),'Initial calendar must match the selected milestone')
     const milestones = JSON.parse(await readFile(new URL('app/assets/submissions.json',root),'utf8'))
     for(const event of milestones) {
@@ -49,11 +51,14 @@ for(const [file,path] of Object.entries(routes)) {
         assert(cardText.includes(phrase),`Missing programme text in ${session.id}: ${phrase}`)
       }
     }
-    assert(/<details[^>]*class="programme-poster"[\s\S]*?<img[\s\S]*?<\/details>/.test(html),'Original programme poster must remain available')
+    assert(/<button[^>]*data-expand-image="\/assets\/2025prog.jpg.png.webp"[^>]*>[\s\S]*?View original programme poster[\s\S]*?<\/button>/.test(html),'Original programme poster must open from its modal button')
+    assert(!(clean(html).includes('<details class="programme-poster"')),'Programme poster must not expand inline')
+    assert.equal((await fetch(origin+assetMap['2025prog.jpg.png'])).status,200,'Modal programme poster must remain downloadable')
     assert(text.includes('All screenings are FREE, but RSVP is required on'),'Original RSVP notice must be preserved')
   }
   for(const match of original.matchAll(/>([^<>]+)</g)) {
-    const phrase=norm(match[1]); if(!phrase) continue
+    // The user requested replacing the decorative submission-button emoji with SVG.
+    const phrase=norm(match[1]); if(!phrase || phrase === '🎬') continue
     phrases++
     if(!text.includes(phrase)) failures.push(`${path}: missing exact text ${phrase.slice(0,100)}`)
   }
@@ -96,4 +101,4 @@ for(const font of Object.values(fonts)) {
   assert.equal(bytes.subarray(0,4).toString(),'wOF2','Font must be a valid WOFF2 container')
   assert.equal(bytes.length,font.webBytes,'Served font must match the supplied conversion')
 }
-console.log(`PASS: 7 pages, 7 original hero images, ${phrases} original text phrases, ${assets} image references, ${links} local links, 6 submission milestones and calendar export, 11 programme sessions with full transcribed copy, original poster disclosures, 7 legacy redirects, and 404 handling.`)
+console.log(`PASS: 7 pages, 7 original hero images, ${phrases} original text phrases, ${assets} image references, ${links} local links, 6 submission milestones and calendar export, 11 programme sessions with full transcribed copy, 2 original poster modal controls and assets, 7 legacy redirects, and 404 handling.`)
