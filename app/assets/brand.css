@@ -29,11 +29,7 @@
 body { font-family:var(--font-body); }
 h1,h2,h3,.original-content h1,.profile h3 { font-family:var(--font-display); letter-spacing:.015em; font-weight:400; }
 .site-header nav,.button,.eyebrow,.festival-lockup,.programme-tools,.programme-results,.agenda-date,.session-venue,.submission-year,.milestone-date { font-family:var(--font-interface); }
-.hero h1,.home-hero h1 { letter-spacing:.015em; }
-.home-hero h1 { font-size:clamp(56px,6vw,84px); }
-.hero:not(.home-hero) h1 { font-size:clamp(48px,4.8vw,64px); }
 .theme-strip p,.partners-section h2 { font-family:var(--font-interface); font-style:normal; }
-.hero h1 span,.hero .eyebrow,.hero-location span { color:var(--brand-yellow); }
 .button,.button-dark,.site-header .button,.page-contact button { background:var(--brand-yellow); color:var(--brand-teal); }
 .button:hover,.button-dark:hover,.page-contact button:hover { background:var(--brand-blue); color:var(--brand-teal); }
 .site-header::before { background:#033932b3; }
@@ -58,4 +54,3 @@ h1,h2,h3,.original-content h1,.profile h3 { font-family:var(--font-display); let
 .highlight-label { margin:0; color:var(--text); font-size:18px; }
 @media(max-width:760px) { .brand-highlights { padding:36px 24px; } .highlight-grid { gap:12px; } .highlight { padding:24px 12px; } .highlight-label { font-size:15px; } .highlight-value { font-size:28px; min-width:0; } }
 @media(max-width:520px) { .highlight-grid { grid-template-columns:1fr; } .highlight { display:flex; align-items:center; gap:20px; text-align:left; padding:20px; } .highlight-value { margin:0; min-width:110px; text-align:center; } }
-@media(max-width:760px) { .home-hero h1 { font-size:clamp(48px,13vw,62px); } .hero:not(.home-hero) h1 { font-size:46px; } }

@@ -53,19 +53,6 @@
 .header-actions { display:flex; align-items:center; gap:12px; position:relative; z-index:32; }
 .theme-control { display:flex; align-items:center; gap:5px; padding:0 8px; border:1px solid #ffffff60; border-radius:var(--radius); color:white; min-height:42px; }
 .skip-link { background:var(--panel); color:var(--text); }
-.hero-image { object-position:center; }
-.hero-shade { background:linear-gradient(0deg,#01141250,transparent 65%),linear-gradient(180deg,#01141235,transparent 30%); }
-.hero-content { padding-bottom:40px; margin-bottom:0; }
-.hero-copy { max-width:560px; padding:28px 32px; border:1px solid #ffffff30; border-radius:12px; background:#071715d9; backdrop-filter:blur(6px); box-shadow:0 12px 40px #00000015; }
-.hero h1 { font-size:clamp(40px,5vw,66px); }
-.home-hero { min-height:min(800px,90svh); }
-.home-hero h1 { font-size:clamp(40px,5vw,66px); }
-.home-hero .hero-content { padding-bottom:40px; }
-.hero .eyebrow { margin:0 0 8px; letter-spacing:.17em; }
-.hero-location { margin:18px 0 0; }
-.home-hero .hero-location { margin:18px 0 20px; }
-.hero-copy .button { padding:12px 22px; }
-.festival-lockup { color:#e5ede8; margin:8px 0; }
 .theme-strip { background:var(--soft-bg); }
 .tide-mark { color:var(--heading); }
 .intro-copy,.team-preview p { font-size:16px; }
@@ -104,22 +91,10 @@
   .site-header { height:95px; }
   .header-actions { gap:8px; }
   .theme-control { padding:0 5px; }
-  .hero { min-height:430px; }
-  .home-hero { min-height:640px; }
-  .hero-content,.home-hero .hero-content { padding:125px 24px 28px; }
-  .hero-copy { padding:24px; }
-  .hero h1,.home-hero h1 { font-size:clamp(34px,9vw,52px); }
-  .hero .eyebrow { font-size:10px; }
-  .hero-image { object-position:center; }
-  .hero-shade { background:linear-gradient(0deg,#01141250,transparent 70%); }
-  .hero-location { font-size:13px; }
   .partners-section ul { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
   .partners-section li { min-height:95px; padding:14px; }
   .intro-copy,.team-preview p,.original-content p { font-size:15px; line-height:1.8; }
 }
 @media(max-width:360px) {
   .header-inner { padding:0 20px; gap:8px; }
-  .hero-content,.home-hero .hero-content { padding-left:20px; padding-right:20px; }
-  .hero-copy { padding:20px; }
-  .hero h1,.home-hero h1 { font-size:34px; }
 }
