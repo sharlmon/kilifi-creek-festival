@@ -98,7 +98,7 @@ Poster and photo modals now support 100–500% zoom, drag to pan, wheel zoom, do
 
 Reading columns are limited to 65 characters with consistent heading hierarchy and section spacing. Primary, secondary and text actions share restrained styling. Long pages offer a horizontally scrollable “On this page” shortcut bar below the hero; anchor destinations remain clear of the compact fixed menu. Headquarters information and the existing map form compact cards with directions based solely on the original Mnarani, Bandari Beach, Kilifi address. Archived screening venues keep their original names; unverified street addresses are not inferred.
 
-The separate decorative sunset/ocean/birds layer uses 25% opacity and a 16-pixel blur behind neutral content surfaces in both themes. Original festival photos, hero images and copy remain intact. Its locally hosted, content-hashed WebP is 88,948 bytes, and it has no interactions or accessibility-tree content.
+The separate decorative sunset/ocean/birds layer uses 45% opacity and a 16-pixel blur behind neutral content surfaces in both themes. Original festival photos, hero images and copy remain intact. Its locally hosted, content-hashed WebP is 88,948 bytes, and it has no interactions or accessibility-tree content.
 
 Generated background: `public/assets/ambience/coastal-sunset-1139e87eb8f6.webp`. Mode: new image generation using the built-in image tool, followed by WebP compression. Prompt:
 
