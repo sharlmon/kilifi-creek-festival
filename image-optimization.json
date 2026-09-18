@@ -1,0 +1,300 @@
+{
+  "assets": 48,
+  "sourceTotalBytes": 170360263,
+  "previewTotalBytes": 9104140,
+  "previewReductionPercent": 94.7,
+  "oldDerivativeTotalBytes": 29115600,
+  "newDerivativeTotalBytes": 22506366,
+  "derivativeReductionPercent": 22.7,
+  "largestPreviewBytes": 628770,
+  "details": [
+    {
+      "source": "/assets/Call for submissions.png.webp",
+      "sourceBytes": 1094831,
+      "previewBytes": 91560,
+      "previousPreviewBytes": 91560
+    },
+    {
+      "source": "/assets/home.jpg.webp",
+      "sourceBytes": 229442,
+      "previewBytes": 198048,
+      "previousPreviewBytes": 272714
+    },
+    {
+      "source": "/assets/imageA.jpg.webp",
+      "sourceBytes": 162284,
+      "previewBytes": 99134,
+      "previousPreviewBytes": 154830
+    },
+    {
+      "source": "/assets/image6.jpg.webp",
+      "sourceBytes": 136733,
+      "previewBytes": 77854,
+      "previousPreviewBytes": 123650
+    },
+    {
+      "source": "/assets/imageB.jpg.webp",
+      "sourceBytes": 187504,
+      "previewBytes": 141518,
+      "previousPreviewBytes": 205990
+    },
+    {
+      "source": "/assets/image4.jpg.webp",
+      "sourceBytes": 155765,
+      "previewBytes": 102600,
+      "previousPreviewBytes": 147052
+    },
+    {
+      "source": "/assets/image5.jpg.webp",
+      "sourceBytes": 473584,
+      "previewBytes": 302996,
+      "previousPreviewBytes": 477292
+    },
+    {
+      "source": "/assets/2025prog.jpg.png.webp",
+      "sourceBytes": 780262,
+      "previewBytes": 147126,
+      "previousPreviewBytes": 147126
+    },
+    {
+      "source": "/assets/image3.jpg.jpeg.webp",
+      "sourceBytes": 231951,
+      "previewBytes": 154472,
+      "previousPreviewBytes": 234232
+    },
+    {
+      "source": "/assets/homepage/Picture1.png.webp",
+      "sourceBytes": 391356,
+      "previewBytes": 21564,
+      "previousPreviewBytes": 32120
+    },
+    {
+      "source": "/assets/homepage/Picture2.png.webp",
+      "sourceBytes": 344416,
+      "previewBytes": 16324,
+      "previousPreviewBytes": 22414
+    },
+    {
+      "source": "/assets/homepage/Picture3.png.webp",
+      "sourceBytes": 651051,
+      "previewBytes": 33978,
+      "previousPreviewBytes": 51644
+    },
+    {
+      "source": "/assets/aboutpage/W0701861.jpeg.webp",
+      "sourceBytes": 10937888,
+      "previewBytes": 229410,
+      "previousPreviewBytes": 351218
+    },
+    {
+      "source": "/assets/aboutpage/W0700769-2.jpg.jpeg.webp",
+      "sourceBytes": 9468138,
+      "previewBytes": 150790,
+      "previousPreviewBytes": 227704
+    },
+    {
+      "source": "/assets/aboutpage/262A9869.jpg.jpeg.webp",
+      "sourceBytes": 8246121,
+      "previewBytes": 104140,
+      "previousPreviewBytes": 238108
+    },
+    {
+      "source": "/assets/aboutpage/W0701956.jpg.jpeg.webp",
+      "sourceBytes": 7441614,
+      "previewBytes": 484036,
+      "previousPreviewBytes": 713210
+    },
+    {
+      "source": "/assets/aboutpage/_DSC0885.jpeg.webp",
+      "sourceBytes": 3363302,
+      "previewBytes": 302642,
+      "previousPreviewBytes": 525164
+    },
+    {
+      "source": "/assets/aboutpage/262A9843.jpg.jpeg.webp",
+      "sourceBytes": 7427824,
+      "previewBytes": 117770,
+      "previousPreviewBytes": 176870
+    },
+    {
+      "source": "/assets/aboutpage/262A9259.jpg (3).jpeg.webp",
+      "sourceBytes": 11602685,
+      "previewBytes": 323542,
+      "previousPreviewBytes": 478046
+    },
+    {
+      "source": "/assets/aboutpage/W0700758.jpg.jpeg.webp",
+      "sourceBytes": 8591588,
+      "previewBytes": 285022,
+      "previousPreviewBytes": 404300
+    },
+    {
+      "source": "/assets/aboutpage/W0701890.jpg.jpeg.webp",
+      "sourceBytes": 10206796,
+      "previewBytes": 499382,
+      "previousPreviewBytes": 732032
+    },
+    {
+      "source": "/assets/aboutpage/W0701960.jpg.jpeg.webp",
+      "sourceBytes": 8024092,
+      "previewBytes": 628770,
+      "previousPreviewBytes": 848796
+    },
+    {
+      "source": "/assets/static/images/main.png.webp",
+      "sourceBytes": 2713958,
+      "previewBytes": 119694,
+      "previousPreviewBytes": 195322
+    },
+    {
+      "source": "/assets/static/images/main.jpg.webp",
+      "sourceBytes": 277954,
+      "previewBytes": 132754,
+      "previousPreviewBytes": 214076
+    },
+    {
+      "source": "/assets/static/images/logo/afrofilms.png",
+      "sourceBytes": 511357,
+      "previewBytes": 9068,
+      "previousPreviewBytes": 9068
+    },
+    {
+      "source": "/assets/static/images/logo/baruu.png",
+      "sourceBytes": 196816,
+      "previewBytes": 6672,
+      "previousPreviewBytes": 6672
+    },
+    {
+      "source": "/assets/static/images/logo/terrace.png",
+      "sourceBytes": 303299,
+      "previewBytes": 30642,
+      "previousPreviewBytes": 30650
+    },
+    {
+      "source": "/assets/static/images/logo/logo.png",
+      "sourceBytes": 571234,
+      "previewBytes": 160438,
+      "previousPreviewBytes": 160326
+    },
+    {
+      "source": "/assets/static/images/logo/tawi.png",
+      "sourceBytes": 417993,
+      "previewBytes": 8390,
+      "previousPreviewBytes": 8394
+    },
+    {
+      "source": "/assets/static/images/team/MUMO-LIKU.png.webp",
+      "sourceBytes": 386498,
+      "previewBytes": 13652,
+      "previousPreviewBytes": 21280
+    },
+    {
+      "source": "/assets/static/images/team/naomi.jpg.webp",
+      "sourceBytes": 187390,
+      "previewBytes": 147056,
+      "previousPreviewBytes": 216192
+    },
+    {
+      "source": "/assets/static/images/team/wakarima.jpg.webp",
+      "sourceBytes": 68836,
+      "previewBytes": 33560,
+      "previousPreviewBytes": 50318
+    },
+    {
+      "source": "/assets/static/images/team/ZIPPY-KIMUNDU.png.webp",
+      "sourceBytes": 385635,
+      "previewBytes": 27932,
+      "previousPreviewBytes": 42886
+    },
+    {
+      "source": "/assets/static/images/team/KEVIN-MWACHIRO.png.webp",
+      "sourceBytes": 564396,
+      "previewBytes": 25590,
+      "previousPreviewBytes": 41120
+    },
+    {
+      "source": "/assets/static/images/team/SAITABAO-KAIYARE.png.webp",
+      "sourceBytes": 526017,
+      "previewBytes": 29890,
+      "previousPreviewBytes": 44296
+    },
+    {
+      "source": "/assets/industry/W0700971.jpg.jpeg.webp",
+      "sourceBytes": 4406172,
+      "previewBytes": 150084,
+      "previousPreviewBytes": 299972
+    },
+    {
+      "source": "/assets/industry/W0701465.jpg.jpeg.webp",
+      "sourceBytes": 7864392,
+      "previewBytes": 614480,
+      "previousPreviewBytes": 1620582
+    },
+    {
+      "source": "/assets/industry/_DSC0441.jpeg.webp",
+      "sourceBytes": 2336477,
+      "previewBytes": 198892,
+      "previousPreviewBytes": 332568
+    },
+    {
+      "source": "/assets/industry/W0702123.jpg.jpeg.webp",
+      "sourceBytes": 3871615,
+      "previewBytes": 510132,
+      "previousPreviewBytes": 809294
+    },
+    {
+      "source": "/assets/industry/W0701471.jpg.jpeg.webp",
+      "sourceBytes": 7443326,
+      "previewBytes": 382840,
+      "previousPreviewBytes": 626596
+    },
+    {
+      "source": "/assets/industry/W0701998.jpg.jpeg.webp",
+      "sourceBytes": 6886014,
+      "previewBytes": 493212,
+      "previousPreviewBytes": 1425228
+    },
+    {
+      "source": "/assets/screenings/262A9334.jpg (1).jpeg.webp",
+      "sourceBytes": 8954777,
+      "previewBytes": 128202,
+      "previousPreviewBytes": 194912
+    },
+    {
+      "source": "/assets/screenings/W0701351.jpg.jpeg.webp",
+      "sourceBytes": 6415504,
+      "previewBytes": 402814,
+      "previousPreviewBytes": 659236
+    },
+    {
+      "source": "/assets/screenings/W0701384.jpg.jpeg.webp",
+      "sourceBytes": 6379883,
+      "previewBytes": 438190,
+      "previousPreviewBytes": 679846
+    },
+    {
+      "source": "/assets/screenings/W0700810.jpg.jpeg.webp",
+      "sourceBytes": 10943790,
+      "previewBytes": 157208,
+      "previousPreviewBytes": 287880
+    },
+    {
+      "source": "/assets/screenings/W0700861.jpg.jpeg.webp",
+      "sourceBytes": 7049639,
+      "previewBytes": 304198,
+      "previousPreviewBytes": 518502
+    },
+    {
+      "source": "/assets/brand/logo-light.png",
+      "sourceBytes": 278011,
+      "previewBytes": 35256,
+      "previousPreviewBytes": 35248
+    },
+    {
+      "source": "/assets/brand/logo-dark.png",
+      "sourceBytes": 270053,
+      "previewBytes": 30616,
+      "previousPreviewBytes": 30654
+    }
+  ]
+}

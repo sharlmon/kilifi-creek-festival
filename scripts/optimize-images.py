@@ -16,15 +16,20 @@ for url, source in sources.items():
     if image.mode not in ('RGB', 'RGBA'):
         image = image.convert('RGBA' if 'transparency' in image.info else 'RGB')
     logo = '/brand/' in url or '/logo/' in url
-    widths = [160, 320] if logo else [320, 640, 960, 1440, 1920]
-    widths = sorted(set([min(w, image.width) for w in widths]))
-    digest = hashlib.sha256(source.read_bytes()).hexdigest()[:16]
+    poster = 'Call for submissions' in url or '2025prog' in url
+    # Cap enlarged photos at 2048 pixels on the long edge; retain all source files.
+    limit = image.width if logo or poster else min(image.width, max(1, round(2048 * image.width / max(image.size))))
+    widths = [160, 320] if logo else [320, 640, 960, 1440, 1920, limit]
+    widths = sorted(set(min(w, limit) for w in widths))
+    # Include the encoding policy so immutable URLs change when compression changes.
+    digest = hashlib.sha256(source.read_bytes() + b'webp-v2-q76-q70-longedge2048').hexdigest()[:16]
     variants = []
     for width in widths:
         height = max(1, round(image.height * width / image.width))
         variant = image.resize((width, height), Image.Resampling.LANCZOS)
         name = f'{digest}-{width}.webp'
-        variant.save(out / name, 'WEBP', quality=85, method=6, lossless=logo)
+        quality = 85 if poster else (70 if width >= 1440 else 76)
+        variant.save(out / name, 'WEBP', quality=quality, method=6, lossless=logo)
         variants.append({'src': '/assets/responsive/' + name, 'width': width, 'bytes': (out / name).stat().st_size})
     manifest[url] = {'width': image.width, 'height': image.height, 'sourceBytes': source.stat().st_size, 'variants': variants}
 (root / 'app/assets/responsive-images.json').write_text(json.dumps(manifest, indent=2))

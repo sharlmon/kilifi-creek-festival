@@ -1,0 +1,128 @@
+[
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/264e195c4386bbb5-1280.webp",
+    "overflow": 0,
+    "path": "/",
+    "preloadMatches": true,
+    "unoptimized": [],
+    "viewport": 1440
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/265134e908243c9c-1280.webp",
+    "overflow": 0,
+    "path": "/about",
+    "preloadMatches": true,
+    "unoptimized": [],
+    "viewport": 1440
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/c482e6947f9731eb-1280.webp",
+    "overflow": 0,
+    "path": "/screenings",
+    "preloadMatches": true,
+    "unoptimized": [],
+    "viewport": 1440
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/8caef3c771bdf910-1280.webp",
+    "overflow": 0,
+    "path": "/industry",
+    "preloadMatches": true,
+    "unoptimized": [],
+    "viewport": 1440
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/b72becfafa32fac3-1440.webp",
+    "overflow": 0,
+    "path": "/team",
+    "preloadMatches": true,
+    "unoptimized": [],
+    "viewport": 1440
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/208e456d23a96462-1280.webp",
+    "overflow": 0,
+    "path": "/press",
+    "preloadMatches": true,
+    "unoptimized": [],
+    "viewport": 1440
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/0b90249926601ebc-1280.webp",
+    "overflow": 0,
+    "path": "/contact",
+    "preloadMatches": true,
+    "unoptimized": [],
+    "viewport": 1440
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/264e195c4386bbb5-640.webp",
+    "overflow": 0,
+    "path": "/",
+    "viewport": 390
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/265134e908243c9c-640.webp",
+    "overflow": 0,
+    "path": "/about",
+    "viewport": 390
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/c482e6947f9731eb-640.webp",
+    "overflow": 0,
+    "path": "/screenings",
+    "viewport": 390
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/8caef3c771bdf910-640.webp",
+    "overflow": 0,
+    "path": "/industry",
+    "viewport": 390
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/b72becfafa32fac3-640.webp",
+    "overflow": 0,
+    "path": "/team",
+    "viewport": 390
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/208e456d23a96462-640.webp",
+    "overflow": 0,
+    "path": "/press",
+    "viewport": 390
+  },
+  {
+    "brokenLoaded": [],
+    "heroLoaded": true,
+    "heroSource": "http://127.0.0.1:4317/assets/responsive/0b90249926601ebc-1280.webp",
+    "overflow": 0,
+    "path": "/contact",
+    "viewport": 390
+  }
+]

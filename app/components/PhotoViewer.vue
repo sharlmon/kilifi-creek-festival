@@ -2,14 +2,14 @@
 const dialog = ref<HTMLDialogElement>()
 const stage = ref<HTMLElement>()
 const fullImage = ref<HTMLImageElement>()
-const photo = ref<{ src: string, alt: string }>()
+const photo = ref<{ src: string, download: string, alt: string }>()
 const loading = ref(false)
 const failed = ref(false)
 const zoom = ref(1)
 const offset = reactive({ x:0, y:0 })
 const dragging = ref(false)
 const route = useRoute()
-const filename = computed(() => decodeURIComponent(photo.value?.src.split('/').at(-1) || 'festival-image.webp'))
+const filename = computed(() => decodeURIComponent(photo.value?.download.split('/').at(-1) || 'festival-image.webp'))
 let trigger: HTMLElement | undefined
 let previousOverflow = ''
 const pointers = new Map<number, {x: number, y: number}>()
@@ -96,7 +96,7 @@ function wheel(event:WheelEvent) {
 async function open(image: HTMLElement) {
   if (dialog.value?.open) return
   trigger = image
-  photo.value = { src:image.dataset.expandImage!, alt:image.dataset.imageAlt || image.getAttribute('alt') || '' }
+  photo.value = { src:image.dataset.expandImage!, download:image.dataset.downloadImage || image.dataset.expandImage!, alt:image.dataset.imageAlt || image.getAttribute('alt') || '' }
   loading.value = true; failed.value = false
   zoom.value = 1; offset.x = offset.y = 0; pointers.clear(); moved = false
   previousOverflow = document.body.style.overflow
@@ -139,7 +139,7 @@ defineExpose({open})
       <button type="button" aria-label="Zoom out" :disabled="zoom <= 1 || loading || failed" @click="setZoom(zoom-.5)">−</button>
       <button type="button" class="photo-reset" aria-label="Reset zoom" @click="setZoom(1)">{{ Math.round(zoom*100) }}%</button>
       <button type="button" aria-label="Zoom in" :disabled="zoom >= 5 || loading || failed" @click="setZoom(zoom+.5)">+</button>
-      <a :href="photo.src" :download="filename" aria-label="Download image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" /></svg></a>
+      <a :href="photo.download" :download="filename" aria-label="Download image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" /></svg></a>
     </div>
     <button class="photo-close" aria-label="Close image viewer" autofocus @click="close"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 6 12 12M18 6 6 18" /></svg></button>
     <template v-if="photo">

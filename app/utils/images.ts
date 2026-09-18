@@ -1,17 +1,22 @@
 import manifest from '~/assets/responsive-images.json'
 import { siteBase } from './siteBase'
 
-export function imageAttributes(src: string, sizes = 'auto, (max-width: 760px) calc(100vw - 48px), 640px', photoAlt?: string) {
+export function imageViewerAttributes(src: string, baseURL?: string) {
+  const image = manifest[src as keyof typeof manifest]
+  return { 'data-expand-image': siteBase(image?.variants.at(-1)?.src || src, baseURL), 'data-download-image': siteBase(src, baseURL), 'data-image-original': siteBase(src, baseURL) }
+}
+
+export function imageAttributes(src: string, sizes = 'auto, (max-width: 760px) calc(100vw - 48px), 640px', photoAlt?: string, baseURL?: string) {
   const interaction = photoAlt !== undefined && !src.includes('/logo/') && !src.includes('/brand/') ? {
     role: 'button', tabindex: 0, 'aria-label': `View full image: ${photoAlt}`,
-    'aria-haspopup': 'dialog', 'data-expand-image': siteBase(src)
+    'aria-haspopup': 'dialog', ...imageViewerAttributes(src, baseURL)
   } : {}
   const image = manifest[src as keyof typeof manifest]
-  if (!image) return { ...interaction, src: siteBase(src), decoding: 'async' as const }
+  if (!image) return { ...interaction, src: siteBase(src, baseURL), decoding: 'async' as const }
   return {
     ...interaction,
-    src: siteBase(src),
-    srcset: image.variants.map(v => `${siteBase(v.src)} ${v.width}w`).join(', '),
+    src: siteBase(image.variants.filter(v => v.width <= 640).at(-1)?.src || image.variants[0].src, baseURL),
+    srcset: image.variants.map(v => `${siteBase(v.src, baseURL)} ${v.width}w`).join(', '),
     sizes, width: image.width, height: image.height, decoding: 'async' as const
   }
 }

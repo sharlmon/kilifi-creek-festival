@@ -3,6 +3,7 @@ import assert from 'node:assert/strict'
 const root = new URL('../', import.meta.url)
 const origin = process.env.CHECK_URL || 'http://127.0.0.1:3000'
 const assetMap = JSON.parse(await readFile(new URL('app/assets/asset-map.json', root), 'utf8'))
+const responsive=JSON.parse(await readFile(new URL('app/assets/responsive-images.json',root),'utf8'))
 const routes = {'index.html':'/','about-us.html':'/about','screenings.html':'/screenings','industry.html':'/industry','team.html':'/team','press.html':'/press','contact-us.html':'/contact'}
 const decode = s => s.replace(/&#(x[\da-f]+|\d+);/gi,(_,v)=>String.fromCodePoint(v[0].toLowerCase()==='x'?parseInt(v.slice(1),16):Number(v))).replace(/&(amp|quot|apos|lt|gt|nbsp|copy|rarr);/g,(_,v)=>({amp:'&',quot:'"',apos:"'",lt:'<',gt:'>',nbsp:' ',copy:'©',rarr:'→'}[v]))
 const clean = s => s.replace(/<!--[\s\S]*?-->/g,'').replace(/<(script|style)[\s\S]*?<\/\1>/g,'')
@@ -19,7 +20,7 @@ for(const [file,path] of Object.entries(routes)) {
       assert(html.includes(phrase), `Missing original poster text: ${phrase}`)
     }
     assert.equal([...html.matchAll(/aria-controls="submission-detail"/g)].length,6,'Six interactive milestones must render')
-    assert(/<button[^>]*data-expand-image="\/assets\/Call for submissions.png.webp"[^>]*>[\s\S]*?View original poster[\s\S]*?<\/button>/.test(html),'Original submissions poster must open from its modal button')
+    assert(html.includes(`data-expand-image="${responsive[assetMap['Call for submissions.png']].variants.at(-1).src}"`) && html.includes(`data-download-image="${assetMap['Call for submissions.png']}"`),'Submissions poster must preview an optimized image and keep the original download')
     assert(!(clean(html).includes('<details class="submission-poster"')),'Poster must not expand inline')
     assert.equal((await fetch(origin+assetMap['Call for submissions.png'])).status,200,'Modal submissions poster must remain downloadable')
     assert(html.includes('href="/assets/calendar/kcf-20260303.ics"'),'Initial calendar must match the selected milestone')
@@ -37,8 +38,9 @@ for(const [file,path] of Object.entries(routes)) {
   }
   const original=clean((await readFile(new URL('scripts/source-copy/'+file,root),'utf8')).split('<body')[1].split('</body>')[0])
   const originalHero = original.match(/bg-\[url\(['"]?\.\/([^'"\)\]]+)/)?.[1]
-  const renderedHero = html.match(/<img[^>]*class="hero-image"[^>]*>/)?.[0].match(/src="([^"]+)"/)?.[1]
+  const renderedHero = html.match(/<img[^>]*class="hero-image"[^>]*>/)?.[0].match(/data-image-original="([^"]+)"/)?.[1]
   assert.equal(renderedHero, assetMap[originalHero], `Original hero image must be restored on ${path}`)
+  assert(html.includes('rel="preload" as="image"'),'Hero should be discovered from the document head')
   const text=norm(clean(html).replace(/<[^>]+>/g,' '))
   if(path === '/screenings') {
     const programme=JSON.parse(await readFile(new URL('app/assets/programme.json',root),'utf8'))
@@ -51,7 +53,7 @@ for(const [file,path] of Object.entries(routes)) {
         assert(cardText.includes(phrase),`Missing programme text in ${session.id}: ${phrase}`)
       }
     }
-    assert(/<button[^>]*data-expand-image="\/assets\/2025prog.jpg.png.webp"[^>]*>[\s\S]*?View original programme poster[\s\S]*?<\/button>/.test(html),'Original programme poster must open from its modal button')
+    assert(html.includes(`data-expand-image="${responsive[assetMap['2025prog.jpg.png']].variants.at(-1).src}"`) && html.includes(`data-download-image="${assetMap['2025prog.jpg.png']}"`),'Programme poster must preview an optimized image and keep the original download')
     assert(!(clean(html).includes('<details class="programme-poster"')),'Programme poster must not expand inline')
     assert.equal((await fetch(origin+assetMap['2025prog.jpg.png'])).status,200,'Modal programme poster must remain downloadable')
     assert(text.includes('All screenings are FREE, but RSVP is required on'),'Original RSVP notice must be preserved')
@@ -65,13 +67,15 @@ for(const [file,path] of Object.entries(routes)) {
   for(const [tag,src] of html.matchAll(/<img[^>]+src="([^"]+)"[^>]*>/g)) {
     assert(!src.includes('static/images/logo/logo.png'),'Old logo still used')
     if(src.startsWith('/assets/')) {
+      const source=Object.entries(responsive).find(([,image])=>image.variants.some(v=>v.src===src))?.[0]
+      assert(source,`Rendered image must use a compressed derivative: ${src}`)
       await access(new URL('public'+decodeURIComponent(src),root)); assets++
       assert(tag.includes('srcset='),`Responsive candidates missing: ${src}`)
       assert(tag.includes('sizes='),`Responsive sizes missing: ${src}`)
       assert(tag.includes('decoding="async"'),`Async decoding missing: ${src}`)
       assert(/width="\d+"/.test(tag) && /height="\d+"/.test(tag),`Intrinsic dimensions missing: ${src}`)
       if(tag.includes('class="hero-image"')) assert(tag.includes('loading="eager"') && tag.includes('fetchpriority="high"'),'Hero must load immediately with high priority')
-      else if(!src.includes('/brand/')) assert(tag.includes('loading="lazy"'),`Below-fold image must defer loading: ${src}`)
+      else if(!source.includes('/brand/')) assert(tag.includes('loading="lazy"'),`Below-fold image must defer loading: ${src}`)
       for(const candidate of tag.match(/srcset="([^"]+)"/)[1].split(', ')) await access(new URL('public'+candidate.split(' ')[0],root))
     }
   }
@@ -96,7 +100,10 @@ for(const [file,path] of Object.entries(routes)) {
   assert.equal(r.headers.get('location'),path)
 }
 assert.equal((await fetch(origin+'/unknown-page')).status,404)
-const responsive=JSON.parse(await readFile(new URL('app/assets/responsive-images.json',root),'utf8'))
+for(const [source,image] of Object.entries(responsive)) {
+  for(const variant of image.variants) await access(new URL('public'+variant.src,root))
+  assert(image.variants.at(-1).bytes<1000000,`Expanded preview remains oversized: ${source}`)
+}
 const cached=await fetch(origin+responsive['/assets/home.jpg.webp'].variants[0].src)
 assert.equal(cached.status,200,'Responsive image must be served')
 assert.equal(cached.headers.get('cache-control'),'public, max-age=31536000, immutable','Content-hashed images must be cached')

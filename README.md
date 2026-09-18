@@ -84,6 +84,14 @@ Hero photos, galleries, team portraits and disclosed posters open in a native mo
 
 The two poster controls now open the viewer directly: “View original poster” and “View original programme poster”. They no longer expand a large inline image. Both original assets load only after activation, and the viewer returns focus to the poster button when dismissed.
 
+## Image loading improvements
+
+All 48 image assets have regenerated, uncropped WebP candidates with a versioned compression hash. Photos use quality 76, or 70 for larger sizes; posters retain quality 85 for lettering, and logos stay lossless. Enlarged photo previews are capped at 2048 pixels on the long edge. Responsive thumbnails also use a compressed fallback, so unsupported responsive selection does not request a multi-megabyte source. Existing lazy loading, asynchronous decoding, intrinsic dimensions and high-priority heroes remain. Each page preloads its responsive hero using the same candidate list and screen-size hint as the visible image.
+
+Pop-up viewers now load the largest optimized derivative instead of the original source. Downloads still retrieve the original full-resolution file explicitly. Aggregate preview payload falls from 170,360,263 source bytes to 9,104,140 bytes (94.7% smaller); regenerated responsive candidates total 22,506,366 bytes, 22.7% below the previous 29,115,600 bytes. These totals compare files, not a single page download or measured network time. The largest enlarged preview is 628,770 bytes. The 11,602,685-byte gallery source now previews as a 323,542-byte image; the mobile homepage selected a 58,042-byte hero candidate, down from 82,522 bytes. Details are in `image-optimization.json`.
+
+All seven routes passed desktop and mobile browser checks with loaded heroes, no broken loaded images and no horizontal overflow. Hero preload candidate lists matched the rendered images. Both poster previews and a formerly large gallery image were visually reviewed. Results are in `image-browser-verification.json`. Source photographs/artwork and website copy are unchanged. Original files and prior hashed derivatives remain available for explicit downloads and older cached page versions. GitHub Pages controls production cache headers; the local server's immutable derivative headers do not override its policy.
+
 ## Reading, navigation and coastal background
 
 Poster and photo modals now support 100–500% zoom, drag to pan, wheel zoom, double-click zoom, keyboard + / − / 0 and arrow controls, and an original-asset download link. Pointer gestures support mobile pinch. Browser checks confirmed zoom, dragging, reset, dismissal, focus return, download targets and 44-pixel controls at mobile widths. Physical multi-touch pinch was not exercised by the available browser controls.

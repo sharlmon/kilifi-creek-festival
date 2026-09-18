@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { imageViewerAttributes } from '~/utils/images'
 defineProps<{ src: string, alt: string, label: string }>()
 </script>
 
 <template>
-  <button type="button" class="poster-modal-trigger" :data-expand-image="siteBase(src)" :data-image-alt="alt" aria-haspopup="dialog">
+  <button type="button" class="poster-modal-trigger" v-bind="imageViewerAttributes(src)" :data-image-alt="alt" aria-haspopup="dialog">
     <span>{{ label }}</span>
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg>
   </button>

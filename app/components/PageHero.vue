@@ -3,6 +3,11 @@ import { imageAttributes } from '~/utils/images'
 import assets from '~/assets/asset-map.json'
 const props = defineProps<{title?: string, home?: boolean, image?: string}>()
 const heroImage = computed(() => assets[(props.image || (props.home ? 'home.jpg' : 'image4.jpg')) as keyof typeof assets])
+const baseURL = useRuntimeConfig().app.baseURL
+useHead(() => {
+  const image = imageAttributes(heroImage.value, '100vw', undefined, baseURL)
+  return { link: [{ key:'hero-preload', rel:'preload', as:'image', href:image.src, imagesrcset: 'srcset' in image ? image.srcset : undefined, imagesizes:'100vw', fetchpriority:'high' }] }
+})
 </script>
 <template>
   <section class="hero" :class="{ 'home-hero': home }">
