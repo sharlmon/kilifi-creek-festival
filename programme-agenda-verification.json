@@ -1,0 +1,145 @@
+{
+  "filters": [
+    {
+      "day": "SAT 11TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "SUN 12TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "MON 13TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "TUES 14TH",
+      "count": 2,
+      "pass": true
+    },
+    {
+      "day": "WED 15TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "THUR 16TH",
+      "count": 2,
+      "pass": true
+    },
+    {
+      "day": "FRI 17TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "SAT 18TH",
+      "count": 2,
+      "pass": true
+    },
+    {
+      "venue": "SALTY’S ON THE CREEK",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "OLD FERRY",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "THE TERRACE ARTS SPACE",
+      "count": 3,
+      "pass": true
+    },
+    {
+      "venue": "MEKATILILI DHOW",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "KILIFI CLUB",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "DISTANT RELATIVES",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "THE TERRACE RESIDENCY",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "NZOMBERE COMMUNITY CENTER",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "VIPINGO RIDGE BEACH CLUB",
+      "count": 1,
+      "pass": true
+    }
+  ],
+  "responsive": [
+    {
+      "mode": "light",
+      "width": 1440,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "width": 1024,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "width": 768,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "width": 390,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "width": 320,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "width": 1440,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "width": 1024,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "width": 768,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "width": 390,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "width": 320,
+      "pass": true
+    }
+  ],
+  "accordion": "Passed Enter activation, individual expansion/collapse and all 11 sessions expand/collapse",
+  "search": "Passed case-insensitive film search, apostrophe-normalized filmmaker search, combined filters, empty/reset states, automatic result expansion and query retention while collapsing results",
+  "shortlist": "Passed click and Space save/remove, shortlist filtering and reload persistence; restored empty initial shortlist",
+  "console": []
+}

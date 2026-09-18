@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kilifi Creek Festival -- Home</title>
+    <meta name="description" content="Kilifi Creek Festival (KCF) is an artist-led, community-rooted film, arts and cultural festival set along the Kilifi Creek in coastal Kenya. 23-31 October 2026.">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="static/css/google-fonts.css"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/snowmas" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/playtime-with-hot-toddies" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            dark: '#0a0a0a',
+                        }
+                    },
+                    fontFamily: { display: ['"Times New Roman"', 'serif'], heading: ['"Times New Roman"', 'serif'], body: ['"Times New Roman"', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Fluid Typography */
+        .fluid-heading-primary {
+            font-size: clamp(1.75rem, 6vw + 0.5rem, 4.5rem);
+            line-height: 1.1;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+            position: relative;
+            z-index: 10;
+        }
+        .fluid-heading-secondary {
+            font-size: clamp(0.9rem, 3vw + 0.25rem, 1.75rem);
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Partners Ticker */
+        .partners-ticker-container {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            overflow: hidden;
+            width: 100%;
+        }
+        .partners-ticker-track {
+            display: flex;
+            width: max-content;
+            animation: ticker-move 30s linear infinite;
+        }
+        .partners-ticker-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes ticker-move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.4s ease;
+        }
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-overlay{position:fixed;inset:0;z-index:100;background:#1a1a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);pointer-events:none}
+        .mobile-menu-overlay.open{transform:translateX(0);pointer-events:auto}
+        .mobile-menu-overlay a{display:block;color:#fff;font-size:1.25rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:1rem 2rem;text-align:center;transition:background .2s,color .2s;border-radius:6px;width:80%;max-width:320px}
+        .mobile-menu-overlay a:hover,.mobile-menu-overlay a:focus{background:rgba(255,255,255,0.1)}
+
+        @media (max-width: 768px) {
+            body { background-position: center top !important; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen bg-white text-gray-900" style="font-family: 'Times New Roman', Times, serif;">
+    <!-- Navbar (Black Beam) -->
+    <nav id="navbar" class="fixed w-full transition-transform duration-300 transform-gpu z-50 bg-[#0a0a0a]/85 backdrop-blur-xl text-white border-b border-white/5 h-16 flex items-center shadow-2xl">
+        <div class="container mx-auto px-4 md:px-12 lg:px-24 flex justify-between items-center relative h-full">
+            <div class="h-full flex items-center">
+                <a href="./index.html" class="h-full flex items-center group transition-all duration-300">
+                    <img class="h-full w-auto py-1 object-contain transition-transform group-hover:scale-[1.02]" 
+                         src="./static/images/logo/logo.png" 
+                         alt="Kilifi Creek Festival Logo" />
+                </a>
+            </div>
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex items-center gap-8 uppercase text-[11px] lg:text-xs font-bold tracking-[0.2em] h-full">
+                <li><a href="./index.html" class="hover:text-amber-500 transition-colors py-2">Home</a></li>
+                <li><a href="./about-us.html" class="hover:text-amber-500 transition-colors py-2">About</a></li>
+                <li><a href="./screenings.html" class="hover:text-amber-500 transition-colors py-2">Screenings</a></li>
+                <li><a href="./industry.html" class="hover:text-amber-500 transition-colors py-2">Industry</a></li>
+                <li><a href="./team.html" class="hover:text-amber-500 transition-colors py-2">Team</a></li>
+                <li><a href="./press.html" class="hover:text-amber-500 transition-colors py-2">Press</a></li>
+                <li><a href="./contact-us.html" class="hover:text-amber-500 transition-colors py-2">Contact</a></li>
+                <li class="h-full flex items-center">
+                    <a href="https://filmfreeway.com/KilifiCreekFestival" target="_blank"
+                       class="ml-4 px-6 py-2.5 bg-amber-600 hover:bg-amber-500 text-white rounded-[2px] transition-all shadow-xl font-black text-[10px] tracking-[0.2em] border border-amber-400/30 uppercase flex items-center gap-2">
+                        <span class="opacity-80">&#127916;</span> SUBMIT FILM
+                    </a>
+                </li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden flex items-center text-white/80 hover:text-white p-2 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-[#050505]/95 backdrop-blur-2xl flex flex-col items-center justify-center space-y-8 transform translate-x-full transition-transform duration-500 md:hidden">
+        <button id="menu-close" class="absolute top-8 right-8 text-white/50 hover:text-white p-2 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="./index.html" class="text-xl font-medium text-white/70 hover:text-white uppercase tracking-[0.3em] transition-all">Home</a>
+        <a href="./about-us.html" class="text-xl font-medium text-white/70 hover:text-white uppercase tracking-[0.3em] transition-all">About</a>
+        <a href="./screenings.html" class="text-xl font-medium text-white/70 hover:text-white uppercase tracking-[0.3em] transition-all">Screenings</a>
+        <a href="./industry.html" class="text-xl font-medium text-white/70 hover:text-white uppercase tracking-[0.3em] transition-all">Industry</a>
+        <a href="./team.html" class="text-xl font-medium text-white/70 hover:text-white uppercase tracking-[0.3em] transition-all">Team</a>
+        <a href="./press.html" class="text-xl font-medium text-white/70 hover:text-white uppercase tracking-[0.3em] transition-all">Press</a>
+        <a href="./contact-us.html" class="text-xl font-medium text-white/70 hover:text-white uppercase tracking-[0.3em] transition-all">Contact</a>
+        <a href="https://filmfreeway.com/KilifiCreekFestival" target="_blank" class="px-10 py-4 bg-amber-600 text-white font-black tracking-[0.2em] rounded-[2px] shadow-xl mt-4 uppercase flex items-center gap-3">
+            <span>&#127916;</span> SUBMIT FILM
+        </a>
+    </div>
+
+    <script>
+        (function() {
+            let prevScrollPos = window.pageYOffset;
+            const navbar = document.getElementById("navbar");
+            if (navbar) {
+                window.addEventListener('scroll', function() {
+                    let e = window.pageYOffset;
+                    if (prevScrollPos > e) {
+                        navbar.style.transform = "translateY(0)";
+                    } else {
+                        if (e > 100) navbar.style.transform = "translateY(-100%)";
+                    }
+                    prevScrollPos = e;
+                });
+            }
+            const menuBtn = document.getElementById("menu-btn");
+            const menuClose = document.getElementById("menu-close");
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (menuBtn && menuClose && mobileMenu) {
+                menuBtn.addEventListener("click", () => {
+                    mobileMenu.classList.remove("translate-x-full");
+                    document.body.style.overflow = "hidden";
+                });
+                menuClose.addEventListener("click", () => {
+                    mobileMenu.classList.add("translate-x-full");
+                    document.body.style.overflow = "";
+                });
+                mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+                    mobileMenu.classList.add("translate-x-full");
+                    document.body.style.overflow = "";
+                }));
+            }
+        })();
+    </script>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- HERO SECTION -- Award Group Picture -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <div class="relative w-screen h-screen bg-[url('./home.jpg')] bg-cover bg-center bg-fixed overflow-hidden flex flex-col items-center">
+        <!-- Overlay for better text legibility -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70 pointer-events-none"></div>
+        
+
+
+        <!-- Date in the right top corner -->
+        <div class="absolute top-24 right-8 md:right-16 lg:right-24 z-30 text-right">
+            <p class="text-white text-xl md:text-3xl font-bold tracking-[0.2em] mb-1 drop-shadow-2xl" style="font-family: 'Times New Roman', Times, serif; text-shadow: 0 4px 20px rgba(0,0,0,0.8);">23 - 31 OCTOBER 2026</p>
+            <p class="text-white/90 text-xs md:text-sm uppercase tracking-[0.4em] font-medium" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Kilifi Creek, Kenya</p>
+        </div>
+
+        <!-- Hero Brand Lockup — KILIFI CREEK | Logo | FESTIVAL -->
+        <div class="absolute bottom-16 md:bottom-20 z-10 w-full px-6 md:px-16 flex justify-center">
+            <div class="flex items-center justify-between gap-3 md:gap-6 w-full max-w-4xl
+                        py-4 md:py-6 px-6 md:px-10
+                        rounded-[28px]
+                        backdrop-blur-[14px]
+                        border border-white/20
+                        bg-black/25
+                        shadow-[0_8px_40px_rgba(0,0,0,0.5)]">
+
+                <!-- Left: KILIFI CREEK -->
+                <h1 class="hero-brand-text text-left leading-[0.9]">
+                    KILIFI<br>CREEK
+                </h1>
+
+                <!-- Centre: Badge Logo -->
+                <div class="flex-shrink-0 flex items-center justify-center">
+                    <img src="./static/images/logo/logo.png"
+                         alt="Kilifi Creek Festival Logo"
+                         class="w-16 md:w-24 lg:w-28 drop-shadow-2xl">
+                </div>
+
+                <!-- Right: FESTIVAL -->
+                <p class="hero-brand-text text-right leading-none">
+                    FESTIVAL
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- LOGO REVEAL ON SCROLL -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <section class="py-32 relative overflow-hidden">
+        <!-- Premium Mesh Gradient Background -->
+        <div class="absolute inset-0 bg-[#f9f7f2]"></div>
+        <div class="absolute inset-0 opacity-40" style="background: radial-gradient(circle at 20% 40%, rgba(251, 191, 36, 0.1), transparent 40%), radial-gradient(circle at 80% 60%, rgba(120, 53, 15, 0.05), transparent 40%);"></div>
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#000 0.5px, transparent 0.5px); background-size: 20px 20px;"></div>
+        
+        <!-- Elegant Borders -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-200 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-200 to-transparent"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="flex flex-col items-center">
+                <!-- Creative Logo Placement -->
+                <div class="relative">
+                    <div class="absolute -inset-8 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
+                    <img src="./static/images/logo/logo.png" alt="KCF Logo" class="relative w-32 md:w-40 lg:w-48 drop-shadow-xl animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- DHOW / THEME SECTION -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <section class="relative w-full min-h-[70vh] bg-[url(./image4.jpg)] bg-cover bg-center bg-fixed flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-6 py-20 flex flex-col items-center justify-center">
+            <p class="text-white text-xl md:text-2xl lg:text-3xl leading-relaxed font-light italic reveal" style="font-family: 'Times New Roman', Times, serif;">
+                "Water is Memory, Movement, and Magic. Drawing on the rhythm of the tides, the festival celebrates the power of art to revive, reconnect, and regenerate."
+            </p>
+            
+            <!-- Seamless Logo Integration -->
+            <div class="mt-12 md:mt-14 reveal" style="transition-duration: 1.2s; transition-delay: 200ms;">
+                <img src="./static/images/logo/logo.png" 
+                     alt="Kilifi Creek Arts Festival Logo" 
+                     class="w-[180px] md:w-[240px] h-auto object-contain opacity-90 drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)] transition-opacity duration-700 hover:opacity-100">
+            </div>
+        </div>
+    </section>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- KCF INTRO TEXT -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <section class="py-24 px-6 bg-white border-b border-gray-50">
+        <div class="container max-w-4xl mx-auto reveal">
+            <div class="w-24 h-2 bg-amber-600 mb-8 mx-auto"></div>
+            <p class="text-gray-800 text-lg md:text-xl leading-relaxed text-center mb-10 font-light">
+                Kilifi Creek Festival (KCF) is an artist-led, community-rooted film, arts and cultural festival set along the winding waters of Kilifi Creek, Kenya. In proud collaboration with The Terrace Consortium, KCF brings together established filmmakers, visionary artists, and local communities for a multi-day journey of film screenings, art exhibitions, fashion showcases, masterclasses, and public talks -- set in carefully curated venues along the creek, from intimate waterfront spaces to vibrant public gathering points. KCF is committed to celebrating and strengthening the link between coastal heritage and local communities.
+            </p>
+            <div class="text-center">
+                <a href="./about-us.html"
+                    class="inline-block border-2 border-amber-600 font-bold text-amber-600 text-xs uppercase tracking-widest py-4 px-12 hover:bg-amber-600 hover:text-white transition-all duration-300">READ MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- THREE VISUALS SECTION -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <section class="py-16 px-6 bg-gray-50 border-y border-gray-100">
+        <div class="container max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+                <!-- Interview / Talking picture -->
+                <div class="group overflow-hidden rounded-2xl shadow-xl">
+                    <img src="./homepage/Picture1.png" alt="Interview at KCF" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <!-- Boat / Water picture -->
+                <div class="group overflow-hidden rounded-2xl shadow-xl">
+                    <img src="./homepage/Picture2.png" alt="Dhow on Kilifi Creek" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <!-- Screening picture -->
+                <div class="group overflow-hidden rounded-2xl shadow-xl">
+                    <img src="./homepage/Picture3.png" alt="Outdoor screening" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- PARTNERS & BRANDS -- without  -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <section class="bg-white py-24 border-b border-gray-100">
+        <div class="px-6 md:px-12 lg:px-24">
+            <div class="flex items-center gap-8 mb-16 max-w-7xl mx-auto">
+                <h2 class="text-gray-900 text-sm md:text-base font-bold uppercase tracking-[0.3em] whitespace-nowrap">Partners & Brands</h2>
+                <div class="h-px bg-gray-200 w-full"></div>
+            </div>
+            <div class="partners-ticker-container">
+                <div class="partners-ticker-track">
+                    <ul class="flex items-center gap-16 md:gap-32 px-12">
+                        <li><img src="./static/images/logo/afrofilms.png" class="partner-logo max-h-[60px] md:max-h-[80px] w-auto object-contain" alt="Afrofilms" /></li>
+                        <li><img src="./static/images/logo/baruu.png" class="partner-logo max-h-[60px] md:max-h-[80px] w-auto object-contain" alt="Baruu Collective" /></li>
+                        <li><img src="./static/images/logo/terrace.png" class="partner-logo max-h-[60px] md:max-h-[80px] w-auto object-contain" alt="The Terrace" /></li>
+                        <li><img src="./static/images/logo/tawi.png" class="partner-logo max-h-[60px] md:max-h-[80px] w-auto object-contain" alt="Tawi Creative" /></li>
+                    </ul>
+                    <!-- Duplicate for infinite effect -->
+                    <ul class="flex items-center gap-16 md:gap-32 px-12">
+                        <li><img src="./static/images/logo/afrofilms.png" class="partner-logo max-h-[60px] md:max-h-[80px] w-auto object-contain" alt="Afrofilms" /></li>
+                        <li><img src="./static/images/logo/baruu.png" class="partner-logo max-h-[60px] md:max-h-[80px] w-auto object-contain" alt="Baruu Collective" /></li>
+                        <li><img src="./static/images/logo/terrace.png" class="partner-logo max-h-[60px] md:max-h-[80px] w-auto object-contain" alt="The Terrace" /></li>
+                        <li><img src="./static/images/logo/tawi.png" class="partner-logo max-h-[60px] md:max-h-[80px] w-auto object-contain" alt="Tawi Creative" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- CALL FOR SUBMISSIONS -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <section class="py-24 px-6 bg-white">
+        <div class="container max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-tight" style="font-family: 'Times New Roman', Times, serif;">CALL FOR SUBMISSIONS</h2>
+            <div class="w-24 h-1 bg-yellow-600 mx-auto mb-12 rounded-full"></div>
+            <!-- Submission Flyer -->
+            <div class="max-w-2xl mx-auto mb-10 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 ring-1 ring-black/5">
+                <img src="./Call for submissions.png" alt="KCF Call for Submissions Flyer" class="w-full object-contain">
+            </div>
+            <p class="text-gray-700 text-lg md:text-xl mb-10 leading-relaxed">
+                Filmmakers are invited to submit their work to KCF via <a href="https://filmfreeway.com/KilifiCreekFestival" target="_blank" class="text-yellow-700 underline underline-offset-4 hover:text-yellow-500 font-semibold transition-colors">FilmFreeway</a>.
+            </p>
+            <a href="https://filmfreeway.com/KilifiCreekFestival" target="_blank"
+                class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white font-black uppercase tracking-widest text-sm px-12 py-5 rounded-full shadow-xl hover:scale-105 transition-all duration-300">
+                Submit on FilmFreeway &rarr;
+            </a>
+        </div>
+    </section>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- TEAM PREVIEW -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <div class="grid grid-cols-1 md:grid-cols-2 border-y border-gray-100">
+        <div class="bg-white p-12 md:p-24 flex justify-start items-center border-r border-gray-100"><a href="./team.html"><img
+                    src="./image5.jpg" class="w-full max-w-md rounded-lg shadow-lg border border-gray-100"></a></div>
+        <div class="md:order-first bg-white p-12 md:p-24 flex justify-end items-center ">
+            <div class="max-w-md">
+                <div class="w-24 h-2 bg-yellow-800 mb-4 shadow-lg"></div>
+                <h2 class="font-bold text-2xl md:text-3xl lg:text-4xl mb-6 text-gray-900" style="font-family: 'Times New Roman', Times, serif;">Festival Team</h2>
+                <p class="font-light text-gray-600 text-sm md:text-base mb-6 leading-relaxed">The festival brings together global film leaders and local creatives, led by
+                    renowned Kenyan filmmakers Zippy Kimundu (Afrofilms International), Saitabao Kaiyare and Mumo Liku
+                    (Baruu collective), Naomi Molilybo Ernst, Wakarima Wangui, and acclaimed author and activist Kevin Mwachiro as Festival Director.</p>
+                <a href="./team.html"
+                    class="inline-block border-2 border-yellow-800 font-light text-yellow-800 text-sm uppercase tracking-widest py-3 px-8 hover:bg-yellow-800 hover:text-white transition-all duration-300">READ MORE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- FESTIVAL HEADQUARTERS -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <section class="py-24 px-6 relative overflow-hidden">
+        <div class="container max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block py-1 px-3 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-800 text-xs font-bold uppercase tracking-widest mb-4">Our Base</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight" style="font-family: 'Times New Roman', Times, serif;">FESTIVAL HEADQUARTERS</h2>
+                <div class="w-24 h-1 bg-yellow-600 mx-auto mt-6 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-[2.5rem] overflow-hidden bg-white rounded-3xl border border-gray-100 shadow-2xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)]">
+                <div class="p-10 md:p-16 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-gray-100">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-8" style="font-family: 'Times New Roman', Times, serif;">The Terrace Art Space</h3>
+                    <p class="text-gray-600 text-lg mb-10 leading-relaxed font-light">
+                        An innovative venue on the shores of the creek, serving as the creative heart of the festival. Join us for screenings, workshops, and sunset conversations.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-yellow-600/10 rounded-xl flex items-center justify-center border border-yellow-600/20">
+                                <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-yellow-600 font-bold">Location</p>
+                                <p class="text-gray-900 font-medium">Mnarani, Bandari Beach, Kilifi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-yellow-600/10 rounded-xl flex items-center justify-center border border-yellow-600/20">
+                                <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-yellow-600 font-bold">Contact</p>
+                                <p class="text-gray-900 font-medium">comms@kilificreekfestival.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] lg:h-full min-h-[400px] relative grayscale hover:grayscale-0 transition-all duration-1000 group">
+                    <iframe class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps?q=The%20Terrace%20Kilifi&output=embed"></iframe>
+                    <div class="absolute inset-0 bg-yellow-900/10 pointer-events-none group-hover:bg-transparent transition-colors duration-1000"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- FOOTER -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <footer class="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
+        <div class="container mx-auto md:flex md:items-center md:justify-between text-center lg:text-left py-24">
+            <ul class="flex items-center flex-wrap mb-6 md:mb-0">
+                <li><a href="./about-us.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">About</a></li>
+                <li><a href="./screenings.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Screenings</a></li>
+                <li><a href="./industry.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Industry</a></li>
+                <li><a href="./team.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Team</a></li>
+                <li><a href="./press.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Press</a></li>
+                <li><a href="./contact-us.html" class="text-sm font-normal text-gray-500 hover:underline">Contact</a></li>
+            </ul>
+            <div class="flex sm:justify-center space-x-6">
+                <a href="#" class="text-gray-500 hover:text-gray-300">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-300">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="text-sm lg:text-base text-center font-light tracking-widest uppercase text-white opacity-75 pb-10">
+            &copy;2026 DESIGN BY TERRACE</div>
+    </footer>
+
+    <!-- Scroll Reveal Script -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
+

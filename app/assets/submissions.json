@@ -1,0 +1,8 @@
+[
+  { "date": "MARCH 3", "label": "CALL FOR ENTRIES OPENS", "day": "20260303" },
+  { "date": "MARCH 31", "label": "EARLY BIRD DEADLINE", "day": "20260331" },
+  { "date": "MAY 31", "label": "REGULAR DEADLINE", "day": "20260531" },
+  { "date": "JULY 20", "label": "LATE DEADLINE", "day": "20260720" },
+  { "date": "AUGUST 14", "label": "EXTENDED DEADLINE", "day": "20260814" },
+  { "date": "AUGUST 31", "label": "NOTIFICATION DATE", "day": "20260831" }
+]

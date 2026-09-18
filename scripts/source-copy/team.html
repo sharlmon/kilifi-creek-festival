@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Team — Kilifi Creek Festival</title>
+    <meta name="description" content="Meet the KCF Team — the creative leaders and organizers behind the Kilifi Creek Festival.">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="static/css/google-fonts.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            dark: '#0a0a0a',
+                        }
+                    },
+                    fontFamily: { display: ['"Times New Roman"', 'serif'], heading: ['"Times New Roman"', 'serif'], body: ['"Times New Roman"', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Fluid Typography */
+        .fluid-heading-primary {
+            font-size: clamp(1.75rem, 6vw + 0.5rem, 4.5rem);
+            line-height: 1.1;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+            position: relative;
+            z-index: 10;
+        }
+        .fluid-heading-secondary {
+            font-size: clamp(0.9rem, 3vw + 0.25rem, 1.75rem);
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay{position:fixed;inset:0;z-index:100;background:#1a1a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);pointer-events:none}
+        .mobile-menu-overlay.open{transform:translateX(0);pointer-events:auto}
+        .mobile-menu-overlay a{display:block;color:#fff;font-size:1.25rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:1rem 2rem;text-align:center;transition:background .2s,color .2s;border-radius:6px;width:80%;max-width:320px}
+        .mobile-menu-overlay a:hover,.mobile-menu-overlay a:focus{background:rgba(255,255,255,0.1)}
+
+        .team-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .team-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -12px rgba(0,0,0,0.15); }
+
+        @media (max-width: 768px) {
+            body { background-position: center top !important; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen bg-white text-gray-900" style="font-family: 'Times New Roman', Times, serif;">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full transition-transform duration-300 transform-gpu z-50 bg-[#0a0a0a]/85 backdrop-blur-xl text-white border-b border-white/5 h-16 flex items-center shadow-2xl">
+        <div class="container mx-auto px-4 md:px-12 lg:px-24 flex justify-between items-center relative h-full">
+            <div class="h-full flex items-center">
+                <a href="./index.html" class="h-full flex items-center group transition-all duration-300">
+                    <img class="h-full w-auto py-1 object-contain transition-transform group-hover:scale-[1.02]" src="./static/images/logo/logo.png" alt="Kilifi Creek Festival Logo" />
+                </a>
+            </div>
+            <ul class="hidden md:flex items-center gap-8 uppercase text-[11px] lg:text-xs font-bold tracking-[0.2em] h-full">
+                <li><a href="./index.html" class="hover:text-amber-500 transition-colors py-2">Home</a></li>
+                <li><a href="./about-us.html" class="hover:text-amber-500 transition-colors py-2">About</a></li>
+                <li><a href="./screenings.html" class="hover:text-amber-500 transition-colors py-2">Screenings</a></li>
+                <li><a href="./industry.html" class="hover:text-amber-500 transition-colors py-2">Industry</a></li>
+                <li><a href="./team.html" class="text-amber-500 transition-colors py-2">Team</a></li>
+                <li><a href="./press.html" class="hover:text-amber-500 transition-colors py-2">Press</a></li>
+                <li><a href="./contact-us.html" class="hover:text-amber-500 transition-colors py-2">Contact</a></li>
+                <li class="h-full flex items-center">
+                    <a href="https://filmfreeway.com/KilifiCreekFestival" target="_blank" class="ml-4 px-6 py-2.5 bg-amber-600 hover:bg-amber-500 text-white rounded-[2px] transition-all shadow-xl font-black text-[10px] tracking-[0.2em] border border-amber-400/30 uppercase flex items-center gap-2">
+                        <span class="opacity-80">&#127916;</span> SUBMIT FILM
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- HERO SECTION -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="relative w-screen h-80 bg-[url('./image5.jpg')] bg-cover bg-center bg-fixed overflow-hidden flex flex-col items-center">
+        <!-- Overlay for better text legibility -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70 pointer-events-none"></div>
+
+        <!-- Date in the right top corner -->
+        <div class="absolute top-24 right-8 md:right-16 lg:right-24 z-30 text-right">
+            <p class="text-white text-lg md:text-2xl font-bold tracking-[0.2em] mb-1 drop-shadow-2xl" style="font-family: 'Times New Roman', Times, serif; text-shadow: 0 4px 20px rgba(0,0,0,0.8);">23 - 31 OCTOBER 2026</p>
+            <p class="text-white/90 text-[10px] md:text-xs uppercase tracking-[0.4em] font-medium" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Kilifi Creek, Kenya</p>
+        </div>
+
+        <!-- Hero Brand Lockup — KILIFI CREEK | Logo | FESTIVAL -->
+        <div class="absolute bottom-8 md:bottom-12 z-10 w-full px-6 md:px-16 flex justify-center">
+            <div class="flex items-center justify-between gap-3 md:gap-6 w-full max-w-4xl
+                        py-4 md:py-5 px-6 md:px-8
+                        rounded-[28px]
+                        backdrop-blur-[14px]
+                        border border-white/20
+                        bg-black/25
+                        shadow-[0_8px_40px_rgba(0,0,0,0.5)]">
+
+                <!-- Left: KILIFI CREEK -->
+                <h1 class="hero-brand-text text-left leading-[0.9]">
+                    KILIFI<br>CREEK
+                </h1>
+
+                <!-- Centre: Badge Logo -->
+                <div class="flex-shrink-0 flex items-center justify-center">
+                    <img src="./static/images/logo/logo.png"
+                         alt="Kilifi Creek Festival Logo"
+                         class="w-12 md:w-20 lg:w-24 drop-shadow-2xl">
+                </div>
+
+                <!-- Right: FESTIVAL -->
+                <p class="hero-brand-text text-right leading-none">
+                    FESTIVAL
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header (Shifted padding down) -->
+    <section class="pt-20 pb-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-20 reveal">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4" style="font-family: 'Times New Roman', Times, serif;">KCF TEAM</h1>
+                <div class="h-1.5 w-24 bg-amber-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-32">
+                <!-- 1. Kevin Mwachiro -->
+                <div class="max-w-4xl mx-auto reveal animate-on-scroll">
+                    <div class="text-center mb-10">
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style="font-family: 'Times New Roman', Times, serif;">Kevin Mwachiro</h3>
+                        <p class="text-amber-600 font-semibold text-lg uppercase tracking-widest">Festival Director</p>
+                    </div>
+                    <div class="mb-12">
+                        <div class="team-card overflow-hidden rounded-[2rem] shadow-2xl max-w-2xl mx-auto border border-gray-100">
+                            <img src="static/images/team/KEVIN-MWACHIRO.png" alt="Kevin Mwachiro" class="w-full aspect-[4/5] object-cover object-center grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                    <div class="max-w-3xl mx-auto text-gray-600 leading-relaxed text-center text-lg font-light">
+                        <p>Kevin Mwachiro is a Kenyan writer, podcaster, journalist, and queer activist. He has authored Invisible - Stories from Kenya's Queer Community and was part of the editorial team for Boldly Queer - African Perspectives on Same-sex Sexuality and Gender Diversity. Kevin's most recent work of fiction is the short story Number Sita, published in the anthology Nairobi Noir. His play, Thrashed, is part of the Goethe Institut's "Six and the City" collection. In 2017, he launched a story-telling podcast called Nipe Story, which produces audio versions of short-story fictional stories from the African continent. Kevin is also a co-founder of the Out Film Festival, the first LGBTQI film festival in East Africa. He currently serves on the boards of PEMA Kenya, a grassroots LGBQTI organisation, and Amnesty International-Kenya.</p>
+                    </div>
+                </div>
+
+                <!-- 2. ZIPPY KIMUNDU -->
+                <div class="max-w-4xl mx-auto reveal animate-on-scroll">
+                    <div class="text-center mb-10">
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style="font-family: 'Times New Roman', Times, serif;">ZIPPY KIMUNDU</h3>
+                        <p class="text-amber-600 font-semibold text-lg uppercase tracking-widest">Co-Founder</p>
+                    </div>
+                    <div class="mb-12">
+                        <div class="team-card overflow-hidden rounded-[2rem] shadow-2xl max-w-2xl mx-auto border border-gray-100">
+                            <img src="static/images/team/ZIPPY-KIMUNDU.png" alt="Zippy Kimundu" class="w-full aspect-[4/5] object-cover object-center grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                    <div class="max-w-3xl mx-auto text-gray-600 leading-relaxed text-center text-lg font-light space-y-6">
+                        <p>Zippy Kimundu is an award-winning Kenyan Filmmaker who has been working in the global industry for nearly two decades. She holds a Masters in Fine Arts from New York University and has worked globally in over 20 countries. She co-directed a short Documentary, 'a fork, a spoon & a KNIGHT' with renowned Director Mira Nair, was the Assistant Editor on the Disney Film 'Queen of Katwe' and her short film 'Mercy' leads the 'Think Twice Movement'.</p>
+                        <p>Her award winning Feature Documentary 'Our Land, Our Freedom' premiered at IDFA/Sheffield in 2023 and her 2025 release 'Widow Champion' premiered at Hotdocs/Tribeca and continues to create global impact.</p>
+                        <p>Zippy is a Sundance, Chicken & Egg, Logan Elevate/IDA, IDFA, Hotdocs, World Cinema Fund/ACP and Ford Foundation fellow, who has worked with numerous organisations including Universal studios, Nelson Mandela Foundation, Mastercard Foundation, UN, World Bank, US State Department, British council, BBC, Google, British Red Cross, among others.</p>
+                        <p>She is the Creative Director, a Film Educator at <a href="https://www.illtellyoumystory.com" target="_blank" class="text-amber-600 hover:underline font-normal">https://www.illtellyoumystory.com</a>, the co-founder at <a href="https://www.terracekilifi.com" target="_blank" class="text-amber-600 hover:underline font-normal">www.terracekilifi.com</a> and Founder at <a href="https://www.afrofilmsinternational.com" target="_blank" class="text-amber-600 hover:underline font-normal">www.afrofilmsinternational.com</a>, a creative collective working to ignite socio-political consciousness and action, across continents.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Mumo Liku -->
+                <div class="max-w-4xl mx-auto reveal animate-on-scroll">
+                    <div class="text-center mb-10">
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style="font-family: 'Times New Roman', Times, serif;">Mumo Liku</h3>
+                        <p class="text-amber-600 font-semibold text-lg uppercase tracking-widest">Co-Founder</p>
+                    </div>
+                    <div class="mb-12">
+                        <div class="team-card overflow-hidden rounded-[2rem] shadow-2xl max-w-2xl mx-auto border border-gray-100">
+                            <img src="static/images/team/MUMO-LIKU.png" alt="Mumo Liku" class="w-full aspect-[4/5] object-cover object-center grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                    <div class="max-w-3xl mx-auto text-gray-600 leading-relaxed text-center text-lg font-light">
+                        <p>Mumo Liku loves the colours blue and green, but only in their darker shades. A natural-born organiser, passionate about entrepreneurs and their empowerment, he holds a BA in Communications from Daystar University, and an MA in Creative Enterprise from University of Reading, UK. A huge fan of rice and coconut beans, he can also be found dancing enchantingly, meeting new and interesting people, and generally adventuring outdoors.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Saitabao Kaiyare -->
+                <div class="max-w-4xl mx-auto reveal animate-on-scroll">
+                    <div class="text-center mb-10">
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style="font-family: 'Times New Roman', Times, serif;">Saitabao Kaiyare</h3>
+                        <p class="text-amber-600 font-semibold text-lg uppercase tracking-widest">Co-Founder</p>
+                    </div>
+                    <div class="mb-12">
+                        <div class="team-card overflow-hidden rounded-[2rem] shadow-2xl max-w-2xl mx-auto border border-gray-100">
+                            <img src="static/images/team/SAITABAO-KAIYARE.png" alt="Saitabao Kaiyare" class="w-full aspect-[4/5] object-cover object-center grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                    <div class="max-w-3xl mx-auto text-gray-600 leading-relaxed text-center text-lg font-light">
+                        <p>Saitabao Kaiyare often seen wearing jewellery traditional to his Maasai people, and symbols of ancestral calling and guidance, he holds a Certificate in Film Design, from Filmakademie, Baden-Wurttemberg, Germany and a BA in ICT from Kenya Methodist University. With an uproarious sense of humour that celebrates the absurd, Saita believes that playfulness and laughter are important tools to bring to work and life, especially when there are heavy topics at hand. He can be found eating Viazi Karai, biryani, Nyama choma, or taking walks among the trees.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Wakarima Wangui -->
+                <div class="max-w-4xl mx-auto reveal animate-on-scroll">
+                    <div class="text-center mb-10">
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style="font-family: 'Times New Roman', Times, serif;">Wakarima Wangui</h3>
+                        <p class="text-amber-600 font-semibold text-lg uppercase tracking-widest">Festival Manager</p>
+                    </div>
+                    <div class="mb-12">
+                        <div class="team-card overflow-hidden rounded-[2rem] shadow-2xl max-w-2xl mx-auto border border-gray-100">
+                            <img src="static/images/team/wakarima.jpg" alt="Wakarima Wangui" class="w-full aspect-[4/5] object-cover object-center grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                    <div class="max-w-3xl mx-auto text-gray-600 leading-relaxed text-center text-lg font-light space-y-6">
+                        <p>Wakarima is an award-winning producer and storyteller with a Bachelor's degree in Film and Theatre Arts. She is passionate about authentic African cinema and has dedicated her career to championing stories that reflect the richness, complexity and beauty of African life. Her mission is simple but powerful; to help bring African stories by us, for us to audiences across the continent and around the world.</p>
+                        <p>Beyond the screen, Wakarima is a natural community builder who thrives on creating spaces where collaboration, creativity, and culture meet. She has extensive experience in festival management, having worked on several cultural and film events that celebrate African storytelling and talent such as Slum Film Festival, Udada Film Festival and KITFest. In addition to her work in festivals, she also teaches film and theatre arts, where she mentors young creatives and inspires the next generation of African storytellers.</p>
+                        <p>Whether she's producing films, curating conversations, or amplifying the voices of fellow filmmakers, Wakarima brings warmth, vision, and purpose to everything she does.</p>
+                        <p>She's thrilled to be part of the festival's communications team this year and looks forward to a vibrant, connection-filled celebration of storytelling and creativity.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Naomi Molilybo Ernst -->
+                <div class="max-w-4xl mx-auto reveal animate-on-scroll">
+                    <div class="text-center mb-10">
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2" style="font-family: 'Times New Roman', Times, serif;">Naomi Molilybo Ernst</h3>
+                        <p class="text-amber-600 font-semibold text-lg uppercase tracking-widest">Festival Coordinator</p>
+                    </div>
+                    <div class="mb-12">
+                        <div class="team-card overflow-hidden rounded-[2rem] shadow-2xl max-w-2xl mx-auto border border-gray-100">
+                            <img src="static/images/team/naomi.jpg" alt="Naomi Molilybo Ernst" class="w-full aspect-[4/5] object-cover object-center grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                    <div class="max-w-3xl mx-auto text-gray-600 leading-relaxed text-center text-lg font-light">
+                        <p>Naomi Molilybo Ernst serves as Festival Coordinator, managing the day-to-day coordination of festival programming and logistics. Her attention to detail and collaborative approach ensure that every aspect of the festival runs smoothly, from guest relations to technical execution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
+        <div class="container mx-auto md:flex md:items-center md:justify-between text-center lg:text-left py-24">
+            <ul class="flex items-center flex-wrap mb-6 md:mb-0">
+                <li><a href="./about-us.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">About</a></li>
+                <li><a href="./screenings.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Screenings</a></li>
+                <li><a href="./industry.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Industry</a></li>
+                <li><a href="./team.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Team</a></li>
+                <li><a href="./press.html" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Press</a></li>
+                <li><a href="./contact-us.html" class="text-sm font-normal text-gray-500 hover:underline">Contact</a></li>
+            </ul>
+            <div class="flex sm:justify-center space-x-6">
+                <a href="#" class="text-gray-500 hover:text-gray-300">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-300">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="text-sm lg:text-base text-center font-light tracking-widest uppercase text-white opacity-75 pb-10">&copy;2026 DESIGN BY TERRACE</div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

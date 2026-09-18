@@ -1,0 +1,271 @@
+{
+  "widths": [
+    {
+      "width": 1920,
+      "before": {
+        "height": 76,
+        "overflow": false,
+        "scroll": 0
+      },
+      "after": {
+        "clipped": [],
+        "controls": [
+          {
+            "height": 54,
+            "label": "Kilifi Creek Festival home"
+          },
+          {
+            "height": 44,
+            "label": "Home"
+          },
+          {
+            "height": 44,
+            "label": "About"
+          },
+          {
+            "height": 44,
+            "label": "Screenings"
+          },
+          {
+            "height": 44,
+            "label": "Industry"
+          },
+          {
+            "height": 44,
+            "label": "Team"
+          },
+          {
+            "height": 44,
+            "label": "Press"
+          },
+          {
+            "height": 44,
+            "label": "Contact"
+          },
+          {
+            "height": 44,
+            "label": "🎬 SUBMIT FILM"
+          },
+          {
+            "height": 44,
+            "label": "Dark mode"
+          }
+        ],
+        "height": 60,
+        "overflow": false,
+        "scroll": 3941.5,
+        "top": 8
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "before": {
+        "height": 76,
+        "overflow": false,
+        "scroll": 0
+      },
+      "after": {
+        "clipped": [],
+        "controls": [
+          {
+            "height": 54,
+            "label": "Kilifi Creek Festival home"
+          },
+          {
+            "height": 44,
+            "label": "Home"
+          },
+          {
+            "height": 44,
+            "label": "About"
+          },
+          {
+            "height": 44,
+            "label": "Screenings"
+          },
+          {
+            "height": 44,
+            "label": "Industry"
+          },
+          {
+            "height": 44,
+            "label": "Team"
+          },
+          {
+            "height": 44,
+            "label": "Press"
+          },
+          {
+            "height": 44,
+            "label": "Contact"
+          },
+          {
+            "height": 44,
+            "label": "🎬 SUBMIT FILM"
+          },
+          {
+            "height": 44,
+            "label": "Dark mode"
+          }
+        ],
+        "height": 60,
+        "overflow": false,
+        "scroll": 3795.5,
+        "top": 8
+      },
+      "passed": true
+    },
+    {
+      "width": 1024,
+      "before": {
+        "height": 76,
+        "overflow": false,
+        "scroll": 0
+      },
+      "after": {
+        "clipped": [],
+        "controls": [
+          {
+            "height": 54,
+            "label": "Kilifi Creek Festival home"
+          },
+          {
+            "height": 44,
+            "label": "Home"
+          },
+          {
+            "height": 44,
+            "label": "About"
+          },
+          {
+            "height": 44,
+            "label": "Screenings"
+          },
+          {
+            "height": 44,
+            "label": "Industry"
+          },
+          {
+            "height": 44,
+            "label": "Team"
+          },
+          {
+            "height": 44,
+            "label": "Press"
+          },
+          {
+            "height": 44,
+            "label": "Contact"
+          },
+          {
+            "height": 44,
+            "label": "🎬 SUBMIT FILM"
+          },
+          {
+            "height": 44,
+            "label": "Dark mode"
+          }
+        ],
+        "height": 60,
+        "overflow": false,
+        "scroll": 3780.5,
+        "top": 8
+      },
+      "passed": true
+    },
+    {
+      "width": 768,
+      "before": {
+        "height": 68,
+        "overflow": false,
+        "scroll": 0
+      },
+      "after": {
+        "clipped": [],
+        "controls": [
+          {
+            "height": 50,
+            "label": "Kilifi Creek Festival home"
+          },
+          {
+            "height": 44,
+            "label": "Dark mode"
+          },
+          {
+            "height": 46,
+            "label": "Open navigation"
+          }
+        ],
+        "height": 58,
+        "overflow": false,
+        "scroll": 4023.5,
+        "top": 6
+      },
+      "passed": true
+    },
+    {
+      "width": 390,
+      "before": {
+        "height": 68,
+        "overflow": false,
+        "scroll": 0
+      },
+      "after": {
+        "clipped": [],
+        "controls": [
+          {
+            "height": 50,
+            "label": "Kilifi Creek Festival home"
+          },
+          {
+            "height": 44,
+            "label": "Dark mode"
+          },
+          {
+            "height": 46,
+            "label": "Open navigation"
+          }
+        ],
+        "height": 58,
+        "overflow": false,
+        "scroll": 2186,
+        "top": 6
+      },
+      "passed": true
+    },
+    {
+      "width": 320,
+      "before": {
+        "height": 68,
+        "overflow": false,
+        "scroll": 0
+      },
+      "after": {
+        "clipped": [],
+        "controls": [
+          {
+            "height": 50,
+            "label": "Kilifi Creek Festival home"
+          },
+          {
+            "height": 44,
+            "label": "Dark mode"
+          },
+          {
+            "height": 46,
+            "label": "Open navigation"
+          }
+        ],
+        "height": 58,
+        "overflow": false,
+        "scroll": 2131.5,
+        "top": 6
+      },
+      "passed": true
+    }
+  ],
+  "mobileOverlay": "320x900 overlay covered the viewport after scrolling, with scroll locking and Escape dismissal intact",
+  "themes": "Both light/dark appearances inspected",
+  "console": []
+}

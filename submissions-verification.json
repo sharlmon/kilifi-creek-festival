@@ -1,0 +1,115 @@
+{
+  "milestones": [
+    {
+      "milestone": "CALL FOR ENTRIES OPENS",
+      "file": "/assets/calendar/kcf-20260303.ics",
+      "pass": true
+    },
+    {
+      "milestone": "EARLY BIRD DEADLINE",
+      "file": "/assets/calendar/kcf-20260331.ics",
+      "pass": true
+    },
+    {
+      "milestone": "REGULAR DEADLINE",
+      "file": "/assets/calendar/kcf-20260531.ics",
+      "pass": true
+    },
+    {
+      "milestone": "LATE DEADLINE",
+      "file": "/assets/calendar/kcf-20260720.ics",
+      "pass": true
+    },
+    {
+      "milestone": "EXTENDED DEADLINE",
+      "file": "/assets/calendar/kcf-20260814.ics",
+      "pass": true
+    },
+    {
+      "milestone": "NOTIFICATION DATE",
+      "file": "/assets/calendar/kcf-20260831.ics",
+      "pass": true
+    }
+  ],
+  "calendarContents": "All six served files passed date, next-day end, label, and media-type checks",
+  "responsive": [
+    {
+      "width": 1440,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "mode": "system",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "mode": "system",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "mode": "system",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "mode": "system",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "mode": "system",
+      "pass": true
+    }
+  ],
+  "keyboardActivation": "pass",
+  "posterDisclosure": "open, loaded, keyboard closed",
+  "calendarDownloadTriggered": true
+}

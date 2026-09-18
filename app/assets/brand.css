@@ -1,0 +1,61 @@
+/* Exact identity palette. Neutral glass surfaces preserve the minimal layout. */
+:root {
+  --brand-teal:#033932;
+  --brand-orange:#FD6910;
+  --brand-yellow:#FFCB21;
+  --brand-blue:#6CC3F2;
+  --teal:var(--brand-teal);
+  --orange:var(--brand-orange);
+  --yellow:var(--brand-yellow);
+  --sky:var(--brand-blue);
+  --font-display:'Afolkalips',Impact,'Arial Narrow',sans-serif;
+  --font-interface:'Lemon Milk','Century Gothic',Arial,sans-serif;
+  --font-body:'Lemon Milk',Arial,Helvetica,sans-serif;
+  --heading:var(--brand-teal);
+  --link:var(--brand-teal);
+  --focus:var(--brand-teal);
+  --accent-text:var(--brand-teal);
+  --glass-tint:#6CC3F208;
+}
+/* Faithful WOFF2 conversions of the user's supplied fonts. */
+@font-face { font-family:'Afolkalips'; src:url('/assets/fonts/afolkalips-79c65c32530c.woff2') format('woff2'); font-style:normal; font-weight:400; font-display:swap; }
+@font-face { font-family:'Lemon Milk'; src:url('/assets/fonts/lemon-milk-regular-a60a0e67b7bb.woff2') format('woff2'); font-style:normal; font-weight:400; font-display:swap; }
+@font-face { font-family:'Lemon Milk'; src:url('/assets/fonts/lemon-milk-medium-299a5e92b929.woff2') format('woff2'); font-style:normal; font-weight:500 600; font-display:swap; }
+@font-face { font-family:'Lemon Milk'; src:url('/assets/fonts/lemon-milk-bold-f2dace92c452.woff2') format('woff2'); font-style:normal; font-weight:700 900; font-display:swap; }
+:root[data-theme='dark'] { --heading:#ffffff; --link:var(--brand-blue); --focus:var(--brand-yellow); --accent-text:var(--brand-yellow); }
+@media(prefers-color-scheme:dark) {
+  :root:not([data-theme='light']):not([data-theme='dark']) { --heading:#ffffff; --link:var(--brand-blue); --focus:var(--brand-yellow); --accent-text:var(--brand-yellow); }
+}
+body { font-family:var(--font-body); }
+h1,h2,h3,.original-content h1,.profile h3 { font-family:var(--font-display); letter-spacing:.015em; font-weight:400; }
+.site-header nav,.button,.eyebrow,.festival-lockup,.programme-tools,.programme-results,.agenda-date,.session-venue,.submission-year,.milestone-date { font-family:var(--font-interface); }
+.hero h1,.home-hero h1 { letter-spacing:.015em; }
+.home-hero h1 { font-size:clamp(56px,6vw,84px); }
+.hero:not(.home-hero) h1 { font-size:clamp(48px,4.8vw,64px); }
+.theme-strip p,.partners-section h2 { font-family:var(--font-interface); font-style:normal; }
+.hero h1 span,.hero .eyebrow,.hero-location span { color:var(--brand-yellow); }
+.button,.button-dark,.site-header .button,.page-contact button { background:var(--brand-yellow); color:var(--brand-teal); }
+.button:hover,.button-dark:hover,.page-contact button:hover { background:var(--brand-blue); color:var(--brand-teal); }
+.site-header::before { background:#033932b3; }
+.site-header.scrolled::before { background:#033932ed; }
+.site-header nav.open { background:#033932fa; }
+.site-header a:hover { color:var(--brand-yellow); }
+.site-header .button:hover { color:var(--brand-teal); }
+.theme-thumb { color:var(--brand-teal); }
+.tide-mark { color:var(--brand-blue); }
+.site-footer,#main-content .submission-festival,#main-content .programme-identity { background:var(--brand-teal); }
+#main-content .stat-card p:first-child { font-family:var(--font-interface); }
+#main-content .save-session[aria-pressed=true] { background:#FFCB2120; }
+#main-content .submission-experience h2 { color:var(--heading); }
+.brand-highlights { padding:48px var(--space) 58px; }
+.brand-highlights-inner { max-width:1280px; margin:auto; }
+.brand-highlights h2 { font-family:var(--font-interface); font-weight:700; font-size:clamp(22px,2.4vw,30px); line-height:1.3; letter-spacing:.015em; margin:0 0 28px; color:var(--heading); }
+.highlight-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.highlight { text-align:center; padding:32px 20px; background:var(--panel); border:1px solid var(--glass-border); border-radius:16px; box-shadow:var(--glass-shadow); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
+.highlight-value { display:inline-block; min-width:100px; padding:4px 16px; border-radius:12px; color:var(--brand-orange); background:var(--brand-teal); font:700 32px/1.5 var(--font-interface); margin:0 0 18px; }
+.highlight:nth-child(2) .highlight-value { color:var(--brand-blue); }
+.highlight:nth-child(3) .highlight-value { color:var(--brand-yellow); }
+.highlight-label { margin:0; color:var(--text); font-size:18px; }
+@media(max-width:760px) { .brand-highlights { padding:36px 24px; } .highlight-grid { gap:12px; } .highlight { padding:24px 12px; } .highlight-label { font-size:15px; } .highlight-value { font-size:28px; min-width:0; } }
+@media(max-width:520px) { .highlight-grid { grid-template-columns:1fr; } .highlight { display:flex; align-items:center; gap:20px; text-align:left; padding:20px; } .highlight-value { margin:0; min-width:110px; text-align:center; } }
+@media(max-width:760px) { .home-hero h1 { font-size:clamp(48px,13vw,62px); } .hero:not(.home-hero) h1 { font-size:46px; } }

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kilifi Creek Festival//Submissions//EN
+BEGIN:VEVENT
+UID:kcf-20260831@kilificreekfestival
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260901
+SUMMARY:Kilifi Creek Festival - NOTIFICATION DATE
+LOCATION:KILIFI\, KENYA
+URL:https://filmfreeway.com/KilifiCreekFestival
+DESCRIPTION:Dates from the KCF submissions poster. See FilmFreeway
+  for submission details.
+END:VEVENT
+END:VCALENDAR

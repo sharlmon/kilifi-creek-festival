@@ -1,0 +1,971 @@
+{
+  "responsiveChecks": [
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1440
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1440
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1440
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1440
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1440
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1440
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1440
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1024
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1024
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1024
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1024
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1024
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1024
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 1024
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 768
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 768
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 768
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 768
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 768
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 768
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 768
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 320
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 320
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 320
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 320
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 320
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 320
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(22, 52, 46)",
+      "theme": "light",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "dark",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1440
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 1024
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 768
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 390
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/about",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/screenings",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/industry",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/team",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/press",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 320
+    },
+    {
+      "background": "rgb(7, 23, 21)",
+      "broken": [],
+      "overflow": false,
+      "path": "/contact",
+      "text": "rgb(245, 244, 239)",
+      "theme": "system",
+      "width": 320
+    }
+  ],
+  "contrastChecks": [
+    {
+      "body": 12.75,
+      "border": 3.84,
+      "button": 8.45,
+      "input": 13.42,
+      "mode": "light",
+      "placeholder": 6.35
+    },
+    {
+      "body": 16.69,
+      "border": 4.33,
+      "button": 8.45,
+      "input": 14.01,
+      "mode": "dark",
+      "placeholder": 8.71
+    }
+  ],
+  "persistence": "Dark selection persisted after full reload",
+  "system": "System follows the device preference; explicit Light overrides device Dark",
+  "keyboard": "Tab and Shift+Tab wrap inside open navigation; Escape closes it; resize to desktop releases scroll lock",
+  "browserErrors": []
+}

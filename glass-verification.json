@@ -1,0 +1,778 @@
+{
+  "responsive": [
+    {
+      "path": "/",
+      "width": 1440,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 1024,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 320,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 1024,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 768,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 390,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 320,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 1440,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 1024,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 768,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 390,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 320,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 1440,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 1024,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 768,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 390,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 320,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 1440,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 1024,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 768,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 390,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 320,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 1440,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 1024,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 768,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 390,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 320,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 1024,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 768,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 390,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 320,
+      "mode": "light",
+      "background": "#f7f6f3",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 1024,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 320,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 1024,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 768,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 390,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 320,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 1440,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 1024,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 768,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 390,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 320,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 1440,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 1024,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 768,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 390,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 320,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 1440,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 1024,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 768,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 390,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 320,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 1440,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 1024,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 768,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 390,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 320,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 1024,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 768,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 390,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 320,
+      "mode": "dark",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 1024,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 320,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 1024,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 768,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 390,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 320,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 1440,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 1024,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 768,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 390,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/screenings",
+      "width": 320,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 1440,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 1024,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 768,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 390,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/industry",
+      "width": 320,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 1440,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 1024,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 768,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 390,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/team",
+      "width": 320,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 1440,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 1024,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 768,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 390,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/press",
+      "width": 320,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 1024,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 768,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 390,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 320,
+      "mode": "system",
+      "background": "#111216",
+      "pass": true
+    }
+  ],
+  "contrast": [
+    {
+      "mode": "light",
+      "ratios": {
+        "body": 13.09,
+        "input": 13.85,
+        "placeholder": 6.43,
+        "button": 9.29,
+        "border": 3.59
+      }
+    },
+    {
+      "mode": "dark",
+      "ratios": {
+        "body": 15.89,
+        "input": 13.72,
+        "placeholder": 8.22,
+        "button": 9.29,
+        "border": 3.8
+      }
+    }
+  ],
+  "contrastMethod": "Computed text colors; translucent input background composited over the neutral page color",
+  "themeIcons": "Sun / Moon / Monitor verified for Light / Dark / System",
+  "savedThemeIcon": "Moon retained after reload",
+  "mobileMenu": {
+    "height": 900,
+    "lock": "hidden",
+    "rect": {
+      "height": 900,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "width": 320
+  },
+  "keyboard": "focus containment, reverse tab, Escape dismissal passed",
+  "submissionInteraction": "milestone selection passed",
+  "consoleErrors": []
+}

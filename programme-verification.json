@@ -1,0 +1,176 @@
+{
+  "filters": [
+    {
+      "day": "SAT 11TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "SUN 12TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "MON 13TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "TUES 14TH",
+      "count": 2,
+      "pass": true
+    },
+    {
+      "day": "WED 15TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "THUR 16TH",
+      "count": 2,
+      "pass": true
+    },
+    {
+      "day": "FRI 17TH",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "day": "SAT 18TH",
+      "count": 2,
+      "pass": true
+    },
+    {
+      "venue": "SALTY’S ON THE CREEK",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "OLD FERRY",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "THE TERRACE ARTS SPACE",
+      "count": 3,
+      "pass": true
+    },
+    {
+      "venue": "MEKATILILI DHOW",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "KILIFI CLUB",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "DISTANT RELATIVES",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "THE TERRACE RESIDENCY",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "NZOMBERE COMMUNITY CENTER",
+      "count": 1,
+      "pass": true
+    },
+    {
+      "venue": "VIPINGO RIDGE BEACH CLUB",
+      "count": 1,
+      "pass": true
+    }
+  ],
+  "search": "case-insensitive title, filmmaker and apostrophe variation passed",
+  "combinedFilters": "pass",
+  "emptyStateAndReset": "pass",
+  "shortlist": "save, keyboard save, filter, reload persistence, remove and empty state passed",
+  "poster": {
+    "loaded": true,
+    "open": true,
+    "src": "/assets/2025prog.jpg.png.webp"
+  },
+  "responsive": [
+    {
+      "width": 1440,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "mode": "system",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "mode": "system",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "mode": "system",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "mode": "system",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "mode": "light",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "mode": "dark",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "mode": "system",
+      "pass": true
+    }
+  ],
+  "consoleErrors": []
+}

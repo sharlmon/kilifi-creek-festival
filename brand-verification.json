@@ -1,0 +1,279 @@
+{
+  "palette": {
+    "teal": "#033932",
+    "orange": "#FD6910",
+    "yellow": "#FFCB21",
+    "blue": "#6CC3F2"
+  },
+  "highlights": [
+    "OUR 2026 HIGHLIGHTS",
+    "2,500",
+    "On site guests",
+    "33",
+    "Films screened",
+    "120",
+    "Creatives trained"
+  ],
+  "layouts": [
+    {
+      "path": "/",
+      "width": 1440,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/screenings",
+      "width": 1440,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/industry",
+      "width": 1440,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/team",
+      "width": 1440,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/press",
+      "width": 1440,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/",
+      "width": 320,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "width": 320,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/screenings",
+      "width": 320,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/industry",
+      "width": 320,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/team",
+      "width": 320,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/press",
+      "width": 320,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "width": 320,
+      "dark": false,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/screenings",
+      "width": 1440,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/industry",
+      "width": 1440,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/team",
+      "width": 1440,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/press",
+      "width": 1440,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/",
+      "width": 320,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "width": 320,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/screenings",
+      "width": 320,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/industry",
+      "width": 320,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/team",
+      "width": 320,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/press",
+      "width": 320,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "width": 320,
+      "dark": true,
+      "clippedHeadings": [],
+      "heroLoaded": true,
+      "overflow": false,
+      "passed": true
+    }
+  ],
+  "typography": {
+    "requested": [
+      "Afolkalips",
+      "Lemon Milk"
+    ],
+    "status": "Font files not supplied; local-family declarations and temporary fallback fonts active"
+  },
+  "console": []
+}
