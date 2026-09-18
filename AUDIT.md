@@ -67,7 +67,7 @@ Programme checks passed all eight day filters and nine venue filters, combined f
 
 The interactive submissions timeline passed all six milestone/calendar checks, keyboard activation and poster disclosure checks, and 15 viewport/theme combinations without overflow. Calendar exports use the original poster's 2026 dates, including correct next-day ends across month boundaries. Results are in `submissions-verification.json`.
 
-External submission and biography links retain the addresses from the original site. Third-party availability is outside this rebuild; no unsupported replacement destinations were invented. Google Maps still requires the visitor's network connection. The supplied Afolkalips and Lemon Milk font archives are now converted to locally hosted WOFF2 files; the exact supplied logo artwork is retained. Deployment and an optional server-side email provider are not configured.
+External submission and biography links retain the addresses from the original site. Third-party availability is outside this rebuild; no unsupported replacement destinations were invented. Google Maps still requires the visitor's network connection. The supplied Afolkalips and Lemon Milk font archives are now converted to locally hosted WOFF2 files; the exact supplied logo artwork is retained. GitHub Pages deployment is configured. An optional server-side email provider is not configured.
 
 ### Hero redesign
 
@@ -80,3 +80,7 @@ Added a shared on-demand full-image viewer to all photographic images and poster
 ### Direct poster modals
 
 Replaced both inline poster disclosures with native buttons opening the shared modal directly. The original labels, poster assets and transcribed programme/submission text remain intact. Verified direct click opening, keyboard activation, Escape/close-button dismissal, focus return, scroll restoration and full uncropped display on desktop and mobile. The regression check now verifies both poster controls and on-demand assets. It excludes only the standalone decorative clapperboard emoji that the user previously requested redesigning; all 305 original copy phrases remain checked.
+
+### Six usability refinements and coastal atmosphere
+
+Added zoom/pan/download controls, restrained reading columns, shared action styles, section shortcuts, headquarters/directions cards and consistent section/card spacing. A separate 88,948-byte generated sunset/ocean/birds background is rendered at 25% opacity with 16-pixel blur. Existing hero images and original copy are retained. Desktop light/dark screenshots and 390/320-pixel layouts were reviewed; targeted browser checks passed zoom, dragging, keyboard reset, dismissal, focus return and shortcuts with no horizontal overflow or captured browser errors. Physical multi-touch pinch is implemented but was not exercised by the available controls. The final production build passed, and regression checks passed 7 routes, 7 original heroes, 305 exact source phrases, 66 image references, 136 links including shortcut targets, both poster assets and the optimized background.

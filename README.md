@@ -76,10 +76,22 @@ CHECK_URL=http://127.0.0.1:4317 npm run check
 
 This checks the original text phrases on every rendered page, image-file references, internal navigation, placeholder links, legacy `.html` redirects, replacement of the old standalone festival logo, and 404 handling. See `AUDIT.md` for the findings and browser review.
 
-The site is ready for local review and has not been published.
+The site is published through the GitHub Pages workflow above.
 
 ## Full-image viewer
 
 Hero photos, galleries, team portraits and disclosed posters open in a native modal image viewer on tap/click or Enter/Space. The full image is displayed with `object-fit: contain` and its original alt text, without cropping. The full-size optimized source is requested only when opened; page thumbnails retain their responsive/lazy loading. The viewer supports the close button, Escape, tapping the backdrop, focus containment, focus return and scroll locking. Logos remain navigation/brand artwork. Home image tiles now open photos; the existing text links and navigation still lead to the related pages.
 
 The two poster controls now open the viewer directly: “View original poster” and “View original programme poster”. They no longer expand a large inline image. Both original assets load only after activation, and the viewer returns focus to the poster button when dismissed.
+
+## Reading, navigation and coastal background
+
+Poster and photo modals now support 100–500% zoom, drag to pan, wheel zoom, double-click zoom, keyboard + / − / 0 and arrow controls, and an original-asset download link. Pointer gestures support mobile pinch. Browser checks confirmed zoom, dragging, reset, dismissal, focus return, download targets and 44-pixel controls at mobile widths. Physical multi-touch pinch was not exercised by the available browser controls.
+
+Reading columns are limited to 65 characters with consistent heading hierarchy and section spacing. Primary, secondary and text actions share restrained styling. Long pages offer a horizontally scrollable “On this page” shortcut bar below the hero; anchor destinations remain clear of the compact fixed menu. Headquarters information and the existing map form compact cards with directions based solely on the original Mnarani, Bandari Beach, Kilifi address. Archived screening venues keep their original names; unverified street addresses are not inferred.
+
+The separate decorative sunset/ocean/birds layer uses 25% opacity and a 16-pixel blur behind neutral content surfaces in both themes. Original festival photos, hero images and copy remain intact. Its locally hosted, content-hashed WebP is 88,948 bytes, and it has no interactions or accessibility-tree content.
+
+Generated background: `public/assets/ambience/coastal-sunset-1139e87eb8f6.webp`. Mode: new image generation using the built-in image tool, followed by WebP compression. Prompt:
+
+> Use case: photorealistic-natural. Asset type: decorative background for the Kilifi Creek Festival website content sections, not a hero replacement. Generate a wide landscape image of a calm Kenyan coastal ocean at sunset: soft golden sun low on a level horizon, muted sunset orange sky fading into pale sky blue, dark deep teal ocean with gentle wave ripples, a few small birds silhouetted naturally in the sky. Atmospheric, tranquil, natural photography style. Simple spacious composition without busy foreground elements, suitable for a subtle blurred background at 25 percent opacity behind text panels. No people, buildings, boats, logos, typography, text, watermarks or borders. Keep the image softly atmospheric but not heavily blurred in the source so blur can be controlled by CSS. Landscape 1536x1024 or wider.

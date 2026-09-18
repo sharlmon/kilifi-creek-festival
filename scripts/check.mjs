@@ -77,10 +77,19 @@ for(const [file,path] of Object.entries(routes)) {
   }
   for(const [,href] of html.matchAll(/<a[^>]+href="([^"]+)"/g)) {
     assert.notEqual(href,'#','Placeholder link remains')
+    if(href.startsWith('#')) {
+      assert(html.includes(`id="${decode(href.slice(1))}"`),`Section shortcut target missing on ${path}: ${href}`)
+      links++
+    }
     if(href.startsWith('/')&&!href.startsWith('/_nuxt')&&!href.startsWith('/assets')) { assert(Object.values(routes).includes(href),`Unexpected local link ${href}`); links++ }
   }
 }
 assert.deepEqual(failures,[],failures.join('\n'))
+const ambience=JSON.parse(await readFile(new URL('app/assets/ambience.json',root),'utf8'))
+const backdrop=await fetch(origin+ambience.src)
+assert.equal(backdrop.status,200,'Decorative coastal background must load')
+assert.equal((await backdrop.arrayBuffer()).byteLength,ambience.bytes,'Optimized background must match the generated asset')
+assert(ambience.bytes<150000,'Decorative background should stay lightweight')
 for(const [file,path] of Object.entries(routes)) {
   const r=await fetch(origin+'/'+file,{redirect:'manual'})
   assert([301,302,307,308].includes(r.status),`Legacy route ${file}`)

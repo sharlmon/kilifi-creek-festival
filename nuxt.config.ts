@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-09-18',
   devtools: { enabled: false },
-  css: ['~/assets/site.css', '~/assets/theme.css', '~/assets/glass.css', '~/assets/brand.css'],
+  css: ['~/assets/site.css', '~/assets/theme.css', '~/assets/glass.css', '~/assets/brand.css', '~/assets/refinements.css'],
   app: { head: { htmlAttrs: { lang: 'en' }, meta: [{ name: 'theme-color', content: '#191a1f' }] } },
   nitro: { prerender: { routes: ['/', '/about', '/screenings', '/industry', '/team', '/press', '/contact'] } },
   routeRules: {

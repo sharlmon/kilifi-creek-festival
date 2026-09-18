@@ -13,7 +13,7 @@ function expandPhoto(event: MouseEvent | KeyboardEvent) {
 useHead({ link: [fonts.afolkalips, fonts['lemon-milk-regular']].map(font => ({ rel: 'preload', as: 'font', type: 'font/woff2', href: siteBase(font.url), crossorigin: 'anonymous' })) })
 useHead({ script: [{ key: 'theme-init', innerHTML: "try{var t=localStorage.getItem('kcf-theme');document.documentElement.dataset.theme=(t==='light'||t==='dark')?t:'system'}catch(e){document.documentElement.dataset.theme='system'}" }] })
 </script>
-<template><NuxtRouteAnnouncer /><SiteHeader /><main id="main-content" @click="expandPhoto" @keydown="expandPhoto"><NuxtPage /></main><SiteFooter /><PhotoViewer ref="photoViewer" /></template>
+<template><CoastalBackground /><NuxtRouteAnnouncer /><SiteHeader /><main id="main-content" @click="expandPhoto" @keydown="expandPhoto"><NuxtPage /></main><SiteFooter /><PhotoViewer ref="photoViewer" /></template>
 
 <style>
 img[data-expand-image] { cursor:zoom-in; }
