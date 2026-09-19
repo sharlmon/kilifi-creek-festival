@@ -14,6 +14,11 @@ for(const [file,path] of Object.entries(routes)) {
   const response=await fetch(origin+path)
   assert.equal(response.status,200,path)
   const html=await response.text()
+  if(path === '/' || path === '/contact') {
+    assert(!html.includes('output=embed'),'Google Maps iframe should not load with the page')
+    assert(!html.includes('title="The Terrace Kilifi location"'),'Interactive map iframe should be replaced')
+    assert(html.includes('Open in Google Maps') && html.includes('Get directions'),'Lightweight venue card actions must render')
+  }
   if(path === '/') {
     for(const phrase of ['OUR 2026 HIGHLIGHTS','2,500','On site guests','33','Films screened','120','Creatives trained']) assert(html.includes(phrase),`Missing supplied 2026 highlight: ${phrase}`)
     for(const phrase of ['MARCH 3','CALL FOR ENTRIES OPENS','MARCH 31','EARLY BIRD DEADLINE','MAY 31','REGULAR DEADLINE','JULY 20','LATE DEADLINE','AUGUST 14','EXTENDED DEADLINE','AUGUST 31','NOTIFICATION DATE','SUBMIT YOUR FILM HERE:']) {
