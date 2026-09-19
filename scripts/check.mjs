@@ -23,6 +23,10 @@ for(const [file,path] of Object.entries(routes)) {
   assert(html.includes('name="twitter:card" content="summary_large_image"'),`Twitter card missing on ${path}`)
   assert(html.includes('name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"'),`Crawler directives missing on ${path}`)
   assert(html.includes('rel="icon" href="/favicon.ico"') || html.includes('rel="icon" href="/kilifi-creek-festival/favicon.ico"'),`Favicon missing on ${path}`)
+  assert(html.includes('http-equiv="Content-Security-Policy"'),`Content Security Policy missing on ${path}`)
+  assert(html.includes('name="referrer" content="strict-origin-when-cross-origin"'),`Referrer policy missing on ${path}`)
+  assert(!/<(?:script|iframe|object|embed)\b/i.test(clean(html).replace(/<script[^>]*type="application\/(?:ld\+json|json)"[\s\S]*?<\/script>/g,'')),`Unsafe rendered element found on ${path}`)
+  for(const tag of html.match(/<a\b[^>]*target="_blank"[^>]*>/g) || []) assert(/\brel="[^"]*noopener[^"]*noreferrer[^"]*"/.test(tag),`External tab lacks isolation on ${path}`)
   if(path === '/' || path === '/contact') {
     assert(!html.includes('output=embed'),'Google Maps iframe should not load with the page')
     assert(!html.includes('title="The Terrace Kilifi location"'),'Interactive map iframe should be replaced')

@@ -1,6 +1,12 @@
 import manifest from '~/assets/responsive-images.json'
 import { siteBase } from './siteBase'
 
+const forbiddenHtml = /<\/?(?:script|iframe|object|embed|base|meta|link)\b|\son[a-z]+\s*=|(?:href|src)\s*=\s*["']\s*(?:javascript:|data:text\/html)/i
+
+function assertSafeHtml(html: string) {
+  if (forbiddenHtml.test(html)) throw new Error('Unsafe HTML was blocked from rendering.')
+}
+
 export function imageViewerAttributes(src: string, baseURL?: string) {
   const image = manifest[src as keyof typeof manifest]
   return { 'data-expand-image': siteBase(image?.variants.at(-1)?.src || src, baseURL), 'data-download-image': siteBase(src, baseURL), 'data-image-original': siteBase(src, baseURL) }
@@ -23,6 +29,7 @@ export function imageAttributes(src: string, sizes = 'auto, (max-width: 760px) c
 
 // Only image attributes change; the original content and HTML text stay intact.
 export function responsiveHtml(html: string) {
+  assertSafeHtml(html)
   return html.replace(/href="(\/(?!\/)[^"]*)"/g, (_, path) => `href="${siteBase(path)}"`).replace(/<img\b[^>]*>/g, tag => {
     const src = tag.match(/\bsrc="([^"]+)"/)?.[1]?.replaceAll('&amp;', '&')
     if (!src) return tag
