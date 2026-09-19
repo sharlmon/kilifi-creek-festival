@@ -4,6 +4,7 @@ const root = new URL('../', import.meta.url)
 const origin = process.env.CHECK_URL || 'http://127.0.0.1:3000'
 const assetMap = JSON.parse(await readFile(new URL('app/assets/asset-map.json', root), 'utf8'))
 const responsive=JSON.parse(await readFile(new URL('app/assets/responsive-images.json',root),'utf8'))
+const teamAdditions=JSON.parse(await readFile(new URL('app/assets/team-additions.json',root),'utf8'))
 const routes = {'index.html':'/','about-us.html':'/about','screenings.html':'/screenings','industry.html':'/industry','team.html':'/team','press.html':'/press','contact-us.html':'/contact'}
 const decode = s => s.replace(/&#(x[\da-f]+|\d+);/gi,(_,v)=>String.fromCodePoint(v[0].toLowerCase()==='x'?parseInt(v.slice(1),16):Number(v))).replace(/&(amp|quot|apos|lt|gt|nbsp|copy|rarr);/g,(_,v)=>({amp:'&',quot:'"',apos:"'",lt:'<',gt:'>',nbsp:' ',copy:'©',rarr:'→'}[v]))
 const clean = s => s.replace(/<!--[\s\S]*?-->/g,'').replace(/<(script|style)[\s\S]*?<\/\1>/g,'')
@@ -62,6 +63,14 @@ for(const [file,path] of Object.entries(routes)) {
     assert(!(clean(html).includes('<details class="programme-poster"')),'Programme poster must not expand inline')
     assert.equal((await fetch(origin+assetMap['2025prog.jpg.png'])).status,200,'Modal programme poster must remain downloadable')
     assert(text.includes('All screenings are FREE, but RSVP is required on'),'Original RSVP notice must be preserved')
+  }
+  if(path === '/team') {
+    for(const profile of teamAdditions) {
+      assert(html.includes(`id="team-${profile.id}"`), `Missing team profile section target: ${profile.name}`)
+      for(const phrase of [profile.name, profile.role, ...profile.paragraphs]) {
+        assert(text.includes(phrase), `Missing supplied team profile content: ${profile.name}: ${phrase.slice(0,100)}`)
+      }
+    }
   }
   for(const match of original.matchAll(/>([^<>]+)</g)) {
     // The user requested replacing the decorative submission-button emoji with SVG.

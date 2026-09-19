@@ -929,6 +929,129 @@
       }
     ]
   },
+  "/assets/static/images/team/simba.jpeg.webp": {
+    "width": 1280,
+    "height": 1082,
+    "sourceBytes": 98964,
+    "variants": [
+      {
+        "src": "/assets/responsive/9deaccaf55f1ff74-320.webp",
+        "width": 320,
+        "bytes": 4960
+      },
+      {
+        "src": "/assets/responsive/9deaccaf55f1ff74-640.webp",
+        "width": 640,
+        "bytes": 12232
+      },
+      {
+        "src": "/assets/responsive/9deaccaf55f1ff74-960.webp",
+        "width": 960,
+        "bytes": 21668
+      },
+      {
+        "src": "/assets/responsive/9deaccaf55f1ff74-1280.webp",
+        "width": 1280,
+        "bytes": 36640
+      }
+    ]
+  },
+  "/assets/static/images/team/david.jpeg.webp": {
+    "width": 1461,
+    "height": 1600,
+    "sourceBytes": 83892,
+    "variants": [
+      {
+        "src": "/assets/responsive/7843bc7cc979e2d7-320.webp",
+        "width": 320,
+        "bytes": 4710
+      },
+      {
+        "src": "/assets/responsive/7843bc7cc979e2d7-640.webp",
+        "width": 640,
+        "bytes": 11686
+      },
+      {
+        "src": "/assets/responsive/7843bc7cc979e2d7-960.webp",
+        "width": 960,
+        "bytes": 19450
+      },
+      {
+        "src": "/assets/responsive/7843bc7cc979e2d7-1440.webp",
+        "width": 1440,
+        "bytes": 29460
+      },
+      {
+        "src": "/assets/responsive/7843bc7cc979e2d7-1461.webp",
+        "width": 1461,
+        "bytes": 31220
+      }
+    ]
+  },
+  "/assets/static/images/team/bree.jpeg.webp": {
+    "width": 1600,
+    "height": 1066,
+    "sourceBytes": 117354,
+    "variants": [
+      {
+        "src": "/assets/responsive/471622b1f50ebeca-320.webp",
+        "width": 320,
+        "bytes": 6462
+      },
+      {
+        "src": "/assets/responsive/471622b1f50ebeca-640.webp",
+        "width": 640,
+        "bytes": 14362
+      },
+      {
+        "src": "/assets/responsive/471622b1f50ebeca-960.webp",
+        "width": 960,
+        "bytes": 23700
+      },
+      {
+        "src": "/assets/responsive/471622b1f50ebeca-1440.webp",
+        "width": 1440,
+        "bytes": 35298
+      },
+      {
+        "src": "/assets/responsive/471622b1f50ebeca-1600.webp",
+        "width": 1600,
+        "bytes": 41776
+      }
+    ]
+  },
+  "/assets/static/images/team/cavallo.jpg.webp": {
+    "width": 4498,
+    "height": 5809,
+    "sourceBytes": 2057407,
+    "variants": [
+      {
+        "src": "/assets/responsive/b04cd7cb6f4fb361-320.webp",
+        "width": 320,
+        "bytes": 6252
+      },
+      {
+        "src": "/assets/responsive/b04cd7cb6f4fb361-640.webp",
+        "width": 640,
+        "bytes": 16584
+      },
+      {
+        "src": "/assets/responsive/b04cd7cb6f4fb361-960.webp",
+        "width": 960,
+        "bytes": 30762
+      },
+      {
+        "src": "/assets/responsive/b04cd7cb6f4fb361-1440.webp",
+        "width": 1440,
+        "bytes": 49270
+      },
+      {
+        "src": "/assets/responsive/b04cd7cb6f4fb361-1586.webp",
+        "width": 1586,
+        "bytes": 56596
+      }
+    ]
+  },
   "/assets/industry/W0700971.jpg.jpeg.webp": {
     "width": 3029,
     "height": 2272,

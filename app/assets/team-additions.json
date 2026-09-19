@@ -1,0 +1,60 @@
+[
+  {
+    "id": "simba",
+    "name": "Simba",
+    "role": "Multimedia Producer, Communications Specialist, and Entrepreneur",
+    "imageKey": "static/images/team/simba.jpeg",
+    "paragraphs": [
+      "Simba is a multimedia producer, communications specialist, and entrepreneur dedicated to transforming ideas into meaningful experiences. His work spans storytelling, branding, mentorship, and technology, with a focus on creating solutions that connect people, inspire action, and foster growth. Whether leading creative productions, developing innovative ventures, or mentoring emerging professionals, he brings curiosity, strategic thinking, and a relentless pursuit of excellence to everything he does."
+    ]
+  },
+  {
+    "id": "david-mwangi-mwenda",
+    "name": "David Mwangi Mwenda",
+    "role": "Strategic Finance and Operations Leader",
+    "imageKey": "static/images/team/david.jpeg",
+    "paragraphs": [
+      "David Mwangi Mwenda is a strategic finance and operations leader with sixteen years of experience building, scaling, and stabilizing organizations across East Africa and the United States. He holds a Bachelor of Laws (LLB) and is currently an ACCA finalist. He is also a Certified Learning and Development Professional.",
+      "David serves as the Lead Consultant at Mwangi Mwenda Consultancy a finance and operations advisory practice serving small and medium businesses across Kenya. The consultancy's work rests on a simple premise: sustainable financial and operational improvement is not something delivered to a business, but built into it. Every engagement, whether compliance clean-up, bookkeeping, or systems implementation, is paired with the transfer of skills, tools, and judgement to the owners and teams who will carry the business forward once the engagement ends."
+    ]
+  },
+  {
+    "id": "tony-kruz",
+    "name": "Anthony Kariuki (Tony Kruz)",
+    "role": "Communications, Marketing and PR Expert",
+    "imageKey": null,
+    "initials": "TK",
+    "paragraphs": [
+      "Anthony Kariuki, also known as Tony Kruz, is a communications, marketing and public relations professional with over 10 years of experience in cinematography, photography, branding, content management and strategic storytelling. He has developed visual content, brand identities/strategies, managed content and led creative campaigns for NGOs, global organizations and media houses. His work combines creative production with communication strategy to create compelling stories, strengthen brands and drive meaningful impact.",
+      "I have worked with NGOs, social movements, global organisations, corporate brands and media houses, helping them communicate their ideas, strengthen their public image and connect with the audiences that matter most. My background combines hands on creative production with strategic communications. I have practical experience in pre production, cinematography, photography, graphic design, video production and post production, alongside expertise in media relations, crisis communication, stakeholder communication, campaign management and digital communications.",
+      "Creative Production — Cinematography, photography, documentary production, events and campaign direction",
+      "Branding — Brand strategy, brand visual identity, brand storytelling, visual direction and message development",
+      "Content Management — Content planning, production workflows, editorial coordination and Multi-channel management",
+      "Communications — Strategic communications, public relations, crisis communications, audience engagement and impact storytelling"
+    ]
+  },
+  {
+    "id": "bree-wangari",
+    "name": "Bree Wangari",
+    "role": "Partnerships and Development Director",
+    "imageKey": "static/images/team/bree.jpeg",
+    "paragraphs": [
+      "Bree Wangari is a storyteller, producer, and strategy consultant who helps founders, organisations, and creatives craft narratives that inspire action. With over 10 years of experience across Africa's startup ecosystem, including roles at Village Capital and Madica, and her start in media at Techpoint.africa, she has mentored founders and helped early-stage companies translate complex ideas into compelling narratives. Today, through CBK Studios, she brings that same strategic lens to visual and audio productions. Her approach unites business strategy with cinematic thinking to help people and organisations tell stories that connect, influence, and endure.",
+      "She is Partnerships and Development Director at Kilifi Creek Festival."
+    ]
+  },
+  {
+    "id": "vincenzo-cavallo",
+    "name": "Dr. Vincenzo Cavallo",
+    "role": "Director, Producer and Researcher",
+    "imageKey": "static/images/team/cavallo.jpg",
+    "paragraphs": [
+      "Dr. Vincenzo Cavallo, known as Dr. Faras in East Africa, is an award-winning director, producer and researcher working between Africa, Europe and Latin America. Italian by birth and Kenya-based for nearly two decades, he is co-founder of Cultural Video Foundation, Cultural Video Production and the Nairobi BUS collective, and has made feature films, XR experiences, documentary series and more than fifty documentaries.",
+      "His latest work, Ri-lancia Luigi Broglio (Re-Launching Luigi Broglio, 2025, 33'), is a 360° immersive theatrical experience and the sole recipient of the 75,000 euro grant of Biennale College Cinema - Immersive, 9th edition. Produced by Cultural Video Production with Silvia Gioiello and INVR.SPACE, it premiered at Venice Immersive during the 82nd Venice Film Festival and won Best 360° Experience at the European XR Awards (AIXR) in Brussels. It later had its Japanese premiere at the Kyoto Historica International Film Festival, where he held a masterclass for the Kyoto Filmmakers Lab, and was exhibited at M9 - Museo del '900 in Venice in 2026. The work revisits the story of the Italian engineer who launched his country into space in the 1960s from the first equatorial launch base, built on a sea platform off the Kenyan coast.",
+      "His feature Bufis - Daydreamers, co-directed with Mahad Ahmed and co-produced with Unafilm with support from the World Cinema Fund and the Red Sea Film Fund, streams worldwide on Netflix; it won the VFF award at the Berlinale Co-Production Market in 2019. He was a Berlinale Talent in 2018 and 2019, representing Kenya.",
+      "In 2020 he premiered African Space Makers at Venice XR, the first interactive XR series produced in Africa, which received the Lumiere Award for best direction, the XR Must Impact Award and a place among the three finalists of the VR NOW Award. Its rights were acquired by RAI-VR and it toured major Italian museums.",
+      "He produced Almost Somali (STEPS, ARTE France), winner of Best Continental Short Doc and available on arte.tv within Generation Africa, and The Baobab Whisperer (Big World Cinema) for Al Jazeera's Africa Direct. His web series Connection House won best direction at Roma Web Fest 2016 and best comedy at Berlin Web Fest 2017; his first feature WAZI?FM received the Golden Dhow at the Zanzibar International Film Festival. His twelve-episode series on Afro-Colombian music, Pasos de Cumbia, won the CNTV Chile and RTVC Colombia co-production awards.",
+      "He holds a Ph.D. in Communication and New Technologies from IULM University, obtained in 2010 after working for UN/DESA, and was a postdoctoral researcher at the University of Oxford on the ERC project ConflictNet. He publishes on ICT for development and on XR and public space in Africa."
+    ]
+  }
+]

@@ -2,6 +2,7 @@
 import { responsiveHtml } from '~/utils/images'
 import content from '~/assets/content.json'
 import heroes from '~/assets/hero-map.json'
+import teamAdditions from '~/assets/team-additions.json'
 import { sectionNavigation, venueDetails } from '~/utils/sections'
 definePageMeta({ validate: route => ['about','screenings','industry','team','press','contact'].includes(String(route.params.slug)) })
 const route=useRoute()
@@ -9,7 +10,11 @@ const slug=computed(()=>String(route.params.slug))
 const titles: Record<string,string>={about:'About',screenings:'Screenings',industry:'Industry',team:'Team',press:'Press',contact:'Contact'}
 const page=computed(()=>content[slug.value as keyof typeof content] as {html:string,title:string,description:string}|undefined)
 const presentation = computed(() => sectionNavigation(venueDetails(page.value?.html || ''), `section-${slug.value}`, ['team','industry'].includes(slug.value)))
-const shortcuts = computed(() => slug.value === 'screenings' ? [presentation.value.items[0]!, { id:'programme', label:'PROGRAM' }, ...presentation.value.items.slice(1)] : presentation.value.items)
+const shortcuts = computed(() => {
+  if (slug.value === 'screenings') return [presentation.value.items[0]!, { id:'programme', label:'PROGRAM' }, ...presentation.value.items.slice(1)]
+  if (slug.value === 'team') return [...presentation.value.items, ...teamAdditions.map(profile => ({ id:`team-${profile.id}`, label:profile.name }))]
+  return presentation.value.items
+})
 if(!page.value?.html) throw createError({statusCode:404,statusMessage:'Page not found'})
 useSeoMeta({title:()=>page.value?.title,description:()=>page.value?.description})
 // Replace only the poster presentation; retain the original recap, statistics and gallery.
@@ -37,5 +42,8 @@ function submit(e: Event) {
     <ProgrammeSchedule />
     <div class="original-content interior-content page-screenings" v-html="responsiveHtml(screeningParts[1])"></div>
   </template>
-  <div v-else-if="page" class="original-content interior-content" :class="'page-'+slug" @submit="submit" v-html="responsiveHtml(presentation.html)"></div>
+  <div v-else-if="page" class="original-content interior-content" :class="'page-'+slug" @submit="submit">
+    <div v-html="responsiveHtml(presentation.html)"></div>
+    <TeamProfileAdditions v-if="slug === 'team'" />
+  </div>
 </template>
