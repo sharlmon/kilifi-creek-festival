@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /kilifi-creek-festival/
+
+Sitemap: https://sharlmon.github.io/kilifi-creek-festival/sitemap.xml

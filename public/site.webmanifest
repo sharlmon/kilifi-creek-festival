@@ -1,0 +1,14 @@
+{
+  "name": "Kilifi Creek Festival",
+  "short_name": "KCF",
+  "description": "Kilifi Creek Festival — Film, Art & Music in Kilifi, Kenya.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#033932",
+  "theme_color": "#033932",
+  "icons": [
+    { "src": "assets/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

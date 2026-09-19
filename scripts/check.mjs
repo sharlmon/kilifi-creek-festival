@@ -6,6 +6,7 @@ const assetMap = JSON.parse(await readFile(new URL('app/assets/asset-map.json', 
 const responsive=JSON.parse(await readFile(new URL('app/assets/responsive-images.json',root),'utf8'))
 const teamAdditions=JSON.parse(await readFile(new URL('app/assets/team-additions.json',root),'utf8'))
 const routes = {'index.html':'/','about-us.html':'/about','screenings.html':'/screenings','industry.html':'/industry','team.html':'/team','press.html':'/press','contact-us.html':'/contact'}
+const publicSite='https://sharlmon.github.io/kilifi-creek-festival'
 const decode = s => s.replace(/&#(x[\da-f]+|\d+);/gi,(_,v)=>String.fromCodePoint(v[0].toLowerCase()==='x'?parseInt(v.slice(1),16):Number(v))).replace(/&(amp|quot|apos|lt|gt|nbsp|copy|rarr);/g,(_,v)=>({amp:'&',quot:'"',apos:"'",lt:'<',gt:'>',nbsp:' ',copy:'©',rarr:'→'}[v]))
 const clean = s => s.replace(/<!--[\s\S]*?-->/g,'').replace(/<(script|style)[\s\S]*?<\/\1>/g,'')
 const norm = s => decode(s).replace(/\s+/g,' ').trim()
@@ -15,6 +16,13 @@ for(const [file,path] of Object.entries(routes)) {
   const response=await fetch(origin+path)
   assert.equal(response.status,200,path)
   const html=await response.text()
+  const canonical=publicSite+(path==='/'?'/':path)
+  assert(html.includes(`rel="canonical" href="${canonical}"`),`Canonical URL missing on ${path}`)
+  assert(html.includes(`property="og:url" content="${canonical}"`),`Open Graph URL missing on ${path}`)
+  assert(html.includes(`property="og:image" content="${publicSite}/assets/brand/kcf-social-card.jpg"`),`Social sharing image missing on ${path}`)
+  assert(html.includes('name="twitter:card" content="summary_large_image"'),`Twitter card missing on ${path}`)
+  assert(html.includes('name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"'),`Crawler directives missing on ${path}`)
+  assert(html.includes('rel="icon" href="/favicon.ico"') || html.includes('rel="icon" href="/kilifi-creek-festival/favicon.ico"'),`Favicon missing on ${path}`)
   if(path === '/' || path === '/contact') {
     assert(!html.includes('output=embed'),'Google Maps iframe should not load with the page')
     assert(!html.includes('title="The Terrace Kilifi location"'),'Interactive map iframe should be replaced')
@@ -105,6 +113,13 @@ for(const [file,path] of Object.entries(routes)) {
     if(href.startsWith('/')&&!href.startsWith('/_nuxt')&&!href.startsWith('/assets')) { assert(Object.values(routes).includes(href),`Unexpected local link ${href}`); links++ }
   }
 }
+for(const file of ['/favicon.ico','/favicon-32x32.png','/apple-touch-icon.png','/site.webmanifest','/robots.txt','/sitemap.xml','/assets/brand/kcf-social-card.jpg']) {
+  assert.equal((await fetch(origin+file)).status,200,`SEO asset must be served: ${file}`)
+}
+const homeHtml=await (await fetch(origin+'/')).text()
+assert(homeHtml.includes('application/ld+json') && homeHtml.includes('"@type":"Festival"'),'Festival structured data must render')
+const sitemap=await (await fetch(origin+'/sitemap.xml')).text()
+for(const path of Object.values(routes)) assert(sitemap.includes(publicSite+(path==='/'?'/':path)),`Sitemap missing ${path}`)
 assert.deepEqual(failures,[],failures.join('\n'))
 const ambience=JSON.parse(await readFile(new URL('app/assets/ambience.json',root),'utf8'))
 const backdrop=await fetch(origin+ambience.src)

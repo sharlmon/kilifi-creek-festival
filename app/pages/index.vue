@@ -4,7 +4,6 @@ import content from '~/assets/content.json'
 import assets from '~/assets/asset-map.json'
 import { venueDetails } from '~/utils/sections'
 const home = content.home
-useSeoMeta({title:'Kilifi Creek Festival -- Home',description:'Kilifi Creek Festival (KCF) is an artist-led, community-rooted film, arts and cultural festival set along the Kilifi Creek in coastal Kenya. 23-31 October 2026.'})
 // The sections are extracted from the original HTML without rewriting their copy.
 const headquarters = home.sections.find(s => s.includes('FESTIVAL HEADQUARTERS'))!
 const partners = home.sections.find(s => s.includes('Partners &amp; Brands'))!

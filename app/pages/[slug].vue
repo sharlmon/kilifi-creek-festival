@@ -16,7 +16,6 @@ const shortcuts = computed(() => {
   return presentation.value.items
 })
 if(!page.value?.html) throw createError({statusCode:404,statusMessage:'Page not found'})
-useSeoMeta({title:()=>page.value?.title,description:()=>page.value?.description})
 // Replace only the poster presentation; retain the original recap, statistics and gallery.
 const screeningParts = computed(() => {
   const html = presentation.value.html.replace(/<div class="bounded">\s*<img[^>]*alt="KCF 2025 Programming"[^>]*>\s*<\/div>/, '')
