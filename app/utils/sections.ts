@@ -18,7 +18,29 @@ export function venueDetails(html: string) {
   const directions = `https://www.google.com/maps/dir/?api=1&amp;destination=${destination}`
   return html.replace(/<iframe\b[^>]*title="The Terrace Kilifi location"[^>]*><\/iframe>/g, () => `<div class="venue-map" aria-label="The Terrace Art Space location">
     <div class="venue-visual" aria-hidden="true">
-      <svg viewBox="0 0 640 320" role="presentation"><defs><linearGradient id="venue-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-blue)"/><stop offset="1" stop-color="var(--brand-yellow)"/></linearGradient></defs><rect width="640" height="320" fill="url(#venue-sky)"/><circle cx="510" cy="72" r="38" fill="var(--brand-orange)" opacity=".92"/><path d="M0 214C94 176 166 243 258 211s166-17 225 8 103 14 157-12v113H0Z" fill="var(--brand-teal)"/><path d="M0 240c92-32 158 22 250-4s170-8 236 12 105 1 154-17" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="6"/><path d="M316 85c-47 0-85 37-85 83 0 64 85 121 85 121s85-57 85-121c0-46-38-83-85-83Zm0 118a36 36 0 1 1 0-72 36 36 0 0 1 0 72Z" fill="#EA4335" stroke="#fff" stroke-width="7"/></svg>
+      <svg viewBox="0 0 640 320" preserveAspectRatio="xMidYMid slice" role="presentation">
+        <rect width="640" height="320" fill="#F5F1E8"/>
+        <path d="M0 0h164c18 35 12 72 36 105 27 37 28 77 2 111-27 35-34 70-25 104H0Z" fill="var(--brand-blue)"/>
+        <path d="M164 0c18 35 12 72 36 105 27 37 28 77 2 111-27 35-34 70-25 104" fill="none" stroke="var(--brand-teal)" stroke-width="8"/>
+        <g fill="none" stroke-linecap="round">
+          <path d="M208 37c71 42 100 55 173 48 86-8 141 23 259 1" stroke="#fff" stroke-width="18"/>
+          <path d="M208 37c71 42 100 55 173 48 86-8 141 23 259 1" stroke="var(--brand-yellow)" stroke-width="10"/>
+          <path d="M206 266c65-35 113-51 174-50 93 2 152-28 260-92" stroke="#fff" stroke-width="14"/>
+          <path d="M206 266c65-35 113-51 174-50 93 2 152-28 260-92" stroke="var(--brand-orange)" stroke-width="6"/>
+          <path d="M284 0c-8 55 4 105 45 145 31 31 39 77 30 125" stroke="#D8D2C5" stroke-width="6"/>
+          <path d="M539 0c-19 45-23 90-2 129 19 34 14 86-11 129" stroke="#D8D2C5" stroke-width="6"/>
+          <path d="M234 153h90m145 31h117" stroke="#D8D2C5" stroke-width="5"/>
+        </g>
+        <g font-family="'Lemon Milk',Arial,sans-serif">
+          <text x="34" y="275" fill="var(--brand-teal)" font-size="15" font-weight="700" letter-spacing="2">KILIFI CREEK</text>
+          <text x="468" y="42" fill="var(--brand-teal)" font-size="13" font-weight="700" letter-spacing="2">MNARANI</text>
+          <path d="M431 76c-28 0-50 22-50 50 0 38 50 82 50 82s50-44 50-82c0-28-22-50-50-50Zm0 72a22 22 0 1 1 0-44 22 22 0 0 1 0 44Z" fill="#EA4335" stroke="#fff" stroke-width="6"/>
+          <path d="M431 208v17" stroke="var(--brand-teal)" stroke-width="3" stroke-linecap="round"/>
+          <rect x="315" y="225" width="232" height="60" rx="13" fill="var(--brand-teal)"/>
+          <text x="431" y="248" fill="var(--brand-yellow)" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1.4">FESTIVAL HEADQUARTERS</text>
+          <text x="431" y="270" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">THE TERRACE ART SPACE</text>
+        </g>
+      </svg>
     </div>
     <div class="venue-location-copy"><span>Festival Headquarters</span><strong>The Terrace Art Space</strong><p>Mnarani, Bandari Beach, Kilifi</p></div>
     <div class="venue-actions"><a class="venue-action venue-open" href="${maps}" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a><a class="venue-action venue-directions" href="${directions}" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a></div>
