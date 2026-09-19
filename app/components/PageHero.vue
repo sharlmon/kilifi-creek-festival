@@ -63,7 +63,10 @@ useHead(() => {
   .hero-content { padding:140px 24px 24px; }
   .hero-title { padding-bottom:22px; }
   .hero h1 { font-size:clamp(58px,12vw,84px); }
-  .home-hero h1 { font-size:clamp(62px,14vw,96px); }
+  .home-hero .hero-content { position:static; padding:0; }
+  .home-hero .hero-title { position:absolute; z-index:2; top:104px; left:24px; right:24px; padding:0; }
+  .home-hero h1 { font-size:clamp(58px,17vw,70px); line-height:.92; }
+  .home-hero .hero-details { position:absolute; z-index:2; left:24px; right:24px; bottom:24px; }
   .hero-details { flex-wrap:wrap; gap:10px 24px; padding:14px; }
   .hero .eyebrow { font-size:10px; letter-spacing:.08em; }
   .hero-location { font-size:11px; }
@@ -72,7 +75,9 @@ useHead(() => {
 @media(max-width:360px) {
   .hero-content { padding-inline:20px; }
   .hero h1 { font-size:56px; }
-  .home-hero h1 { font-size:60px; }
+  .home-hero .hero-title { top:98px; left:20px; right:20px; }
+  .home-hero .hero-details { left:20px; right:20px; bottom:20px; }
+  .home-hero h1 { font-size:56px; }
 }
 @supports not (backdrop-filter:blur(1px)) {
   .hero-details { background:#17181dd9; }

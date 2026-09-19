@@ -143,11 +143,18 @@ html { scroll-padding-top:104px; }
 @media(max-width:1023px) {
   .site-header { top:8px; left:8px; right:8px; height:68px; }
   .site-header.scrolled { top:6px; height:58px; }
-  .site-header .header-inner { padding:0 12px; gap:12px; }
+  .site-header .header-inner { display:grid; grid-template-columns:72px minmax(0,1fr) 72px; padding:0 12px; gap:8px; }
+  .site-header .home-logo { position:relative; z-index:32; grid-column:2; grid-row:1; justify-self:center; line-height:0; }
+  .site-header .header-actions { display:contents; }
+  .site-header .menu-toggle { grid-column:1; grid-row:1; justify-self:start; }
+  .site-header .theme-control { position:relative; z-index:32; grid-column:3; grid-row:1; justify-self:end; }
   .site-header .brand-logo { width:56px; height:62px; }
   .site-header.scrolled .brand-logo { width:44px; height:50px; }
   .site-header nav.open { font-size:18px; gap:10px; }
   html { scroll-padding-top:92px; }
+}
+@media(max-width:360px) {
+  .site-header .header-inner { grid-template-columns:68px minmax(0,1fr) 68px; padding-inline:10px; gap:4px; }
 }
 @media(prefers-reduced-motion:reduce) {
   .site-header,.site-header .brand-logo { transition:none; }
