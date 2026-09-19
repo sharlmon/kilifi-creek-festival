@@ -5,7 +5,10 @@ export function sectionNavigation(html: string, prefix: string, subheadings = fa
   const updated = html.replace(/<h([123])([^>]*)>([\s\S]*?)<\/h\1>/g, (heading, level, attributes, text) => {
     if (level === '3' && !subheadings) return heading
     const id = attributes.match(/\bid="([^"]+)"/)?.[1] || `${prefix}-${items.length + 1}`
-    items.push({ id, label: decode(text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()) })
+    // Navigation labels are rendered as text. Reject markup instead of trying to
+    // strip it with an incomplete HTML parser.
+    if (/[<>]/.test(text)) throw new Error('Heading markup is not supported in section navigation.')
+    items.push({ id, label: decode(text).replace(/\s+/g, ' ').trim() })
     return `<h${level}${attributes}${attributes.includes('id="') ? '' : ` id="${id}"`} tabindex="-1">${text}</h${level}>`
   })
   return { html:updated, items }
