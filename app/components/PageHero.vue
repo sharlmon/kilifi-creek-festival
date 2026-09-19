@@ -16,7 +16,7 @@ useHead(() => {
     <div class="hero-content">
       <div class="hero-title">
         <p v-if="!home" class="festival-lockup">KILIFI CREEK FESTIVAL</p>
-        <h1 v-if="home">KILIFI CREEK<br /><span>FESTIVAL</span></h1>
+        <h1 v-if="home">KILIFI CREEK FESTIVAL</h1>
         <h1 v-else>{{ title }}</h1>
       </div>
       <div class="hero-details">
@@ -41,14 +41,19 @@ useHead(() => {
   background:#17181d;
   color:#fff;
 }
-.home-hero { min-height:clamp(600px,85svh,880px); }
+.home-hero { min-height:clamp(720px,92svh,920px); padding-top:168px; background:linear-gradient(100deg,var(--brand-teal) 0 72%,#07544a 100%); }
+.home-hero .hero-image { top:168px; height:calc(100% - 168px); }
+.home-hero .hero-shade { top:168px; }
+.home-hero .hero-content { position:absolute; inset:0; display:flex; flex-direction:column; padding-top:96px; }
+.home-hero .hero-title { display:flex; align-items:center; justify-content:center; min-height:72px; padding:0; text-align:center; }
+.home-hero .hero-details { margin-top:auto; }
 .hero-image { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
 /* Leave the upper photograph clear; shade only the area behind the title. */
 .hero-shade { pointer-events:none; position:absolute; inset:0; background:linear-gradient(180deg,transparent 35%,#10111528 55%,#101115c7 100%); }
 .hero-content { pointer-events:none; position:relative; width:100%; max-width:1440px; margin:0 auto; padding:180px clamp(24px,5vw,72px) 32px; }
 .hero-title { padding-bottom:26px; }
 .hero h1 { color:#fff; font:400 clamp(64px,7.5vw,110px)/.98 var(--font-display); letter-spacing:.015em; margin:0; text-shadow:0 2px 20px #00000035; overflow-wrap:anywhere; }
-.home-hero h1 { font-size:clamp(72px,8.5vw,128px); }
+.home-hero h1 { max-width:100%; font-size:clamp(50px,6.4vw,96px); line-height:.9; white-space:nowrap; text-shadow:0 3px 20px #0008; }
 .hero h1 span { color:#fff; }
 .festival-lockup { margin:0 0 16px; font:500 11px/1.6 var(--font-interface); letter-spacing:.15em; color:var(--brand-yellow); }
 .hero-details { pointer-events:auto; display:flex; align-items:center; gap:28px; padding:12px 16px; border:1px solid #ffffff30; border-radius:12px; background:#17181d50; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
@@ -59,13 +64,15 @@ useHead(() => {
 .hero .button { margin-left:auto; min-height:44px; padding:10px 20px; font-size:11px; border-radius:8px; gap:22px; white-space:nowrap; }
 @media(max-width:760px) {
   .hero { min-height:520px; }
-  .home-hero { min-height:640px; }
+  .home-hero { min-height:720px; padding-top:146px; }
+  .home-hero .hero-image { top:146px; height:calc(100% - 146px); }
+  .home-hero .hero-shade { top:146px; }
   .hero-content { padding:140px 24px 24px; }
   .hero-title { padding-bottom:22px; }
   .hero h1 { font-size:clamp(58px,12vw,84px); }
-  .home-hero .hero-content { position:static; padding:0; }
-  .home-hero .hero-title { position:absolute; z-index:2; top:104px; left:24px; right:24px; padding:0; }
-  .home-hero h1 { font-size:clamp(58px,17vw,70px); line-height:.92; }
+  .home-hero .hero-content { position:absolute; padding:82px 24px 24px; }
+  .home-hero .hero-title { min-height:64px; }
+  .home-hero h1 { font-size:clamp(29px,8.5vw,44px); line-height:.9; }
   .home-hero .hero-details { position:absolute; z-index:2; left:24px; right:24px; bottom:24px; }
   .hero-details { flex-wrap:wrap; gap:10px 24px; padding:14px; }
   .hero .eyebrow { font-size:10px; letter-spacing:.08em; }
@@ -75,9 +82,8 @@ useHead(() => {
 @media(max-width:360px) {
   .hero-content { padding-inline:20px; }
   .hero h1 { font-size:56px; }
-  .home-hero .hero-title { top:98px; left:20px; right:20px; }
   .home-hero .hero-details { left:20px; right:20px; bottom:20px; }
-  .home-hero h1 { font-size:56px; }
+  .home-hero h1 { font-size:29px; }
 }
 @supports not (backdrop-filter:blur(1px)) {
   .hero-details { background:#17181dd9; }

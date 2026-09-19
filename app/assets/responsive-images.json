@@ -1052,6 +1052,38 @@
       }
     ]
   },
+  "/assets/static/images/team/tony-kruz.webp": {
+    "width": 1593,
+    "height": 2048,
+    "sourceBytes": 139354,
+    "variants": [
+      {
+        "src": "/assets/responsive/d0dbd374c2455af7-320.webp",
+        "width": 320,
+        "bytes": 8224
+      },
+      {
+        "src": "/assets/responsive/d0dbd374c2455af7-640.webp",
+        "width": 640,
+        "bytes": 27972
+      },
+      {
+        "src": "/assets/responsive/d0dbd374c2455af7-960.webp",
+        "width": 960,
+        "bytes": 52636
+      },
+      {
+        "src": "/assets/responsive/d0dbd374c2455af7-1440.webp",
+        "width": 1440,
+        "bytes": 77276
+      },
+      {
+        "src": "/assets/responsive/d0dbd374c2455af7-1593.webp",
+        "width": 1593,
+        "bytes": 90910
+      }
+    ]
+  },
   "/assets/industry/W0700971.jpg.jpeg.webp": {
     "width": 3029,
     "height": 2272,
