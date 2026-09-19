@@ -19,6 +19,7 @@ for(const [file,path] of Object.entries(routes)) {
     assert(!html.includes('output=embed'),'Google Maps iframe should not load with the page')
     assert(!html.includes('title="The Terrace Kilifi location"'),'Interactive map iframe should be replaced')
     assert(html.includes('Open in Google Maps') && html.includes('Get directions'),'Lightweight venue card actions must render')
+    assert(html.includes('fill="#EA4335"'),'Location card must use the familiar red map pin')
   }
   if(path === '/') {
     assert(/<h1[^>]*>KILIFI CREEK FESTIVAL<\/h1>/.test(html),'Homepage title must remain on one line')
