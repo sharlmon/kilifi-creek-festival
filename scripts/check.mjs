@@ -35,7 +35,7 @@ for(const [file,path] of Object.entries(routes)) {
   }
   if(path === '/') {
     assert(/<h1[^>]*>KILIFI CREEK FESTIVAL<\/h1>/.test(html),'Homepage title must remain on one line')
-    for(const phrase of ['OUR 2026 HIGHLIGHTS','2,500','On site guests','33','Films screened','120','Creatives trained']) assert(html.includes(phrase),`Missing supplied 2026 highlight: ${phrase}`)
+    for(const phrase of ['OUR 2025 HIGHLIGHTS','2,500','On site guests','33','Films screened','120','Creatives trained']) assert(html.includes(phrase),`Missing supplied 2025 highlight: ${phrase}`)
     for(const phrase of ['MARCH 3','CALL FOR ENTRIES OPENS','MARCH 31','EARLY BIRD DEADLINE','MAY 31','REGULAR DEADLINE','JULY 20','LATE DEADLINE','AUGUST 14','EXTENDED DEADLINE','AUGUST 31','NOTIFICATION DATE','SUBMIT YOUR FILM HERE:']) {
       assert(html.includes(phrase), `Missing original poster text: ${phrase}`)
     }

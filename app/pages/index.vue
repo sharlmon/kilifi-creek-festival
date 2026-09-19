@@ -7,7 +7,7 @@ const home = content.home
 // The sections are extracted from the original HTML without rewriting their copy.
 const headquarters = home.sections.find(s => s.includes('FESTIVAL HEADQUARTERS'))!
 const partners = home.sections.find(s => s.includes('Partners &amp; Brands'))!
-const shortcuts = [{id:'highlights-heading',label:'OUR 2026 HIGHLIGHTS'}, {id:'partners',label:'Partners & Brands'}, {id:'submissions',label:'CALL FOR SUBMISSIONS'}, {id:'festival-team',label:'Festival Team'}, {id:'headquarters',label:'FESTIVAL HEADQUARTERS'}]
+const shortcuts = [{id:'highlights-heading',label:'OUR 2025 HIGHLIGHTS'}, {id:'partners',label:'Partners & Brands'}, {id:'submissions',label:'CALL FOR SUBMISSIONS'}, {id:'festival-team',label:'Festival Team'}, {id:'headquarters',label:'FESTIVAL HEADQUARTERS'}]
 </script>
 <template>
   <PageHero home />
