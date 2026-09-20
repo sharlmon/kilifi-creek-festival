@@ -520,6 +520,80 @@
       }
     ]
   },
+  "/assets/drive-2026/industry-hero.jpg": {
+    "width": 2000,
+    "height": 1333,
+    "sourceBytes": 2482070,
+    "variants": [
+      {
+        "src": "/assets/responsive/7c2abe28c65f5fb6-320.webp",
+        "width": 320,
+        "bytes": 12982
+      },
+      {
+        "src": "/assets/responsive/7c2abe28c65f5fb6-640.webp",
+        "width": 640,
+        "bytes": 45396
+      },
+      {
+        "src": "/assets/responsive/7c2abe28c65f5fb6-960.webp",
+        "width": 960,
+        "bytes": 93336
+      },
+      {
+        "src": "/assets/responsive/7c2abe28c65f5fb6-1440.webp",
+        "width": 1440,
+        "bytes": 171732
+      },
+      {
+        "src": "/assets/responsive/7c2abe28c65f5fb6-1920.webp",
+        "width": 1920,
+        "bytes": 282402
+      },
+      {
+        "src": "/assets/responsive/7c2abe28c65f5fb6-2000.webp",
+        "width": 2000,
+        "bytes": 320722
+      }
+    ]
+  },
+  "/assets/drive-2026/team-hero.jpg": {
+    "width": 2000,
+    "height": 1600,
+    "sourceBytes": 3826868,
+    "variants": [
+      {
+        "src": "/assets/responsive/e268ffab0ad01ff5-320.webp",
+        "width": 320,
+        "bytes": 21068
+      },
+      {
+        "src": "/assets/responsive/e268ffab0ad01ff5-640.webp",
+        "width": 640,
+        "bytes": 71614
+      },
+      {
+        "src": "/assets/responsive/e268ffab0ad01ff5-960.webp",
+        "width": 960,
+        "bytes": 146132
+      },
+      {
+        "src": "/assets/responsive/e268ffab0ad01ff5-1440.webp",
+        "width": 1440,
+        "bytes": 270992
+      },
+      {
+        "src": "/assets/responsive/e268ffab0ad01ff5-1920.webp",
+        "width": 1920,
+        "bytes": 445132
+      },
+      {
+        "src": "/assets/responsive/e268ffab0ad01ff5-2000.webp",
+        "width": 2000,
+        "bytes": 506074
+      }
+    ]
+  },
   "/assets/aboutpage/W0701861.jpeg.webp": {
     "width": 4744,
     "height": 3558,

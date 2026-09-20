@@ -51,7 +51,11 @@ for(const {file,path} of routeRecords) {
   if(file) {
     const originalHero = original.match(/bg-\[url\(['"]?\.\/([^'"\)\]]+)/)?.[1]
     const renderedHero = html.match(/<img[^>]*class="hero-image"[^>]*>/)?.[0].match(/data-image-original="([^"]+)"/)?.[1]
-    const expectedHero = path === '/' ? assetMap['home-hero-2026.jpg'] : assetMap[originalHero]
+    const suppliedHero = {
+      '/industry': assetMap['drive-2026/industry-hero.jpg'],
+      '/team': assetMap['drive-2026/team-hero.jpg']
+    }[path]
+    const expectedHero = suppliedHero || (path === '/' ? assetMap['home-hero-2026.jpg'] : assetMap[originalHero])
     assert.equal(renderedHero, expectedHero, `Expected hero image must render on ${path}`)
   }
   assert(html.includes('rel="preload" as="image"'),'Hero should be discovered from the document head')
