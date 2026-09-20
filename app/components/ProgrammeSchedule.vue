@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const days = [
-  { weekday: 'FRIDAY', date: '23 OCTOBER 2026', venues: ['THE TERRACE ARTS SPACE'] },
-  { weekday: 'SATURDAY', date: '24 OCTOBER 2026', venues: ['SALTY’S ON THE CREEK', 'OLD FERRY'] },
-  { weekday: 'SUNDAY', date: '25 OCTOBER 2026', venues: ['MEKATILILI DHOW', 'KILIFI CLUB'] },
-  { weekday: 'MONDAY', date: '26 OCTOBER 2026', venues: ['DISTANT RELATIVES'] },
-  { weekday: 'TUESDAY', date: '27 OCTOBER 2026', venues: ['THE TERRACE ARTS SPACE'] },
-  { weekday: 'WEDNESDAY', date: '28 OCTOBER 2026', venues: ['NZOMBERE COMMUNITY CENTER'] },
-  { weekday: 'THURSDAY', date: '29 OCTOBER 2026', venues: ['THE TERRACE RESIDENCY'] },
-  { weekday: 'FRIDAY', date: '30 OCTOBER 2026', venues: ['VIPINGO RIDGE BEACH CLUB'] },
-  { weekday: 'SATURDAY', date: '31 OCTOBER 2026', venues: ['THE TERRACE ARTS SPACE'] }
+  { weekday: 'FRIDAY', date: '23 OCTOBER 2026' },
+  { weekday: 'SATURDAY', date: '24 OCTOBER 2026' },
+  { weekday: 'SUNDAY', date: '25 OCTOBER 2026' },
+  { weekday: 'MONDAY', date: '26 OCTOBER 2026' },
+  { weekday: 'TUESDAY', date: '27 OCTOBER 2026' },
+  { weekday: 'WEDNESDAY', date: '28 OCTOBER 2026' },
+  { weekday: 'THURSDAY', date: '29 OCTOBER 2026' },
+  { weekday: 'FRIDAY', date: '30 OCTOBER 2026' },
+  { weekday: 'SATURDAY', date: '31 OCTOBER 2026' }
 ]
 
 const tracks = [
@@ -30,7 +30,7 @@ const tracks = [
         <div>
           <p class="programme-kicker">23–31 OCTOBER 2026</p>
           <h2 id="programme-title">FESTIVAL AND INDUSTRY PROGRAM</h2>
-          <p class="programme-intro">Select a day to view its festival screenings and industry sessions. The venues below are drawn from the draft programme; confirmed sessions and times will be added as they become available.</p>
+          <p class="programme-intro">Select a day to view its festival screenings and industry sessions. Venue and time details will be updated once they are confirmed.</p>
         </div>
         <p class="programme-status"><span aria-hidden="true"></span> PROGRAM COMING SOON</p>
       </header>
@@ -40,7 +40,7 @@ const tracks = [
           <summary>
             <span class="day-number">DAY {{ index + 1 }}</span>
             <span class="day-date"><strong>{{ day.weekday }}</strong><span>{{ day.date }}</span></span>
-            <span class="day-venues"><strong>VENUES</strong><span>{{ day.venues.join(' · ') }}</span></span>
+            <span class="day-venues"><strong>VENUES</strong><span>XXX</span></span>
             <span class="day-action"><span>VIEW DAY</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></span>
           </summary>
           <div class="programme-detail">
@@ -49,8 +49,8 @@ const tracks = [
               <h3>Schedule to be confirmed</h3>
               <p>{{ track.description }}</p>
               <dl>
-                <div><dt>Venue</dt><dd>{{ day.venues.join(', ') }}</dd></div>
-                <div><dt>Time</dt><dd>To be confirmed</dd></div>
+                <div><dt>Venue</dt><dd>XXX</dd></div>
+                <div><dt>Time</dt><dd>XXX</dd></div>
               </dl>
             </section>
           </div>

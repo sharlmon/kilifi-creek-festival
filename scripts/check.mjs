@@ -55,9 +55,11 @@ for(const {file,path} of routeRecords) {
   assert(html.includes('rel="preload" as="image"'),'Hero should be discovered from the document head')
   const text=norm(clean(html).replace(/<[^>]+>/g,' '))
   if(path === '/screenings') {
-    for(const phrase of ['FESTIVAL AND INDUSTRY PROGRAM','23–31 OCTOBER 2026','FRIDAY','23 OCTOBER 2026','SATURDAY','24 OCTOBER 2026','SUNDAY','25 OCTOBER 2026','MONDAY','26 OCTOBER 2026','TUESDAY','27 OCTOBER 2026','WEDNESDAY','28 OCTOBER 2026','THURSDAY','29 OCTOBER 2026','FRIDAY','30 OCTOBER 2026','SATURDAY','31 OCTOBER 2026','Festival Screenings','Industry Sessions','Venue','To be confirmed','THE TERRACE ARTS SPACE','SALTY’S ON THE CREEK','MEKATILILI DHOW','DISTANT RELATIVES','NZOMBERE COMMUNITY CENTER','THE TERRACE RESIDENCY','VIPINGO RIDGE BEACH CLUB']) assert(text.includes(phrase),`Missing 2026 programme content: ${phrase}`)
+    for(const phrase of ['FESTIVAL AND INDUSTRY PROGRAM','23–31 OCTOBER 2026','FRIDAY','23 OCTOBER 2026','SATURDAY','24 OCTOBER 2026','SUNDAY','25 OCTOBER 2026','MONDAY','26 OCTOBER 2026','TUESDAY','27 OCTOBER 2026','WEDNESDAY','28 OCTOBER 2026','THURSDAY','29 OCTOBER 2026','FRIDAY','30 OCTOBER 2026','SATURDAY','31 OCTOBER 2026','Festival Screenings','Industry Sessions','Venue','Time','XXX']) assert(text.includes(phrase),`Missing 2026 programme content: ${phrase}`)
     assert.equal([...html.matchAll(/class="programme-day"/g)].length,9,'Nine programme days must render')
     assert.equal([...html.matchAll(/class="programme-track"/g)].length,18,'Screenings and Industry tracks must render for every day')
+    assert.equal([...html.matchAll(/<dd[^>]*>XXX<\/dd>/g)].length,36,'Every programme venue and time must use the XXX placeholder')
+    for(const staleVenue of ['THE TERRACE ARTS SPACE','SALTY’S ON THE CREEK','MEKATILILI DHOW','DISTANT RELATIVES','NZOMBERE COMMUNITY CENTER','THE TERRACE RESIDENCY','VIPINGO RIDGE BEACH CLUB']) assert(!text.includes(staleVenue),`Draft venue must not remain: ${staleVenue}`)
     assert(!text.includes('Submit Your Film'),'Outdated programme submission call to action remains')
     assert(!text.includes('School screenings'),'Unconfirmed school screenings must remain omitted')
   }
