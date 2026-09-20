@@ -112,7 +112,7 @@ for(const {file,path} of routeRecords) {
   }
 }
 for(const [path,phrases] of Object.entries({
-  '/partners':['Partner With Kilifi Creek Festival','Our 2026 Reach','What Partner Support Enables','CONFIRMED KCF 2026 PARTNERS','Goethe-Institut','EUNIC — EU National Institutes for Culture','British Council','Movies That Matter','Sauti Sessions','Distant Relatives','Contact the Partnerships Team'],
+  '/partners':['Partner With Kilifi Creek Festival','Our 2026 Reach','What Partner Support Enables','CONFIRMED KCF 2026 PARTNERS','Goethe-Institut','EUNIC — EU National Institutes for Culture','British Council','Movies That Matter','Sauti Sessions','Distant Relatives','Chicken &amp; Egg Films','Contact the Partnerships Team'],
   '/visit':['Plan Your Time in Kilifi','The Terrace Art Space','Open in Google Maps','VISITOR ENQUIRIES'],
   '/impact':['Artistic Exchange With Lasting Value','Growing Kilifi’s Creative Economy','KCF 2026 AUDIENCE STRATEGY','2026 Impact Metrics'],
   '/why-kilifi':['Most festivals happen in cities.','KCF happens on the water.','The Kilifi Story','Nature Is Part of the Programme']
