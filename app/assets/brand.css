@@ -41,7 +41,6 @@ h1,h2,h3,.original-content h1,.profile h3 { text-transform:none; }
 .site-header::before { background:color-mix(in srgb,var(--brand-header-green) 86%,transparent); }
 .site-header.scrolled::before { background:color-mix(in srgb,var(--brand-header-green) 96%,transparent); }
 .site-header nav.open { background:color-mix(in srgb,var(--brand-header-green) 98%,transparent); }
-.brand-logo { background:#fff; border:1px solid #ffffff70; border-radius:12px; }
 .site-header .brand-logo { width:76px; height:76px; }
 .site-header.scrolled .brand-logo { width:60px; height:60px; }
 .site-header a:hover { color:var(--brand-yellow); }
