@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { imageAttributes } from '~/utils/images'
-withDefaults(defineProps<{ light?: boolean }>(), { light: false })
+const props = withDefaults(defineProps<{ light?: boolean, compact?: boolean }>(), { light: false, compact: false })
+const source = computed(() => props.compact ? '/assets/brand/header-icon.png' : props.light ? '/assets/brand/logo-light.png' : '/assets/brand/logo-dark.png')
 </script>
-<template><span class="brand-logo"><img :src="light ? '/assets/brand/logo-light.png' : '/assets/brand/logo-dark.png'" alt="Kilifi Creek Festival Logo" v-bind="imageAttributes(light ? '/assets/brand/logo-light.png' : '/assets/brand/logo-dark.png', '160px')" loading="eager" /></span></template>
+<template><span class="brand-logo" :class="{ 'brand-logo-compact': compact }"><img :src="source" alt="Kilifi Creek Festival logo" v-bind="imageAttributes(source, '160px')" loading="eager" /></span></template>

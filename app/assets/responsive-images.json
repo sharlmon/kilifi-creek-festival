@@ -1084,6 +1084,33 @@
       }
     ]
   },
+  "/assets/static/images/team/tony-kruz-color.png": {
+    "width": 1244,
+    "height": 1600,
+    "sourceBytes": 2807592,
+    "variants": [
+      {
+        "src": "/assets/responsive/8ada3f2f9d91e254-320.webp",
+        "width": 320,
+        "bytes": 9774
+      },
+      {
+        "src": "/assets/responsive/8ada3f2f9d91e254-640.webp",
+        "width": 640,
+        "bytes": 29744
+      },
+      {
+        "src": "/assets/responsive/8ada3f2f9d91e254-960.webp",
+        "width": 960,
+        "bytes": 54252
+      },
+      {
+        "src": "/assets/responsive/8ada3f2f9d91e254-1244.webp",
+        "width": 1244,
+        "bytes": 76148
+      }
+    ]
+  },
   "/assets/industry/W0700971.jpg.jpeg.webp": {
     "width": 3029,
     "height": 2272,
@@ -1512,6 +1539,23 @@
         "src": "/assets/responsive/3ac6479c70801bb7-320.webp",
         "width": 320,
         "bytes": 30616
+      }
+    ]
+  },
+  "/assets/brand/header-icon.png": {
+    "width": 3000,
+    "height": 3000,
+    "sourceBytes": 361187,
+    "variants": [
+      {
+        "src": "/assets/responsive/0a120193b6fd19f2-160.webp",
+        "width": 160,
+        "bytes": 10632
+      },
+      {
+        "src": "/assets/responsive/0a120193b6fd19f2-320.webp",
+        "width": 320,
+        "bytes": 24234
       }
     ]
   }

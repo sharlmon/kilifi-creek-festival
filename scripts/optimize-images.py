@@ -6,7 +6,7 @@ import hashlib, json
 root = Path(__file__).resolve().parents[1]
 asset_map = json.loads((root / 'app/assets/asset-map.json').read_text())
 sources = {url: root / 'public/assets' / name for name, url in asset_map.items()}
-for name in ('logo-light.png', 'logo-dark.png'):
+for name in ('logo-light.png', 'logo-dark.png', 'header-icon.png'):
     sources['/assets/brand/' + name] = root / 'public/assets/brand' / name
 out = root / 'public/assets/responsive'
 out.mkdir(exist_ok=True)

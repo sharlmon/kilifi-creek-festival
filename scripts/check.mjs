@@ -91,7 +91,7 @@ for(const {file,path} of routeRecords) {
         assert(text.includes(phrase), `Missing supplied team profile content: ${profile.name}: ${phrase.slice(0,100)}`)
       }
     }
-    assert(html.includes(`data-image-original="${assetMap['static/images/team/tony-kruz.webp']}"`),'Tony Kruz portrait must render as an expandable profile image')
+    assert(html.includes(`data-image-original="${assetMap['static/images/team/tony-kruz-color.png']}"`),'Tony Kruz colour portrait must render as an expandable profile image')
   }
   for(const match of original.matchAll(/>([^<>]+)</g)) {
     // The user requested replacing the decorative submission-button emoji with SVG.
