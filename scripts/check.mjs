@@ -44,6 +44,8 @@ for(const {file,path} of routeRecords) {
     for(const stale of ['CALL FOR ENTRIES OPENS','EARLY BIRD DEADLINE','REGULAR DEADLINE','LATE DEADLINE','EXTENDED DEADLINE','SUBMIT YOUR FILM HERE:','Submit on FilmFreeway']) assert(!html.includes(stale),`Outdated submission content remains: ${stale}`)
     assert(html.includes(`data-image-original="${assetMap['home-hero-2026.jpg']}"`),'Homepage must use the supplied high-resolution hero image')
     assert(html.includes(`data-image-original="${assetMap['home.jpg']}"`),'Homepage introduction must retain its existing festival photograph')
+    assert(html.includes(`data-image-original="${assetMap['drive-2026/festival-discussion.jpg']}"`),'Homepage must use the supplied festival discussion photograph')
+    assert(html.includes(`data-image-original="${assetMap['drive-2026/outdoor-screening.jpg']}"`),'Homepage must use the supplied outdoor screening photograph')
   }
   const original=file ? clean((await readFile(new URL('scripts/source-copy/'+file,root),'utf8')).split('<body')[1].split('</body>')[0]) : ''
   if(file) {
@@ -71,6 +73,13 @@ for(const {file,path} of routeRecords) {
       }
     }
     assert(html.includes(`data-image-original="${assetMap['static/images/team/tony-kruz-color.png']}"`),'Tony Kruz colour portrait must render as an expandable profile image')
+  }
+  if(path === '/about') {
+    assert(html.includes(`data-image-original="${assetMap['drive-2026/community-audience.jpg']}"`),'About page must use the supplied community audience photograph')
+  }
+  if(path === '/industry') {
+    assert(html.includes(`data-image-original="${assetMap['drive-2026/industry-panel.jpg']}"`),'Industry page must use the supplied panel photograph')
+    assert(html.includes(`data-image-original="${assetMap['drive-2026/industry-workshop.jpg']}"`),'Industry page must use the supplied workshop photograph')
   }
   for(const match of original.matchAll(/>([^<>]+)</g)) {
     // The user requested replacing the decorative submission-button emoji with SVG.

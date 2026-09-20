@@ -335,6 +335,191 @@
       }
     ]
   },
+  "/assets/drive-2026/festival-discussion.jpg": {
+    "width": 2000,
+    "height": 1600,
+    "sourceBytes": 2653565,
+    "variants": [
+      {
+        "src": "/assets/responsive/535f7bde907750c3-320.webp",
+        "width": 320,
+        "bytes": 13200
+      },
+      {
+        "src": "/assets/responsive/535f7bde907750c3-640.webp",
+        "width": 640,
+        "bytes": 39472
+      },
+      {
+        "src": "/assets/responsive/535f7bde907750c3-960.webp",
+        "width": 960,
+        "bytes": 73440
+      },
+      {
+        "src": "/assets/responsive/535f7bde907750c3-1440.webp",
+        "width": 1440,
+        "bytes": 123742
+      },
+      {
+        "src": "/assets/responsive/535f7bde907750c3-1920.webp",
+        "width": 1920,
+        "bytes": 197286
+      },
+      {
+        "src": "/assets/responsive/535f7bde907750c3-2000.webp",
+        "width": 2000,
+        "bytes": 229036
+      }
+    ]
+  },
+  "/assets/drive-2026/outdoor-screening.jpg": {
+    "width": 2000,
+    "height": 1333,
+    "sourceBytes": 3026823,
+    "variants": [
+      {
+        "src": "/assets/responsive/483605dffd5914be-320.webp",
+        "width": 320,
+        "bytes": 21686
+      },
+      {
+        "src": "/assets/responsive/483605dffd5914be-640.webp",
+        "width": 640,
+        "bytes": 73078
+      },
+      {
+        "src": "/assets/responsive/483605dffd5914be-960.webp",
+        "width": 960,
+        "bytes": 142344
+      },
+      {
+        "src": "/assets/responsive/483605dffd5914be-1440.webp",
+        "width": 1440,
+        "bytes": 246082
+      },
+      {
+        "src": "/assets/responsive/483605dffd5914be-1920.webp",
+        "width": 1920,
+        "bytes": 407880
+      },
+      {
+        "src": "/assets/responsive/483605dffd5914be-2000.webp",
+        "width": 2000,
+        "bytes": 470816
+      }
+    ]
+  },
+  "/assets/drive-2026/community-audience.jpg": {
+    "width": 2000,
+    "height": 1333,
+    "sourceBytes": 2430485,
+    "variants": [
+      {
+        "src": "/assets/responsive/f0f5e4074124451a-320.webp",
+        "width": 320,
+        "bytes": 17684
+      },
+      {
+        "src": "/assets/responsive/f0f5e4074124451a-640.webp",
+        "width": 640,
+        "bytes": 49146
+      },
+      {
+        "src": "/assets/responsive/f0f5e4074124451a-960.webp",
+        "width": 960,
+        "bytes": 85842
+      },
+      {
+        "src": "/assets/responsive/f0f5e4074124451a-1440.webp",
+        "width": 1440,
+        "bytes": 135562
+      },
+      {
+        "src": "/assets/responsive/f0f5e4074124451a-1920.webp",
+        "width": 1920,
+        "bytes": 220554
+      },
+      {
+        "src": "/assets/responsive/f0f5e4074124451a-2000.webp",
+        "width": 2000,
+        "bytes": 252942
+      }
+    ]
+  },
+  "/assets/drive-2026/industry-panel.jpg": {
+    "width": 2000,
+    "height": 1333,
+    "sourceBytes": 1743337,
+    "variants": [
+      {
+        "src": "/assets/responsive/c436f3bc0ff850c7-320.webp",
+        "width": 320,
+        "bytes": 10254
+      },
+      {
+        "src": "/assets/responsive/c436f3bc0ff850c7-640.webp",
+        "width": 640,
+        "bytes": 29772
+      },
+      {
+        "src": "/assets/responsive/c436f3bc0ff850c7-960.webp",
+        "width": 960,
+        "bytes": 55208
+      },
+      {
+        "src": "/assets/responsive/c436f3bc0ff850c7-1440.webp",
+        "width": 1440,
+        "bytes": 89450
+      },
+      {
+        "src": "/assets/responsive/c436f3bc0ff850c7-1920.webp",
+        "width": 1920,
+        "bytes": 135682
+      },
+      {
+        "src": "/assets/responsive/c436f3bc0ff850c7-2000.webp",
+        "width": 2000,
+        "bytes": 146688
+      }
+    ]
+  },
+  "/assets/drive-2026/industry-workshop.jpg": {
+    "width": 2000,
+    "height": 1333,
+    "sourceBytes": 2272976,
+    "variants": [
+      {
+        "src": "/assets/responsive/9f1612df8c522ed8-320.webp",
+        "width": 320,
+        "bytes": 13588
+      },
+      {
+        "src": "/assets/responsive/9f1612df8c522ed8-640.webp",
+        "width": 640,
+        "bytes": 40696
+      },
+      {
+        "src": "/assets/responsive/9f1612df8c522ed8-960.webp",
+        "width": 960,
+        "bytes": 77666
+      },
+      {
+        "src": "/assets/responsive/9f1612df8c522ed8-1440.webp",
+        "width": 1440,
+        "bytes": 133044
+      },
+      {
+        "src": "/assets/responsive/9f1612df8c522ed8-1920.webp",
+        "width": 1920,
+        "bytes": 218292
+      },
+      {
+        "src": "/assets/responsive/9f1612df8c522ed8-2000.webp",
+        "width": 2000,
+        "bytes": 250440
+      }
+    ]
+  },
   "/assets/aboutpage/W0701861.jpeg.webp": {
     "width": 4744,
     "height": 3558,

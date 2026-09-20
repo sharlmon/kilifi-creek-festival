@@ -9,7 +9,20 @@ const route=useRoute()
 const slug=computed(()=>String(route.params.slug))
 const titles: Record<string,string>={about:'About',screenings:'2026 Programme',industry:'Industry',team:'Team',press:'Press',contact:'Contact'}
 const page=computed(()=>content[slug.value as keyof typeof content] as {html:string,title:string,description:string}|undefined)
-const presentation = computed(() => sectionNavigation(venueDetails(page.value?.html || ''), `section-${slug.value}`, ['team','industry'].includes(slug.value)))
+const sectionImageReplacements: Record<string, Record<string,string>> = {
+  about: {
+    '/assets/image6.jpg.webp': '/assets/drive-2026/community-audience.jpg'
+  },
+  industry: {
+    '/assets/image3.jpg.jpeg.webp': '/assets/drive-2026/industry-panel.jpg',
+    '/assets/imageB.jpg.webp': '/assets/drive-2026/industry-workshop.jpg'
+  }
+}
+const refreshedHtml = computed(() => Object.entries(sectionImageReplacements[slug.value] || {}).reduce(
+  (html, [source, replacement]) => html.replaceAll(source, replacement),
+  page.value?.html || ''
+))
+const presentation = computed(() => sectionNavigation(venueDetails(refreshedHtml.value), `section-${slug.value}`, ['team','industry'].includes(slug.value)))
 const shortcuts = computed(() => {
   if (slug.value === 'screenings') return [{ id:'programme', label:'2026 PROGRAMME' }, presentation.value.items[0]!]
   if (slug.value === 'team') return [...presentation.value.items, ...teamAdditions.map(profile => ({ id:`team-${profile.id}`, label:profile.name }))]
