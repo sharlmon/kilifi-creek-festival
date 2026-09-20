@@ -41,6 +41,9 @@ h1,h2,h3,.original-content h1,.profile h3 { text-transform:none; }
 .site-header::before { background:color-mix(in srgb,var(--brand-header-green) 86%,transparent); }
 .site-header.scrolled::before { background:color-mix(in srgb,var(--brand-header-green) 96%,transparent); }
 .site-header nav.open { background:color-mix(in srgb,var(--brand-header-green) 98%,transparent); }
+.brand-logo { background:#fff; border:1px solid #ffffff70; border-radius:12px; }
+.site-header .brand-logo { width:76px; height:76px; }
+.site-header.scrolled .brand-logo { width:60px; height:60px; }
 .site-header a:hover { color:var(--brand-yellow); }
 .site-header .button:hover { color:var(--brand-teal); }
 .theme-thumb { color:var(--brand-teal); }
@@ -66,4 +69,5 @@ h1,h2,h3,.original-content h1,.profile h3 { text-transform:none; }
 .highlight-label { margin:0; color:var(--text); font-size:18px; }
 @media(max-width:1000px) { .highlight-grid-goals { grid-template-columns:repeat(3,minmax(0,1fr)); } }
 @media(max-width:760px) { .brand-highlights { padding:36px 24px; } .highlight-grid,.highlight-grid-goals { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .highlight { padding:24px 12px; } .highlight-label { font-size:15px; } .highlight-value { font-size:28px; min-width:0; } .highlight-value-word { font-size:18px; } }
+@media(max-width:760px) { .site-header .brand-logo { width:64px; height:66px; } .site-header.scrolled .brand-logo { width:52px; height:54px; } }
 @media(max-width:520px) { .highlight-grid { grid-template-columns:1fr; } .highlight { display:flex; align-items:center; gap:20px; text-align:left; padding:20px; } .highlight-value { margin:0; min-width:110px; text-align:center; } }

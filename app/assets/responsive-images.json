@@ -1509,53 +1509,36 @@
     ]
   },
   "/assets/brand/logo-light.png": {
-    "width": 1200,
-    "height": 1200,
-    "sourceBytes": 278011,
+    "width": 3000,
+    "height": 3000,
+    "sourceBytes": 418984,
     "variants": [
       {
-        "src": "/assets/responsive/49af1269c26ebaf3-160.webp",
+        "src": "/assets/responsive/707a57cd0cd96adc-160.webp",
         "width": 160,
-        "bytes": 14750
+        "bytes": 14658
       },
       {
-        "src": "/assets/responsive/49af1269c26ebaf3-320.webp",
+        "src": "/assets/responsive/707a57cd0cd96adc-320.webp",
         "width": 320,
-        "bytes": 35256
+        "bytes": 34952
       }
     ]
   },
   "/assets/brand/logo-dark.png": {
-    "width": 1200,
-    "height": 1200,
-    "sourceBytes": 270053,
-    "variants": [
-      {
-        "src": "/assets/responsive/3ac6479c70801bb7-160.webp",
-        "width": 160,
-        "bytes": 12930
-      },
-      {
-        "src": "/assets/responsive/3ac6479c70801bb7-320.webp",
-        "width": 320,
-        "bytes": 30616
-      }
-    ]
-  },
-  "/assets/brand/header-icon.png": {
     "width": 3000,
     "height": 3000,
-    "sourceBytes": 361187,
+    "sourceBytes": 463875,
     "variants": [
       {
-        "src": "/assets/responsive/0a120193b6fd19f2-160.webp",
+        "src": "/assets/responsive/79e52216b2f4973e-160.webp",
         "width": 160,
-        "bytes": 10632
+        "bytes": 12888
       },
       {
-        "src": "/assets/responsive/0a120193b6fd19f2-320.webp",
+        "src": "/assets/responsive/79e52216b2f4973e-320.webp",
         "width": 320,
-        "bytes": 24234
+        "bytes": 30344
       }
     ]
   }
