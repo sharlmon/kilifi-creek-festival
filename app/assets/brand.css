@@ -8,9 +8,11 @@
   --orange:var(--brand-orange);
   --yellow:var(--brand-yellow);
   --sky:var(--brand-blue);
-  --font-display:'Afolkalips',Impact,'Arial Narrow',sans-serif;
-  --font-interface:'Lemon Milk','Century Gothic',Arial,sans-serif;
-  --font-body:'Lemon Milk',Arial,Helvetica,sans-serif;
+  --font-brand:'Afolkalips',Impact,'Arial Narrow',sans-serif;
+  --font-label:'Lemon Milk','Century Gothic',Arial,sans-serif;
+  --font-display:Georgia,'Times New Roman',serif;
+  --font-interface:'Century Gothic',Arial,sans-serif;
+  --font-body:Arial,Helvetica,sans-serif;
   --heading:var(--brand-teal);
   --link:var(--brand-teal);
   --focus:var(--brand-teal);
@@ -26,10 +28,13 @@
 @media(prefers-color-scheme:dark) {
   :root:not([data-theme='light']):not([data-theme='dark']) { --heading:#ffffff; --link:var(--brand-blue); --focus:var(--brand-yellow); --accent-text:var(--brand-yellow); }
 }
-body { font-family:var(--font-body); }
+body { font-family:var(--font-body); text-transform:none; }
 h1,h2,h3,.original-content h1,.profile h3 { font-family:var(--font-display); letter-spacing:.015em; font-weight:400; }
-.site-header nav,.button,.eyebrow,.festival-lockup,.programme-tools,.programme-results,.agenda-date,.session-venue,.submission-year,.milestone-date { font-family:var(--font-interface); }
-.theme-strip p,.partners-section h2 { font-family:var(--font-interface); font-style:normal; }
+.home-hero h1 { font-family:var(--font-brand); }
+.site-header nav,.site-footer nav,.button,.page-contact button,.programme-tools,.programme-results { font-family:var(--font-interface); text-transform:none; }
+.eyebrow,.festival-lockup,.agenda-date,.session-venue,.submission-year,.milestone-date,.partners-section h2,.copyright { font-family:var(--font-label); }
+.theme-strip p { font-family:var(--font-interface); font-style:normal; }
+h1,h2,h3,.original-content h1,.profile h3 { text-transform:none; }
 .button,.button-dark,.site-header .button,.page-contact button { background:var(--brand-yellow); color:var(--brand-teal); }
 .button:hover,.button-dark:hover,.page-contact button:hover { background:var(--brand-blue); color:var(--brand-teal); }
 .site-header::before { background:#033932b3; }
