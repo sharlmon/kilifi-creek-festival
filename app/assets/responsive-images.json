@@ -48,6 +48,43 @@
       }
     ]
   },
+  "/assets/home-hero-2026.jpg": {
+    "width": 2000,
+    "height": 1238,
+    "sourceBytes": 3110368,
+    "variants": [
+      {
+        "src": "/assets/responsive/32e132f7e5d4c540-320.webp",
+        "width": 320,
+        "bytes": 17932
+      },
+      {
+        "src": "/assets/responsive/32e132f7e5d4c540-640.webp",
+        "width": 640,
+        "bytes": 59404
+      },
+      {
+        "src": "/assets/responsive/32e132f7e5d4c540-960.webp",
+        "width": 960,
+        "bytes": 123840
+      },
+      {
+        "src": "/assets/responsive/32e132f7e5d4c540-1440.webp",
+        "width": 1440,
+        "bytes": 234566
+      },
+      {
+        "src": "/assets/responsive/32e132f7e5d4c540-1920.webp",
+        "width": 1920,
+        "bytes": 397550
+      },
+      {
+        "src": "/assets/responsive/32e132f7e5d4c540-2000.webp",
+        "width": 2000,
+        "bytes": 459106
+      }
+    ]
+  },
   "/assets/imageA.jpg.webp": {
     "width": 1280,
     "height": 960,

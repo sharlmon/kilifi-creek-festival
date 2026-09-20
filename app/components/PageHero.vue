@@ -2,7 +2,7 @@
 import { imageAttributes } from '~/utils/images'
 import assets from '~/assets/asset-map.json'
 const props = defineProps<{title?: string, home?: boolean, image?: string}>()
-const heroImage = computed(() => assets[(props.image || (props.home ? 'home.jpg' : 'image4.jpg')) as keyof typeof assets])
+const heroImage = computed(() => assets[(props.image || (props.home ? 'home-hero-2026.jpg' : 'image4.jpg')) as keyof typeof assets])
 const baseURL = useRuntimeConfig().app.baseURL
 useHead(() => {
   const image = imageAttributes(heroImage.value, '100vw', undefined, baseURL)

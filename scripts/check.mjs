@@ -42,19 +42,22 @@ for(const {file,path} of routeRecords) {
     for(const phrase of ['Set along the winding waters of Kilifi Creek','Through Creekside screenings','Join us from 23–31 October 2026','VIEW 2026 PROGRAMME','PARTNER WITH US','PLAN YOUR VISIT']) assert(html.includes(phrase),`Missing supplied homepage rewrite: ${phrase}`)
     for(const phrase of ['SUBMISSIONS CLOSED','Film Submissions Are Now Closed','The confirmed programme will be shared in due time.']) assert(html.includes(phrase),`Missing current submissions status: ${phrase}`)
     for(const stale of ['CALL FOR ENTRIES OPENS','EARLY BIRD DEADLINE','REGULAR DEADLINE','LATE DEADLINE','EXTENDED DEADLINE','SUBMIT YOUR FILM HERE:','Submit on FilmFreeway']) assert(!html.includes(stale),`Outdated submission content remains: ${stale}`)
+    assert(html.includes(`data-image-original="${assetMap['home-hero-2026.jpg']}"`),'Homepage must use the supplied high-resolution hero image')
+    assert(html.includes(`data-image-original="${assetMap['home.jpg']}"`),'Homepage introduction must retain its existing festival photograph')
   }
   const original=file ? clean((await readFile(new URL('scripts/source-copy/'+file,root),'utf8')).split('<body')[1].split('</body>')[0]) : ''
   if(file) {
     const originalHero = original.match(/bg-\[url\(['"]?\.\/([^'"\)\]]+)/)?.[1]
     const renderedHero = html.match(/<img[^>]*class="hero-image"[^>]*>/)?.[0].match(/data-image-original="([^"]+)"/)?.[1]
-    assert.equal(renderedHero, assetMap[originalHero], `Original hero image must be restored on ${path}`)
+    const expectedHero = path === '/' ? assetMap['home-hero-2026.jpg'] : assetMap[originalHero]
+    assert.equal(renderedHero, expectedHero, `Expected hero image must render on ${path}`)
   }
   assert(html.includes('rel="preload" as="image"'),'Hero should be discovered from the document head')
   const text=norm(clean(html).replace(/<[^>]+>/g,' '))
   if(path === '/screenings') {
-    for(const phrase of ['2026 Programme','TUESDAY','27 OCTOBER 2026','WEDNESDAY','28 OCTOBER 2026','THURSDAY','29 OCTOBER 2026','FRIDAY','30 OCTOBER 2026','SATURDAY','31 OCTOBER 2026','Festival Screenings','Industry Programme','Location','To be confirmed']) assert(text.includes(phrase),`Missing 2026 programme content: ${phrase}`)
-    assert.equal([...html.matchAll(/class="programme-day"/g)].length,5,'Five programme days must render')
-    assert.equal([...html.matchAll(/class="programme-track"/g)].length,10,'Screenings and Industry tracks must render for every day')
+    for(const phrase of ['FESTIVAL AND INDUSTRY PROGRAM','23–31 OCTOBER 2026','FRIDAY','23 OCTOBER 2026','SATURDAY','24 OCTOBER 2026','SUNDAY','25 OCTOBER 2026','MONDAY','26 OCTOBER 2026','TUESDAY','27 OCTOBER 2026','WEDNESDAY','28 OCTOBER 2026','THURSDAY','29 OCTOBER 2026','FRIDAY','30 OCTOBER 2026','SATURDAY','31 OCTOBER 2026','Festival Screenings','Industry Sessions','Venue','To be confirmed','THE TERRACE ARTS SPACE','SALTY’S ON THE CREEK','MEKATILILI DHOW','DISTANT RELATIVES','NZOMBERE COMMUNITY CENTER','THE TERRACE RESIDENCY','VIPINGO RIDGE BEACH CLUB']) assert(text.includes(phrase),`Missing 2026 programme content: ${phrase}`)
+    assert.equal([...html.matchAll(/class="programme-day"/g)].length,9,'Nine programme days must render')
+    assert.equal([...html.matchAll(/class="programme-track"/g)].length,18,'Screenings and Industry tracks must render for every day')
     assert(!text.includes('Submit Your Film'),'Outdated programme submission call to action remains')
     assert(!text.includes('School screenings'),'Unconfirmed school screenings must remain omitted')
   }
@@ -151,4 +154,4 @@ for(const font of Object.values(fonts)) {
   assert.equal(bytes.subarray(0,4).toString(),'wOF2','Font must be a valid WOFF2 container')
   assert.equal(bytes.length,font.webBytes,'Served font must match the supplied conversion')
 }
-console.log(`PASS: ${allRoutes.length} pages, 7 original hero images, ${phrases} retained original text phrases, ${assets} image references, ${links} local links, closed submissions status, five-day 2026 programme preview, confirmed partner logos, 7 legacy redirects, and 404 handling.`)
+console.log(`PASS: ${allRoutes.length} pages, 7 expected hero images, ${phrases} retained original text phrases, ${assets} image references, ${links} local links, closed submissions status, nine-day 2026 programme preview, confirmed partner logos, 7 legacy redirects, and 404 handling.`)
