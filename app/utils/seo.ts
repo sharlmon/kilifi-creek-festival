@@ -32,6 +32,22 @@ const pages: Record<string, { title: string, description: string }> = {
   '/contact': {
     title: 'Contact — Kilifi Creek Festival',
     description: 'Get in touch with the Kilifi Creek Festival team. Email comms@kilificreekfestival.com for enquiries and collaboration.'
+  },
+  '/partners': {
+    title: 'Partner With Us — Kilifi Creek Festival',
+    description: 'Partner with Kilifi Creek Festival to support cinema, skills development, coastal culture, community impact and sustainable creative growth.'
+  },
+  '/visit': {
+    title: 'Plan Your Visit — Kilifi Creek Festival',
+    description: 'Plan your visit to Kilifi Creek Festival, 23–31 October 2026 at Kilifi Creek, Kenya.'
+  },
+  '/impact': {
+    title: 'Community Impact — Kilifi Creek Festival',
+    description: 'Explore the community, artistic, economic, skills-development and environmental impact of Kilifi Creek Festival.'
+  },
+  '/why-kilifi': {
+    title: 'Why Kilifi — Kilifi Creek Festival',
+    description: 'Discover how Kilifi Creek, coastal heritage, dhow culture, community spaces and local creatives shape Kilifi Creek Festival.'
   }
 }
 

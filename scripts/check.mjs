@@ -5,14 +5,17 @@ const origin = process.env.CHECK_URL || 'http://127.0.0.1:3000'
 const assetMap = JSON.parse(await readFile(new URL('app/assets/asset-map.json', root), 'utf8'))
 const responsive=JSON.parse(await readFile(new URL('app/assets/responsive-images.json',root),'utf8'))
 const teamAdditions=JSON.parse(await readFile(new URL('app/assets/team-additions.json',root),'utf8'))
-const routes = {'index.html':'/','about-us.html':'/about','screenings.html':'/screenings','industry.html':'/industry','team.html':'/team','press.html':'/press','contact-us.html':'/contact'}
+const legacyRoutes = {'index.html':'/','about-us.html':'/about','screenings.html':'/screenings','industry.html':'/industry','team.html':'/team','press.html':'/press','contact-us.html':'/contact'}
+const addedRoutes = ['/partners','/visit','/impact','/why-kilifi']
+const routeRecords = [...Object.entries(legacyRoutes).map(([file,path])=>({file,path})),...addedRoutes.map(path=>({file:null,path}))]
+const allRoutes = routeRecords.map(({path})=>path)
 const publicSite='https://sharlmon.github.io/kilifi-creek-festival'
 const decode = s => s.replace(/&#(x[\da-f]+|\d+);/gi,(_,v)=>String.fromCodePoint(v[0].toLowerCase()==='x'?parseInt(v.slice(1),16):Number(v))).replace(/&(amp|quot|apos|lt|gt|nbsp|copy|rarr);/g,(_,v)=>({amp:'&',quot:'"',apos:"'",lt:'<',gt:'>',nbsp:' ',copy:'©',rarr:'→'}[v]))
 const clean = s => s.replace(/<!--[\s\S]*?-->/g,'').replace(/<(script|style)[\s\S]*?<\/\1>/g,'')
 const norm = s => decode(s).replace(/\s+/g,' ').trim()
 const failures=[]
 let phrases=0, assets=0, links=0
-for(const [file,path] of Object.entries(routes)) {
+for(const {file,path} of routeRecords) {
   const response=await fetch(origin+path)
   assert.equal(response.status,200,path)
   const html=await response.text()
@@ -35,7 +38,8 @@ for(const [file,path] of Object.entries(routes)) {
   }
   if(path === '/') {
     assert(/<h1[^>]*>KILIFI CREEK FESTIVAL<\/h1>/.test(html),'Homepage title must remain on one line')
-    for(const phrase of ['OUR 2025 HIGHLIGHTS','2,500','On site guests','33','Films screened','120','Creatives trained']) assert(html.includes(phrase),`Missing supplied 2025 highlight: ${phrase}`)
+    for(const phrase of ['OUR 2025 HIGHLIGHTS','1,000+','33','Films from 15 countries','47','Screenings across 7 venues','20+','Local businesses engaged','12','Filmmakers hosted','Hundreds','Reached through free community screenings','OUR 2026 GOALS','5,000','Creatives directly trained','14','Workshops and mentorship sessions','18','Panels and industry discussions']) assert(html.includes(phrase),`Missing supplied homepage impact content: ${phrase}`)
+    for(const phrase of ['Set along the winding waters of Kilifi Creek','Through Creekside screenings','Join us from 23–31 October 2026','SUBMIT A FILM','PARTNER WITH US','PLAN YOUR VISIT']) assert(html.includes(phrase),`Missing supplied homepage rewrite: ${phrase}`)
     for(const phrase of ['MARCH 3','CALL FOR ENTRIES OPENS','MARCH 31','EARLY BIRD DEADLINE','MAY 31','REGULAR DEADLINE','JULY 20','LATE DEADLINE','AUGUST 14','EXTENDED DEADLINE','AUGUST 31','NOTIFICATION DATE','SUBMIT YOUR FILM HERE:']) {
       assert(html.includes(phrase), `Missing original poster text: ${phrase}`)
     }
@@ -56,10 +60,12 @@ for(const [file,path] of Object.entries(routes)) {
       assert(calendar.includes(`SUMMARY:Kilifi Creek Festival - ${event.label}\r\n`),'Calendar must match milestone label')
     }
   }
-  const original=clean((await readFile(new URL('scripts/source-copy/'+file,root),'utf8')).split('<body')[1].split('</body>')[0])
-  const originalHero = original.match(/bg-\[url\(['"]?\.\/([^'"\)\]]+)/)?.[1]
-  const renderedHero = html.match(/<img[^>]*class="hero-image"[^>]*>/)?.[0].match(/data-image-original="([^"]+)"/)?.[1]
-  assert.equal(renderedHero, assetMap[originalHero], `Original hero image must be restored on ${path}`)
+  const original=file ? clean((await readFile(new URL('scripts/source-copy/'+file,root),'utf8')).split('<body')[1].split('</body>')[0]) : ''
+  if(file) {
+    const originalHero = original.match(/bg-\[url\(['"]?\.\/([^'"\)\]]+)/)?.[1]
+    const renderedHero = html.match(/<img[^>]*class="hero-image"[^>]*>/)?.[0].match(/data-image-original="([^"]+)"/)?.[1]
+    assert.equal(renderedHero, assetMap[originalHero], `Original hero image must be restored on ${path}`)
+  }
   assert(html.includes('rel="preload" as="image"'),'Hero should be discovered from the document head')
   const text=norm(clean(html).replace(/<[^>]+>/g,' '))
   if(path === '/screenings') {
@@ -91,6 +97,8 @@ for(const [file,path] of Object.entries(routes)) {
     // The user requested replacing the decorative submission-button emoji with SVG.
     const phrase=norm(match[1]); if(!phrase || phrase === '🎬') continue
     phrases++
+    const supersededHomepageIntro = 'Kilifi Creek Festival (KCF) is an artist-led, community-rooted film, arts and cultural festival set along the winding waters of Kilifi Creek, Kenya. In proud collaboration with The Terrace Consortium, KCF brings together established filmmakers, visionary artists, and local communities for a multi-day journey of film screenings, art exhibitions, fashion showcases, masterclasses, and public talks -- set in carefully curated venues along the creek, from intimate waterfront spaces to vibrant public gathering points. KCF is committed to celebrating and strengthening the link between coastal heritage and local communities.'
+    if(path==='/' && phrase===supersededHomepageIntro) continue
     if(!text.includes(phrase)) failures.push(`${path}: missing exact text ${phrase.slice(0,100)}`)
   }
   for(const [tag,src] of html.matchAll(/<img[^>]+src="([^"]+)"[^>]*>/g)) {
@@ -114,8 +122,17 @@ for(const [file,path] of Object.entries(routes)) {
       assert(html.includes(`id="${decode(href.slice(1))}"`),`Section shortcut target missing on ${path}: ${href}`)
       links++
     }
-    if(href.startsWith('/')&&!href.startsWith('/_nuxt')&&!href.startsWith('/assets')) { assert(Object.values(routes).includes(href),`Unexpected local link ${href}`); links++ }
+    if(href.startsWith('/')&&!href.startsWith('/_nuxt')&&!href.startsWith('/assets')) { assert(allRoutes.includes(href),`Unexpected local link ${href}`); links++ }
   }
+}
+for(const [path,phrases] of Object.entries({
+  '/partners':['Partner With Kilifi Creek Festival','Our 2026 Reach','What Partner Support Enables','CONFIRMED KCF 2026 PARTNERS','Contact the Partnerships Team'],
+  '/visit':['Plan Your Time in Kilifi','The Terrace Art Space','Open in Google Maps','VISITOR ENQUIRIES'],
+  '/impact':['Artistic Exchange With Lasting Value','Growing Kilifi’s Creative Economy','KCF 2026 AUDIENCE STRATEGY','2026 Impact Metrics'],
+  '/why-kilifi':['Most festivals happen in cities.','KCF happens on the water.','The Kilifi Story','Nature Is Part of the Programme']
+})) {
+  const html=await (await fetch(origin+path)).text()
+  for(const phrase of phrases) assert(html.includes(phrase),`Missing revamp content on ${path}: ${phrase}`)
 }
 for(const file of ['/favicon.ico','/favicon-32x32.png','/apple-touch-icon.png','/site.webmanifest','/robots.txt','/sitemap.xml','/assets/brand/kcf-social-card.jpg']) {
   assert.equal((await fetch(origin+file)).status,200,`SEO asset must be served: ${file}`)
@@ -123,14 +140,14 @@ for(const file of ['/favicon.ico','/favicon-32x32.png','/apple-touch-icon.png','
 const homeHtml=await (await fetch(origin+'/')).text()
 assert(homeHtml.includes('application/ld+json') && homeHtml.includes('"@type":"Festival"'),'Festival structured data must render')
 const sitemap=await (await fetch(origin+'/sitemap.xml')).text()
-for(const path of Object.values(routes)) assert(sitemap.includes(publicSite+(path==='/'?'/':path)),`Sitemap missing ${path}`)
+for(const path of allRoutes) assert(sitemap.includes(publicSite+(path==='/'?'/':path)),`Sitemap missing ${path}`)
 assert.deepEqual(failures,[],failures.join('\n'))
 const ambience=JSON.parse(await readFile(new URL('app/assets/ambience.json',root),'utf8'))
 const backdrop=await fetch(origin+ambience.src)
 assert.equal(backdrop.status,200,'Decorative coastal background must load')
 assert.equal((await backdrop.arrayBuffer()).byteLength,ambience.bytes,'Optimized background must match the generated asset')
 assert(ambience.bytes<150000,'Decorative background should stay lightweight')
-for(const [file,path] of Object.entries(routes)) {
+for(const [file,path] of Object.entries(legacyRoutes)) {
   const r=await fetch(origin+'/'+file,{redirect:'manual'})
   assert([301,302,307,308].includes(r.status),`Legacy route ${file}`)
   assert.equal(r.headers.get('location'),path)
@@ -153,4 +170,4 @@ for(const font of Object.values(fonts)) {
   assert.equal(bytes.subarray(0,4).toString(),'wOF2','Font must be a valid WOFF2 container')
   assert.equal(bytes.length,font.webBytes,'Served font must match the supplied conversion')
 }
-console.log(`PASS: 7 pages, 7 original hero images, ${phrases} original text phrases, ${assets} image references, ${links} local links, 6 submission milestones and calendar export, 11 programme sessions with full transcribed copy, 2 original poster modal controls and assets, 7 legacy redirects, and 404 handling.`)
+console.log(`PASS: ${allRoutes.length} pages, 7 original hero images, ${phrases} retained original text phrases, ${assets} image references, ${links} local links, 6 submission milestones and calendar export, 11 programme sessions with full transcribed copy, 2 original poster modal controls and assets, 7 legacy redirects, and 404 handling.`)

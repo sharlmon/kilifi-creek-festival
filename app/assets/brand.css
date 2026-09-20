@@ -47,10 +47,17 @@ h1,h2,h3,.original-content h1,.profile h3 { font-family:var(--font-display); let
 .brand-highlights-inner { max-width:1280px; margin:auto; }
 .brand-highlights h2 { font-family:var(--font-interface); font-weight:700; font-size:clamp(22px,2.4vw,30px); line-height:1.3; letter-spacing:.015em; margin:0 0 28px; color:var(--heading); }
 .highlight-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.highlight-group+.highlight-group { margin-top:clamp(48px,7vw,92px); padding-top:clamp(42px,6vw,72px); border-top:1px solid var(--line); }
+.highlight-group>.eyebrow { margin-bottom:10px; }
+.highlight-grid-six { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.highlight-grid-goals { grid-template-columns:repeat(4,minmax(0,1fr)); }
 .highlight { text-align:center; padding:32px 20px; background:var(--panel); border:1px solid var(--glass-border); border-radius:16px; box-shadow:var(--glass-shadow); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
 .highlight-value { display:inline-block; min-width:100px; padding:4px 16px; border-radius:12px; color:var(--brand-orange); background:var(--brand-teal); font:700 32px/1.5 var(--font-interface); margin:0 0 18px; }
 .highlight:nth-child(2) .highlight-value { color:var(--brand-blue); }
 .highlight:nth-child(3) .highlight-value { color:var(--brand-yellow); }
+.highlight:nth-child(4n) .highlight-value { color:var(--brand-orange); }
+.highlight-value-word { font-size:22px; }
 .highlight-label { margin:0; color:var(--text); font-size:18px; }
-@media(max-width:760px) { .brand-highlights { padding:36px 24px; } .highlight-grid { gap:12px; } .highlight { padding:24px 12px; } .highlight-label { font-size:15px; } .highlight-value { font-size:28px; min-width:0; } }
+@media(max-width:1000px) { .highlight-grid-goals { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:760px) { .brand-highlights { padding:36px 24px; } .highlight-grid,.highlight-grid-goals { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .highlight { padding:24px 12px; } .highlight-label { font-size:15px; } .highlight-value { font-size:28px; min-width:0; } .highlight-value-word { font-size:18px; } }
 @media(max-width:520px) { .highlight-grid { grid-template-columns:1fr; } .highlight { display:flex; align-items:center; gap:20px; text-align:left; padding:20px; } .highlight-value { margin:0; min-width:110px; text-align:center; } }

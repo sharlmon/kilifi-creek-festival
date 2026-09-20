@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 
 const output = new URL('../.output/public/', import.meta.url)
 const base = process.env.NUXT_APP_BASE_URL || '/'
-const routes = ['', 'about', 'screenings', 'industry', 'team', 'press', 'contact']
+const routes = ['', 'about', 'screenings', 'industry', 'team', 'press', 'contact', 'partners', 'visit', 'impact', 'why-kilifi']
 for (const route of routes) {
   const html = await readFile(new URL(route ? `${route}/index.html` : 'index.html', output), 'utf8')
   assert(!/(?:src|href|srcset)="\/(?:assets|_nuxt)\//.test(html), `Unprefixed asset on ${route || 'home'}`)
@@ -20,4 +20,4 @@ for (const [file, route] of Object.entries(aliases)) {
   const target = base + route
   await writeFile(new URL(file, output), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${target}"><link rel="canonical" href="${target}"><title>Kilifi Creek Festival</title></head><body><a href="${target}">Continue to Kilifi Creek Festival</a></body></html>`)
 }
-console.log('Verified seven static pages, prefixed assets, and legacy page aliases.')
+console.log(`Verified ${routes.length} static pages, prefixed assets, and legacy page aliases.`)

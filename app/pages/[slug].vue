@@ -44,5 +44,6 @@ function submit(e: Event) {
   <div v-else-if="page" class="original-content interior-content" :class="'page-'+slug" @submit="submit">
     <div v-html="responsiveHtml(presentation.html)"></div>
     <TeamProfileAdditions v-if="slug === 'team'" />
+    <PressResources v-if="slug === 'press'" />
   </div>
 </template>
