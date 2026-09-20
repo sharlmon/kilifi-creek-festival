@@ -11,8 +11,8 @@
   --font-brand:'Afolkalips',Impact,'Arial Narrow',sans-serif;
   --font-label:'Lemon Milk','Century Gothic',Arial,sans-serif;
   --font-display:'Afolkalips',Impact,'Arial Narrow',sans-serif;
-  --font-interface:'Lemon Milk','Century Gothic',Arial,sans-serif;
-  --font-body:'Lemon Milk',Arial,Helvetica,sans-serif;
+  --font-interface:'Century Gothic',Arial,sans-serif;
+  --font-body:Arial,Helvetica,sans-serif;
   --heading:var(--brand-teal);
   --link:var(--brand-teal);
   --focus:var(--brand-teal);
