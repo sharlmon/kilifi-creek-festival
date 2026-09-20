@@ -49,7 +49,10 @@ h1,h2,h3,.original-content h1,.profile h3 { text-transform:none; }
 .site-header .button:hover { color:var(--brand-teal); }
 .theme-thumb { color:var(--brand-teal); }
 .tide-mark { color:var(--brand-blue); }
-.site-footer,#main-content .submission-festival,#main-content .programme-identity { background:var(--brand-teal); }
+.site-footer { background:var(--brand-header-green); color:var(--brand-teal); border-color:#03393226; }
+.site-footer .footer-top { border-color:#0339322e; }
+.site-footer .footer-email,.site-footer .copyright { color:var(--brand-teal); }
+#main-content .submission-festival,#main-content .programme-identity { background:var(--brand-teal); }
 #main-content .stat-card p:first-child { font-family:var(--font-interface); }
 #main-content .save-session[aria-pressed=true] { background:#FFCB2120; }
 #main-content .submission-experience h2 { color:var(--heading); }
