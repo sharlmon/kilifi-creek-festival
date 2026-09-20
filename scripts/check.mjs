@@ -52,6 +52,7 @@ for(const {file,path} of routeRecords) {
     const originalHero = original.match(/bg-\[url\(['"]?\.\/([^'"\)\]]+)/)?.[1]
     const renderedHero = html.match(/<img[^>]*class="hero-image"[^>]*>/)?.[0].match(/data-image-original="([^"]+)"/)?.[1]
     const suppliedHero = {
+      '/about': assetMap['drive-2026/outdoor-screening.jpg'],
       '/industry': assetMap['drive-2026/industry-hero.jpg'],
       '/team': assetMap['drive-2026/team-hero.jpg']
     }[path]
