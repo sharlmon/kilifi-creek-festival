@@ -4,7 +4,7 @@
   --brand-orange:#FD6910;
   --brand-yellow:#FFCB21;
   --brand-blue:#6CC3F2;
-  --brand-header-green:#0B5A4E;
+  --brand-header-green:#68A795;
   --teal:var(--brand-teal);
   --orange:var(--brand-orange);
   --yellow:var(--brand-yellow);
@@ -38,9 +38,11 @@ h1,h2,h3,.original-content h1,.profile h3 { font-family:var(--font-display); let
 h1,h2,h3,.original-content h1,.profile h3 { text-transform:none; }
 .button,.button-dark,.site-header .button,.page-contact button { background:var(--brand-yellow); color:var(--brand-teal); }
 .button:hover,.button-dark:hover,.page-contact button:hover { background:var(--brand-blue); color:var(--brand-teal); }
-.site-header::before { background:color-mix(in srgb,var(--brand-header-green) 86%,transparent); }
-.site-header.scrolled::before { background:color-mix(in srgb,var(--brand-header-green) 96%,transparent); }
+.site-header { color:var(--brand-teal); }
+.site-header::before { background:color-mix(in srgb,var(--brand-header-green) 94%,transparent); }
+.site-header.scrolled::before { background:color-mix(in srgb,var(--brand-header-green) 98%,transparent); }
 .site-header nav.open { background:color-mix(in srgb,var(--brand-header-green) 98%,transparent); }
+.theme-control,.menu-toggle { color:var(--brand-teal); border-color:#03393255; background:#ffffff24; }
 .site-header .brand-logo { width:76px; height:76px; }
 .site-header.scrolled .brand-logo { width:60px; height:60px; }
 .site-header a:hover { color:var(--brand-yellow); }

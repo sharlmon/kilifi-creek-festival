@@ -39,8 +39,8 @@ onBeforeUnmount(() => { if(import.meta.client) { document.body.style.overflow=''
 </template>
 
 <style scoped>
-.site-header nav .submit-link { display:inline-flex; align-items:center; gap:14px; min-height:44px; margin-left:6px; padding:6px 6px 6px 16px; border:1px solid #ffffff50; border-radius:999px; background:#ffffff0c; color:#fff; font:500 11px/1.4 var(--font-interface); letter-spacing:.02em; white-space:nowrap; transition:background .2s,border-color .2s; }
-.site-header nav .submit-link:hover { color:#fff; background:#ffffff1c; border-color:var(--brand-yellow); }
+.site-header nav .submit-link { display:inline-flex; align-items:center; gap:14px; min-height:44px; margin-left:6px; padding:6px 6px 6px 16px; border:1px solid #03393266; border-radius:999px; background:#ffffff24; color:var(--brand-teal); font:500 11px/1.4 var(--font-interface); letter-spacing:.02em; white-space:nowrap; transition:background .2s,border-color .2s; }
+.site-header nav .submit-link:hover { color:var(--brand-teal); background:#ffffff50; border-color:var(--brand-yellow); }
 .submit-arrow { display:grid; place-items:center; width:30px; height:30px; flex-shrink:0; border-radius:50%; background:var(--brand-yellow); color:var(--brand-teal); }
 .submit-arrow svg { width:16px; height:16px; transition:transform .2s; }
 .submit-link:hover .submit-arrow svg { transform:translate(1px,-1px); }
