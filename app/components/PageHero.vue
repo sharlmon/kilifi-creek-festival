@@ -25,7 +25,7 @@ useHead(() => {
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>
           Kilifi Creek, Kenya
         </p>
-        <a v-if="home" class="button" href="https://filmfreeway.com/KilifiCreekFestival" target="_blank" rel="noopener noreferrer">SUBMIT FILM <span aria-hidden="true">↗</span></a>
+        <NuxtLink v-if="home" class="button" to="/screenings#programme">2026 PROGRAMME <span aria-hidden="true">↗</span></NuxtLink>
       </div>
     </div>
   </section>

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { imageAttributes } from '~/utils/images'
-
 const shortcuts = [
   { id:'why-partner', label:'WHY PARTNER WITH KCF' },
   { id:'reach', label:'2026 REACH' },
@@ -30,14 +28,6 @@ const support = [
   ['Special Events','Opening and Closing events.'],
   ['Marketing & Communications','Outdoor advertising, flyers, posters, branded materials, digital campaigns and media collaborations.']
 ]
-const partners = [
-  { name:'Goethe-Institut' }, { name:'EUNIC' }, { name:'Chevening' }, { name:'British Council' },
-  { name:'Baruu Collective', image:'/assets/static/images/logo/baruu.png' },
-  { name:'The Terrace', image:'/assets/static/images/logo/terrace.png' },
-  { name:'Afrofilms International', image:'/assets/static/images/logo/afrofilms.png' },
-  { name:'Tawi Creative Hub', image:'/assets/static/images/logo/tawi.png' },
-  { name:'Docubox' }, { name:'Movies That Matter' }, { name:'Sauti Sessions' }, { name:'Distant Relatives' }, { name:"Salty's on the Creek" }, { name:'Blue House' }
-]
 </script>
 
 <template>
@@ -60,7 +50,7 @@ const partners = [
     </div></section>
     <section id="confirmed-partners" class="revamp-section"><div class="revamp-inner">
       <p class="eyebrow">CONFIRMED KCF 2026 PARTNERS</p><h2>Creative and Community Partners</h2>
-      <div class="partner-logo-grid"><article v-for="partner in partners" :key="partner.name" class="partner-logo-card"><img v-if="partner.image" :src="partner.image" v-bind="imageAttributes(partner.image,'150px')" :alt="partner.name" loading="lazy" /><span v-else>{{ partner.name }}</span></article></div>
+      <ConfirmedPartners />
     </div></section>
     <section id="partnership-contact" class="revamp-section"><div class="revamp-inner revamp-narrow">
       <p class="eyebrow">START A CONVERSATION</p><h2>Contact the Partnerships Team</h2><p class="revamp-lead">Support Kilifi Creek Festival through a financial contribution or an in-kind partnership.</p>

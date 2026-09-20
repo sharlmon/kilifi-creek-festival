@@ -38,27 +38,10 @@ for(const {file,path} of routeRecords) {
   }
   if(path === '/') {
     assert(/<h1[^>]*>KILIFI CREEK FESTIVAL<\/h1>/.test(html),'Homepage title must remain on one line')
-    for(const phrase of ['OUR 2025 HIGHLIGHTS','1,000+','33','Films from 15 countries','47','Screenings across 7 venues','20+','Local businesses engaged','12','Filmmakers hosted','Hundreds','Reached through free community screenings','OUR 2026 GOALS','5,000','Creatives directly trained','14','Workshops and mentorship sessions','18','Panels and industry discussions']) assert(html.includes(phrase),`Missing supplied homepage impact content: ${phrase}`)
-    for(const phrase of ['Set along the winding waters of Kilifi Creek','Through Creekside screenings','Join us from 23–31 October 2026','SUBMIT A FILM','PARTNER WITH US','PLAN YOUR VISIT']) assert(html.includes(phrase),`Missing supplied homepage rewrite: ${phrase}`)
-    for(const phrase of ['MARCH 3','CALL FOR ENTRIES OPENS','MARCH 31','EARLY BIRD DEADLINE','MAY 31','REGULAR DEADLINE','JULY 20','LATE DEADLINE','AUGUST 14','EXTENDED DEADLINE','AUGUST 31','NOTIFICATION DATE','SUBMIT YOUR FILM HERE:']) {
-      assert(html.includes(phrase), `Missing original poster text: ${phrase}`)
-    }
-    assert.equal([...html.matchAll(/aria-controls="submission-detail"/g)].length,6,'Six interactive milestones must render')
-    assert(html.includes(`data-expand-image="${responsive[assetMap['Call for submissions.png']].variants.at(-1).src}"`) && html.includes(`data-download-image="${assetMap['Call for submissions.png']}"`),'Submissions poster must preview an optimized image and keep the original download')
-    assert(!(clean(html).includes('<details class="submission-poster"')),'Poster must not expand inline')
-    assert.equal((await fetch(origin+assetMap['Call for submissions.png'])).status,200,'Modal submissions poster must remain downloadable')
-    assert(html.includes('href="/assets/calendar/kcf-20260303.ics"'),'Initial calendar must match the selected milestone')
-    const milestones = JSON.parse(await readFile(new URL('app/assets/submissions.json',root),'utf8'))
-    for(const event of milestones) {
-      const response=await fetch(origin+`/assets/calendar/kcf-${event.day}.ics`)
-      assert.equal(response.status,200,'Calendar must be downloadable')
-      assert(response.headers.get('content-type')?.includes('text/calendar'),'Calendar media type')
-      const calendar=await response.text()
-      const next=new Date(Date.UTC(2026,Number(event.day.slice(4,6))-1,Number(event.day.slice(6,8))+1)).toISOString().slice(0,10).replaceAll('-','')
-      assert(calendar.includes(`DTSTART;VALUE=DATE:${event.day}\r\n`),'Calendar must use the poster date')
-      assert(calendar.includes(`DTEND;VALUE=DATE:${next}\r\n`),'All-day calendar must end on the following day')
-      assert(calendar.includes(`SUMMARY:Kilifi Creek Festival - ${event.label}\r\n`),'Calendar must match milestone label')
-    }
+    for(const phrase of ['OUR 2025 HIGHLIGHTS','1,000+','33','Films from 15 countries','47','Screenings across 7 venues','20+','Local businesses engaged','12','Filmmakers hosted','800','Reached through free community screenings','OUR 2026 GOALS','5,000','Creatives directly trained','14','Workshops and mentorship sessions','18','Panels and industry discussions']) assert(html.includes(phrase),`Missing supplied homepage impact content: ${phrase}`)
+    for(const phrase of ['Set along the winding waters of Kilifi Creek','Through Creekside screenings','Join us from 23–31 October 2026','VIEW 2026 PROGRAMME','PARTNER WITH US','PLAN YOUR VISIT']) assert(html.includes(phrase),`Missing supplied homepage rewrite: ${phrase}`)
+    for(const phrase of ['SUBMISSIONS CLOSED','Film Submissions Are Now Closed','The confirmed programme will be shared in due time.']) assert(html.includes(phrase),`Missing current submissions status: ${phrase}`)
+    for(const stale of ['CALL FOR ENTRIES OPENS','EARLY BIRD DEADLINE','REGULAR DEADLINE','LATE DEADLINE','EXTENDED DEADLINE','SUBMIT YOUR FILM HERE:','Submit on FilmFreeway']) assert(!html.includes(stale),`Outdated submission content remains: ${stale}`)
   }
   const original=file ? clean((await readFile(new URL('scripts/source-copy/'+file,root),'utf8')).split('<body')[1].split('</body>')[0]) : ''
   if(file) {
@@ -69,20 +52,11 @@ for(const {file,path} of routeRecords) {
   assert(html.includes('rel="preload" as="image"'),'Hero should be discovered from the document head')
   const text=norm(clean(html).replace(/<[^>]+>/g,' '))
   if(path === '/screenings') {
-    const programme=JSON.parse(await readFile(new URL('app/assets/programme.json',root),'utf8'))
-    assert.equal(programme.length,11,'All original programme session groups must be retained')
-    assert.equal([...html.matchAll(/data-session="/g)].length,11,'All archived sessions must render before filtering')
-    for(const session of programme) {
-      const card=html.match(new RegExp(`<article[^>]*data-session="${session.id}"[\\s\\S]*?<\\/article>`))?.[0] || ''
-      const cardText=norm(clean(card).replace(/<[^>]+>/g,' '))
-      for(const phrase of [session.day,session.venue,session.time,session.invitation,...session.items].filter(Boolean)) {
-        assert(cardText.includes(phrase),`Missing programme text in ${session.id}: ${phrase}`)
-      }
-    }
-    assert(html.includes(`data-expand-image="${responsive[assetMap['2025prog.jpg.png']].variants.at(-1).src}"`) && html.includes(`data-download-image="${assetMap['2025prog.jpg.png']}"`),'Programme poster must preview an optimized image and keep the original download')
-    assert(!(clean(html).includes('<details class="programme-poster"')),'Programme poster must not expand inline')
-    assert.equal((await fetch(origin+assetMap['2025prog.jpg.png'])).status,200,'Modal programme poster must remain downloadable')
-    assert(text.includes('All screenings are FREE, but RSVP is required on'),'Original RSVP notice must be preserved')
+    for(const phrase of ['2026 Programme','TUESDAY','27 OCTOBER 2026','WEDNESDAY','28 OCTOBER 2026','THURSDAY','29 OCTOBER 2026','FRIDAY','30 OCTOBER 2026','SATURDAY','31 OCTOBER 2026','Festival Screenings','Industry Programme','Location','To be confirmed']) assert(text.includes(phrase),`Missing 2026 programme content: ${phrase}`)
+    assert.equal([...html.matchAll(/class="programme-day"/g)].length,5,'Five programme days must render')
+    assert.equal([...html.matchAll(/class="programme-track"/g)].length,10,'Screenings and Industry tracks must render for every day')
+    assert(!text.includes('Submit Your Film'),'Outdated programme submission call to action remains')
+    assert(!text.includes('School screenings'),'Unconfirmed school screenings must remain omitted')
   }
   if(path === '/team') {
     for(const profile of teamAdditions) {
@@ -97,13 +71,20 @@ for(const {file,path} of routeRecords) {
     // The user requested replacing the decorative submission-button emoji with SVG.
     const phrase=norm(match[1]); if(!phrase || phrase === '🎬') continue
     phrases++
+    if(new Set(['SUBMIT FILM','Screenings']).has(phrase)) continue
     const supersededHomepageIntro = 'Kilifi Creek Festival (KCF) is an artist-led, community-rooted film, arts and cultural festival set along the winding waters of Kilifi Creek, Kenya. In proud collaboration with The Terrace Consortium, KCF brings together established filmmakers, visionary artists, and local communities for a multi-day journey of film screenings, art exhibitions, fashion showcases, masterclasses, and public talks -- set in carefully curated venues along the creek, from intimate waterfront spaces to vibrant public gathering points. KCF is committed to celebrating and strengthening the link between coastal heritage and local communities.'
     if(path==='/' && phrase===supersededHomepageIntro) continue
+    if(path==='/' && new Set(['Partners & Brands','CALL FOR SUBMISSIONS','Filmmakers are invited to submit their work to KCF via','FilmFreeway','Submit on FilmFreeway →']).has(phrase)) continue
+    if(path==='/screenings' && new Set(['KCF 2026 Programme Coming Soon','The 2026 screening programme will be announced in the coming months. Stay tuned!','Submit Your Film →']).has(phrase)) continue
     if(!text.includes(phrase)) failures.push(`${path}: missing exact text ${phrase.slice(0,100)}`)
   }
   for(const [tag,src] of html.matchAll(/<img[^>]+src="([^"]+)"[^>]*>/g)) {
     assert(!src.includes('static/images/logo/logo.png'),'Old logo still used')
-    if(src.startsWith('/assets/')) {
+    if(src.startsWith('/assets/partners/')) {
+      await access(new URL('public'+decodeURIComponent(src),root)); assets++
+      assert(tag.includes('loading="lazy"'),`Partner logo must defer loading: ${src}`)
+      assert(/width="\d+"/.test(tag) && /height="\d+"/.test(tag),`Partner logo dimensions missing: ${src}`)
+    } else if(src.startsWith('/assets/')) {
       const source=Object.entries(responsive).find(([,image])=>image.variants.some(v=>v.src===src))?.[0]
       assert(source,`Rendered image must use a compressed derivative: ${src}`)
       await access(new URL('public'+decodeURIComponent(src),root)); assets++
@@ -122,11 +103,11 @@ for(const {file,path} of routeRecords) {
       assert(html.includes(`id="${decode(href.slice(1))}"`),`Section shortcut target missing on ${path}: ${href}`)
       links++
     }
-    if(href.startsWith('/')&&!href.startsWith('/_nuxt')&&!href.startsWith('/assets')) { assert(allRoutes.includes(href),`Unexpected local link ${href}`); links++ }
+    if(href.startsWith('/')&&!href.startsWith('/_nuxt')&&!href.startsWith('/assets')) { assert(allRoutes.includes(href.split('#')[0]),`Unexpected local link ${href}`); links++ }
   }
 }
 for(const [path,phrases] of Object.entries({
-  '/partners':['Partner With Kilifi Creek Festival','Our 2026 Reach','What Partner Support Enables','CONFIRMED KCF 2026 PARTNERS','Contact the Partnerships Team'],
+  '/partners':['Partner With Kilifi Creek Festival','Our 2026 Reach','What Partner Support Enables','CONFIRMED KCF 2026 PARTNERS','Goethe-Institut','EUNIC — EU National Institutes for Culture','British Council','Movies That Matter','Sauti Sessions','Distant Relatives','Contact the Partnerships Team'],
   '/visit':['Plan Your Time in Kilifi','The Terrace Art Space','Open in Google Maps','VISITOR ENQUIRIES'],
   '/impact':['Artistic Exchange With Lasting Value','Growing Kilifi’s Creative Economy','KCF 2026 AUDIENCE STRATEGY','2026 Impact Metrics'],
   '/why-kilifi':['Most festivals happen in cities.','KCF happens on the water.','The Kilifi Story','Nature Is Part of the Programme']
@@ -170,4 +151,4 @@ for(const font of Object.values(fonts)) {
   assert.equal(bytes.subarray(0,4).toString(),'wOF2','Font must be a valid WOFF2 container')
   assert.equal(bytes.length,font.webBytes,'Served font must match the supplied conversion')
 }
-console.log(`PASS: ${allRoutes.length} pages, 7 original hero images, ${phrases} retained original text phrases, ${assets} image references, ${links} local links, 6 submission milestones and calendar export, 11 programme sessions with full transcribed copy, 2 original poster modal controls and assets, 7 legacy redirects, and 404 handling.`)
+console.log(`PASS: ${allRoutes.length} pages, 7 original hero images, ${phrases} retained original text phrases, ${assets} image references, ${links} local links, closed submissions status, five-day 2026 programme preview, confirmed partner logos, 7 legacy redirects, and 404 handling.`)

@@ -10,7 +10,7 @@
           <div class="highlight"><p class="highlight-value">47</p><p class="highlight-label">Screenings across 7 venues</p></div>
           <div class="highlight"><p class="highlight-value">20+</p><p class="highlight-label">Local businesses engaged</p></div>
           <div class="highlight"><p class="highlight-value">12</p><p class="highlight-label">Filmmakers hosted</p></div>
-          <div class="highlight"><p class="highlight-value highlight-value-word">Hundreds</p><p class="highlight-label">Reached through free community screenings</p></div>
+          <div class="highlight"><p class="highlight-value">800</p><p class="highlight-label">Reached through free community screenings</p></div>
         </div>
       </div>
       <div class="highlight-group goals-group" id="goals-heading">

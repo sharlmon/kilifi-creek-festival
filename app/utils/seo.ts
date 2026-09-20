@@ -14,7 +14,7 @@ const pages: Record<string, { title: string, description: string }> = {
     description: "KCF is an artist-led, community-rooted film, arts and cultural festival set along the Kilifi Creek on Kenya's coast."
   },
   '/screenings': {
-    title: 'Screenings — Kilifi Creek Festival',
+    title: '2026 Programme — Kilifi Creek Festival',
     description: 'KCF 2025 featured 47 screenings, 33 films from 15 countries across 7 unique venues along the Kilifi Creek.'
   },
   '/industry': {
