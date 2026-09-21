@@ -34,7 +34,7 @@ export function venueDetails(html: string) {
           <path d="M539 0c-19 45-23 90-2 129 19 34 14 86-11 129" stroke="#D8D2C5" stroke-width="6"/>
           <path d="M234 153h90m145 31h117" stroke="#D8D2C5" stroke-width="5"/>
         </g>
-        <g font-family="'Lemon Milk',Arial,sans-serif">
+        <g font-family="'Poppins',Arial,sans-serif">
           <text x="34" y="275" fill="var(--brand-teal)" font-size="15" font-weight="700" letter-spacing="2">KILIFI CREEK</text>
           <text x="468" y="42" fill="var(--brand-teal)" font-size="13" font-weight="700" letter-spacing="2">MNARANI</text>
           <path d="M431 76c-28 0-50 22-50 50 0 38 50 82 50 82s50-44 50-82c0-28-22-50-50-50Zm0 72a22 22 0 1 1 0-44 22 22 0 0 1 0 44Z" fill="#EA4335" stroke="#fff" stroke-width="6"/>

@@ -36,6 +36,6 @@ const profiles = additions.map(profile => ({
 <style scoped>
 .team-additions { padding-top:0; }
 .profile-placeholder { position:sticky; top:84px; display:grid; place-items:center; aspect-ratio:4/5; border:1px solid var(--glass-border); border-radius:var(--radius); background:linear-gradient(145deg,#033932e6,#191a1fee); box-shadow:var(--glass-shadow); color:var(--brand-yellow); }
-.profile-placeholder span { font:400 clamp(76px,8vw,112px)/1 var(--font-display); letter-spacing:.04em; }
+.profile-placeholder span { font:400 clamp(76px,8vw,112px)/1 var(--font-brand); letter-spacing:.04em; }
 @media(max-width:760px) { .profile-placeholder { position:static; } }
 </style>

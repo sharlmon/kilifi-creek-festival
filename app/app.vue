@@ -19,7 +19,7 @@ function expandPhoto(event: MouseEvent | KeyboardEvent) {
   event.preventDefault()
   photoViewer.value?.open(image)
 }
-useHead({ link: [fonts.afolkalips, fonts['lemon-milk-regular']].map(font => ({ rel: 'preload', as: 'font', type: 'font/woff2', href: siteBase(font.url), crossorigin: 'anonymous' })) })
+useHead({ link: [fonts.afolkalips, fonts['poppins-regular']].map(font => ({ rel: 'preload', as: 'font', type: 'font/woff2', href: siteBase(font.url), crossorigin: 'anonymous' })) })
 useHead({ script: [{ key: 'theme-init', innerHTML: "try{var t=localStorage.getItem('kcf-theme');document.documentElement.dataset.theme=(t==='light'||t==='dark')?t:'system'}catch(e){document.documentElement.dataset.theme='system'}" }] })
 useSeoMeta({
   title: () => seo.value.title,

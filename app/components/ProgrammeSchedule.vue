@@ -81,7 +81,7 @@ h2 { margin:0 0 16px; color:var(--heading); font-size:clamp(38px,5vw,64px); }
 .day-number { color:var(--muted); font:600 11px/1.5 var(--font-interface); letter-spacing:.1em; }
 .day-date,.day-venues { display:flex; flex-direction:column; gap:5px; }
 .day-date strong,.day-venues strong { color:var(--accent-text); font:600 11px/1.4 var(--font-interface); letter-spacing:.08em; }
-.day-date>span { color:var(--heading); font:400 24px/1.15 var(--font-display); letter-spacing:.015em; }
+.day-date>span { color:var(--heading); font:600 24px/1.15 var(--font-display); letter-spacing:-.015em; }
 .day-venues>span { overflow:hidden; color:var(--text); font:500 12px/1.5 var(--font-interface); text-overflow:ellipsis; white-space:nowrap; }
 .day-action { display:flex; align-items:center; justify-content:flex-end; gap:10px; color:var(--muted); font:600 10px/1.4 var(--font-interface); letter-spacing:.06em; }
 .day-action svg { width:18px; height:18px; transition:transform .2s; }

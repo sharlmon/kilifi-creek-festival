@@ -10,10 +10,10 @@
   --yellow:var(--brand-yellow);
   --sky:var(--brand-blue);
   --font-brand:'Afolkalips',Impact,'Arial Narrow',sans-serif;
-  --font-label:'Lemon Milk','Century Gothic',Arial,sans-serif;
-  --font-display:'Afolkalips',Impact,'Arial Narrow',sans-serif;
-  --font-interface:'Century Gothic',Arial,sans-serif;
-  --font-body:Arial,Helvetica,sans-serif;
+  --font-label:'Poppins',Arial,sans-serif;
+  --font-display:'Poppins',Arial,sans-serif;
+  --font-interface:'Poppins',Arial,sans-serif;
+  --font-body:'Poppins',Arial,sans-serif;
   --heading:var(--brand-teal);
   --link:var(--brand-teal);
   --focus:var(--brand-teal);
@@ -22,15 +22,16 @@
 }
 /* Faithful WOFF2 conversions of the user's supplied fonts. */
 @font-face { font-family:'Afolkalips'; src:url('/assets/fonts/afolkalips-79c65c32530c.woff2') format('woff2'); font-style:normal; font-weight:400; font-display:swap; }
-@font-face { font-family:'Lemon Milk'; src:url('/assets/fonts/lemon-milk-regular-a60a0e67b7bb.woff2') format('woff2'); font-style:normal; font-weight:400; font-display:swap; }
-@font-face { font-family:'Lemon Milk'; src:url('/assets/fonts/lemon-milk-medium-299a5e92b929.woff2') format('woff2'); font-style:normal; font-weight:500 600; font-display:swap; }
-@font-face { font-family:'Lemon Milk'; src:url('/assets/fonts/lemon-milk-bold-f2dace92c452.woff2') format('woff2'); font-style:normal; font-weight:700 900; font-display:swap; }
+@font-face { font-family:'Poppins'; src:url('/assets/fonts/poppins-regular-2425ebbc021b.woff2') format('woff2'); font-style:normal; font-weight:400; font-display:swap; }
+@font-face { font-family:'Poppins'; src:url('/assets/fonts/poppins-medium-45870260a29f.woff2') format('woff2'); font-style:normal; font-weight:500; font-display:swap; }
+@font-face { font-family:'Poppins'; src:url('/assets/fonts/poppins-semibold-1d665d5b75a9.woff2') format('woff2'); font-style:normal; font-weight:600; font-display:swap; }
+@font-face { font-family:'Poppins'; src:url('/assets/fonts/poppins-bold-210933fb1bb4.woff2') format('woff2'); font-style:normal; font-weight:700; font-display:swap; }
 :root[data-theme='dark'] { --heading:#ffffff; --link:var(--brand-blue); --focus:var(--brand-yellow); --accent-text:var(--brand-yellow); }
 @media(prefers-color-scheme:dark) {
   :root:not([data-theme='light']):not([data-theme='dark']) { --heading:#ffffff; --link:var(--brand-blue); --focus:var(--brand-yellow); --accent-text:var(--brand-yellow); }
 }
 body { font-family:var(--font-body); text-transform:none; }
-h1,h2,h3,.original-content h1,.profile h3 { font-family:var(--font-display); letter-spacing:.015em; font-weight:400; }
+h1,h2,h3,.original-content h1,.profile h3 { font-family:var(--font-display); letter-spacing:-.025em; font-weight:600; }
 .home-hero h1 { font-family:var(--font-brand); }
 .site-header nav,.site-footer nav,.button,.page-contact button,.programme-tools,.programme-results { font-family:var(--font-interface); text-transform:none; }
 .eyebrow,.festival-lockup,.agenda-date,.session-venue,.submission-year,.milestone-date,.partners-section h2,.copyright { font-family:var(--font-label); }

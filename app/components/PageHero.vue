@@ -50,7 +50,7 @@ useHead(() => {
 .hero-shade { pointer-events:none; position:absolute; inset:0; background:linear-gradient(180deg,transparent 35%,#10111528 55%,#101115c7 100%); }
 .hero-content { pointer-events:none; position:relative; width:100%; max-width:1440px; margin:0 auto; padding:180px clamp(24px,5vw,72px) 32px; }
 .hero-title { padding-bottom:26px; }
-.hero h1 { color:#fff; font:400 clamp(64px,7.5vw,110px)/.98 var(--font-display); letter-spacing:.015em; margin:0; text-shadow:0 2px 20px #00000035; overflow-wrap:anywhere; }
+.hero h1 { color:#fff; font:400 clamp(64px,7.5vw,110px)/.98 var(--font-brand); letter-spacing:.015em; margin:0; text-shadow:0 2px 20px #00000035; overflow-wrap:anywhere; }
 .home-hero h1 { max-width:100%; font-size:clamp(50px,6.4vw,96px); line-height:.9; white-space:nowrap; text-shadow:0 3px 20px #0008; }
 .hero h1 span { color:#fff; }
 .festival-lockup { margin:0 0 16px; font:500 11px/1.6 var(--font-interface); letter-spacing:.15em; color:var(--brand-yellow); }
