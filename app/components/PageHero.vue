@@ -53,10 +53,10 @@ useHead(() => {
 .hero h1 { color:#fff; font:400 clamp(64px,7.5vw,110px)/.98 var(--font-brand); letter-spacing:.015em; margin:0; text-shadow:0 2px 20px #00000035; overflow-wrap:anywhere; }
 .home-hero h1 { max-width:100%; font-size:clamp(50px,6.4vw,96px); line-height:.9; white-space:nowrap; text-shadow:0 3px 20px #0008; }
 .hero h1 span { color:#fff; }
-.festival-lockup { margin:0 0 16px; font:500 11px/1.6 var(--font-interface); letter-spacing:.15em; color:var(--brand-yellow); }
+.festival-lockup { margin:0 0 16px; font:500 11px/1.6 var(--font-label); letter-spacing:.15em; color:var(--brand-yellow); }
 .hero-details { pointer-events:auto; display:flex; align-items:center; gap:28px; padding:12px 16px; border:1px solid #ffffff30; border-radius:12px; background:#17181d50; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
 .hero:not(.home-hero) .hero-details { width:fit-content; max-width:100%; }
-.hero .eyebrow { color:var(--brand-yellow); font:500 11px/1.7 var(--font-interface); letter-spacing:.12em; margin:0; }
+.hero .eyebrow { color:var(--brand-yellow); font:500 11px/1.7 var(--font-label); letter-spacing:.12em; margin:0; }
 .hero-location { display:flex; align-items:center; gap:9px; margin:0; color:#fff; font:400 12px/1.7 var(--font-interface); }
 .hero-location svg { width:18px; height:18px; flex-shrink:0; color:var(--brand-yellow); }
 .hero .button { margin-left:auto; min-height:44px; padding:10px 20px; font-size:11px; border-radius:8px; gap:22px; white-space:nowrap; }

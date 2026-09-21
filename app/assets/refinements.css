@@ -27,8 +27,8 @@ body { position:relative; isolation:isolate; background:var(--page-bg); }
 .venue-visual { aspect-ratio:2/1; overflow:hidden; background:var(--brand-blue); }
 .venue-visual svg { display:block; width:100%; height:100%; }
 .venue-location-copy { display:grid; gap:5px; padding:20px 20px 14px; }
-.venue-location-copy span { color:var(--brand-orange); font:700 10px/1.5 var(--font-interface); letter-spacing:.12em; text-transform:uppercase; }
-.venue-location-copy strong { color:var(--heading); font:600 24px/1.2 var(--font-display); }
+.venue-location-copy span { color:var(--brand-orange); font:700 10px/1.5 var(--font-label); letter-spacing:.12em; text-transform:uppercase; }
+.venue-location-copy strong { color:var(--heading); font:400 24px/1.2 var(--font-display); }
 #main-content .venue-location-copy p { max-width:none; margin:0; color:var(--text); font-size:12px; line-height:1.7; }
 .venue-actions { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:auto; padding:0 12px 12px; }
 #main-content .venue-map .venue-action { display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:48px; padding:10px 12px; border:1px solid color-mix(in srgb,var(--brand-teal) 40%,var(--line)); border-radius:999px; color:var(--text); font-size:10px; text-decoration:none; }

@@ -7,6 +7,30 @@
     "webBytes": 55896,
     "lowercaseCoverage": true
   },
+  "lemon-milk-regular": {
+    "url": "/assets/fonts/lemon-milk-regular-a60a0e67b7bb.woff2",
+    "family": "LEMON MILK",
+    "weight": 400,
+    "sourceBytes": 34568,
+    "webBytes": 21368,
+    "lowercaseCoverage": true
+  },
+  "lemon-milk-medium": {
+    "url": "/assets/fonts/lemon-milk-medium-299a5e92b929.woff2",
+    "family": "LEMON MILK",
+    "weight": 500,
+    "sourceBytes": 33760,
+    "webBytes": 20860,
+    "lowercaseCoverage": true
+  },
+  "lemon-milk-bold": {
+    "url": "/assets/fonts/lemon-milk-bold-f2dace92c452.woff2",
+    "family": "LEMON MILK",
+    "weight": 700,
+    "sourceBytes": 34596,
+    "webBytes": 21664,
+    "lowercaseCoverage": true
+  },
   "poppins-regular": {
     "url": "/assets/fonts/poppins-regular-2425ebbc021b.woff2",
     "family": "Poppins",

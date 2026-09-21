@@ -21,7 +21,7 @@
 .submission-inner { display:flex; align-items:center; justify-content:space-between; gap:64px; max-width:1280px; margin:auto; }
 .submission-copy { max-width:760px; }
 .submission-year { margin:0 0 14px; color:var(--yellow); font:500 12px/1.6 var(--font-label); letter-spacing:.16em; }
-.submission-status { display:inline-flex; margin:0 0 24px; padding:8px 12px; border:1px solid #ffcb2175; border-radius:999px; color:var(--yellow); font:600 11px/1 var(--font-interface); letter-spacing:.1em; }
+.submission-status { display:inline-flex; margin:0 0 24px; padding:8px 12px; border:1px solid #ffcb2175; border-radius:999px; color:var(--yellow); font:600 11px/1 var(--font-label); letter-spacing:.1em; }
 h2 { margin:0 0 18px; color:var(--yellow); font-size:clamp(34px,4vw,56px); }
 .submission-copy>p:last-of-type { max-width:650px; margin:0 0 28px; font-size:16px; line-height:1.8; }
 .submission-festival { flex-shrink:0; text-align:center; }

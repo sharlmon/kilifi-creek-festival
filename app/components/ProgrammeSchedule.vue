@@ -65,10 +65,10 @@ const tracks = [
 .programme-inner { max-width:1180px; margin:auto; }
 .programme-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:48px; margin-bottom:36px; }
 .programme-heading>div { max-width:820px; }
-.programme-kicker { margin:0 0 12px; color:var(--accent-text); font:600 11px/1.6 var(--font-interface); letter-spacing:.12em; }
+.programme-kicker { margin:0 0 12px; color:var(--accent-text); font:600 11px/1.6 var(--font-label); letter-spacing:.12em; }
 h2 { margin:0 0 16px; color:var(--heading); font-size:clamp(38px,5vw,64px); }
 .programme-intro { max-width:780px; margin:0; font-size:16px; line-height:1.8; }
-.programme-status { display:flex; align-items:center; gap:10px; flex-shrink:0; margin:0 0 8px; color:var(--muted); font:600 11px/1.4 var(--font-interface); letter-spacing:.08em; }
+.programme-status { display:flex; align-items:center; gap:10px; flex-shrink:0; margin:0 0 8px; color:var(--muted); font:600 11px/1.4 var(--font-label); letter-spacing:.08em; }
 .programme-status>span { width:9px; height:9px; border-radius:50%; background:var(--brand-yellow); box-shadow:0 0 0 5px #ffcb2126; }
 .programme-days { overflow:hidden; border:1px solid var(--glass-border); border-radius:18px; background:var(--panel); box-shadow:var(--glass-shadow); }
 .programme-day { border-bottom:1px solid var(--line); }
@@ -78,22 +78,22 @@ h2 { margin:0 0 16px; color:var(--heading); font-size:clamp(38px,5vw,64px); }
 .programme-day summary:hover { background:color-mix(in srgb,var(--brand-header-green) 12%,transparent); }
 .programme-day summary:focus-visible { outline:3px solid var(--focus); outline-offset:-4px; }
 .day-number,.day-date,.day-venues { min-width:0; }
-.day-number { color:var(--muted); font:600 11px/1.5 var(--font-interface); letter-spacing:.1em; }
+.day-number { color:var(--muted); font:600 11px/1.5 var(--font-label); letter-spacing:.1em; }
 .day-date,.day-venues { display:flex; flex-direction:column; gap:5px; }
-.day-date strong,.day-venues strong { color:var(--accent-text); font:600 11px/1.4 var(--font-interface); letter-spacing:.08em; }
-.day-date>span { color:var(--heading); font:600 24px/1.15 var(--font-display); letter-spacing:-.015em; }
+.day-date strong,.day-venues strong { color:var(--accent-text); font:600 11px/1.4 var(--font-label); letter-spacing:.08em; }
+.day-date>span { color:var(--heading); font:400 24px/1.15 var(--font-display); letter-spacing:.015em; }
 .day-venues>span { overflow:hidden; color:var(--text); font:500 12px/1.5 var(--font-interface); text-overflow:ellipsis; white-space:nowrap; }
-.day-action { display:flex; align-items:center; justify-content:flex-end; gap:10px; color:var(--muted); font:600 10px/1.4 var(--font-interface); letter-spacing:.06em; }
+.day-action { display:flex; align-items:center; justify-content:flex-end; gap:10px; color:var(--muted); font:600 10px/1.4 var(--font-label); letter-spacing:.06em; }
 .day-action svg { width:18px; height:18px; transition:transform .2s; }
 .programme-day[open] summary { background:color-mix(in srgb,var(--brand-header-green) 16%,transparent); }
 .programme-day[open] .day-action svg { transform:rotate(180deg); }
 .programme-detail { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; padding:0 28px 28px 142px; }
 .programme-track { padding:22px; border:1px solid var(--line); border-radius:14px; background:color-mix(in srgb,var(--panel) 88%,var(--soft-bg)); }
-.track-type { margin:0 0 14px; color:var(--accent-text); font:600 11px/1.4 var(--font-interface); letter-spacing:.08em; text-transform:uppercase; }
+.track-type { margin:0 0 14px; color:var(--accent-text); font:600 11px/1.4 var(--font-label); letter-spacing:.08em; text-transform:uppercase; }
 .programme-track h3 { margin:0 0 10px; color:var(--heading); font-size:22px; }
 .programme-track>p:not(.track-type) { margin:0 0 18px; font-size:13px; line-height:1.65; }
 .programme-track dl { display:grid; gap:8px; margin:0; padding-top:15px; border-top:1px solid var(--line); }
-.programme-track dl div { display:flex; justify-content:space-between; gap:18px; font:500 11px/1.5 var(--font-interface); }
+.programme-track dl div { display:flex; justify-content:space-between; gap:18px; font:500 11px/1.5 var(--font-label); }
 .programme-track dt { color:var(--muted); }
 .programme-track dd { max-width:70%; margin:0; color:var(--text); text-align:right; }
 @media(max-width:900px) {
