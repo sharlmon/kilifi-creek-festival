@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 
 const output = new URL('../.output/public/', import.meta.url)
 const base = process.env.NUXT_APP_BASE_URL || '/'
-const routes = ['', 'about', 'screenings', 'industry', 'team', 'press', 'contact', 'partners', 'visit', 'impact', 'why-kilifi']
+const routes = ['', 'about', 'screenings', 'industry', 'team', 'press', 'contact', 'partners', 'visit', 'impact', 'why-kilifi', 'gallery']
 for (const route of routes) {
   const html = await readFile(new URL(route ? `${route}/index.html` : 'index.html', output), 'utf8')
   assert(!/(?:src|href|srcset)="\/(?:assets|_nuxt)\//.test(html), `Unprefixed asset on ${route || 'home'}`)

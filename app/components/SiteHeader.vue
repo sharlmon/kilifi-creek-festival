@@ -8,7 +8,7 @@ const menu = ref<HTMLElement>()
 const explore = ref<HTMLElement>()
 const exploreToggle = ref<HTMLButtonElement>()
 const links = [['Home','/'],['About','/about'],['Programme','/screenings'],['Industry','/industry'],['Team','/team'],['Press','/press']]
-const exploreLinks = [['Why Kilifi','/why-kilifi'],['Community Impact','/impact'],['Plan Your Visit','/visit'],['Partner With Us','/partners'],['Contact','/contact']]
+const exploreLinks = [['Why Kilifi','/why-kilifi'],['Gallery','/gallery'],['Community Impact','/impact'],['Plan Your Visit','/visit'],['Partner With Us','/partners'],['Contact','/contact']]
 watch(() => route.path, () => { open.value = false; exploreOpen.value = false })
 watch(open, v => { if (import.meta.client) document.body.style.overflow = v ? 'hidden' : '' })
 function close() { open.value=false; toggle.value?.focus() }

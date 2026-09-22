@@ -48,6 +48,10 @@ const pages: Record<string, { title: string, description: string }> = {
   '/why-kilifi': {
     title: 'Why Kilifi — Kilifi Creek Festival',
     description: 'Discover how Kilifi Creek, coastal heritage, dhow culture, community spaces and local creatives shape Kilifi Creek Festival.'
+  },
+  '/gallery': {
+    title: 'Gallery — Kilifi Creek Festival',
+    description: 'Explore Kilifi Creek Festival in pictures — open-air screenings, performances, filmmaker conversations, community and life along the creek.'
   }
 }
 

@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       content: "default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; form-action 'self'; upgrade-insecure-requests"
     }
   ] } },
-  nitro: { prerender: { routes: ['/', '/about', '/screenings', '/industry', '/team', '/press', '/contact', '/partners', '/visit', '/impact', '/why-kilifi'] } },
+  nitro: { prerender: { routes: ['/', '/about', '/screenings', '/industry', '/team', '/press', '/contact', '/partners', '/visit', '/impact', '/why-kilifi', '/gallery'] } },
   routeRules: {
     '/assets/fonts/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
     '/assets/responsive/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },

@@ -6,7 +6,7 @@ const assetMap = JSON.parse(await readFile(new URL('app/assets/asset-map.json', 
 const responsive=JSON.parse(await readFile(new URL('app/assets/responsive-images.json',root),'utf8'))
 const teamAdditions=JSON.parse(await readFile(new URL('app/assets/team-additions.json',root),'utf8'))
 const legacyRoutes = {'index.html':'/','about-us.html':'/about','screenings.html':'/screenings','industry.html':'/industry','team.html':'/team','press.html':'/press','contact-us.html':'/contact'}
-const addedRoutes = ['/partners','/visit','/impact','/why-kilifi']
+const addedRoutes = ['/partners','/visit','/impact','/why-kilifi','/gallery']
 const routeRecords = [...Object.entries(legacyRoutes).map(([file,path])=>({file,path})),...addedRoutes.map(path=>({file:null,path}))]
 const allRoutes = routeRecords.map(({path})=>path)
 const publicSite='https://sharlmon.github.io/kilifi-creek-festival'
@@ -129,7 +129,8 @@ for(const [path,phrases] of Object.entries({
   '/partners':['Partner With Kilifi Creek Festival','Our 2026 Reach','What Partner Support Enables','CONFIRMED KCF 2026 PARTNERS','Goethe-Institut','EUNIC — EU National Institutes for Culture','British Council','Movies That Matter','Sauti Sessions','Distant Relatives','Chicken &amp; Egg Films','Contact the Partnerships Team'],
   '/visit':['Plan Your Time in Kilifi','The Terrace Art Space','Open in Google Maps','VISITOR ENQUIRIES'],
   '/impact':['Artistic Exchange With Lasting Value','Growing Kilifi’s Creative Economy','KCF 2026 AUDIENCE STRATEGY','2026 Impact Metrics'],
-  '/why-kilifi':['Most festivals happen in cities.','KCF happens on the water.','The Kilifi Story','Nature Is Part of the Programme']
+  '/why-kilifi':['Most festivals happen in cities.','KCF happens on the water.','The Kilifi Story','Nature Is Part of the Programme'],
+  '/gallery':['KILIFI CREEK FESTIVAL IN PICTURES','Film, Art, Community','All moments','Festival celebrations','Cinema under the trees','Across Kilifi Creek','Ideas in the open air']
 })) {
   const html=await (await fetch(origin+path)).text()
   for(const phrase of phrases) assert(html.includes(phrase),`Missing revamp content on ${path}: ${phrase}`)
