@@ -130,7 +130,7 @@ for(const [path,phrases] of Object.entries({
   '/visit':['Plan Your Time in Kilifi','The Terrace Art Space','Open in Google Maps','VISITOR ENQUIRIES'],
   '/impact':['Artistic Exchange With Lasting Value','Growing Kilifi’s Creative Economy','KCF 2026 AUDIENCE STRATEGY','2026 Impact Metrics'],
   '/why-kilifi':['Most festivals happen in cities.','KCF happens on the water.','The Kilifi Story','Nature Is Part of the Programme'],
-  '/gallery':['KILIFI CREEK FESTIVAL IN PICTURES','Film, Art, Community','All moments','Festival celebrations','Cinema under the trees','Across Kilifi Creek','Ideas in the open air']
+  '/gallery':['KILIFI CREEK FESTIVAL IN PICTURES','Film, Art, Community','All moments','Festival celebrations','Cinema under the trees','Across Kilifi Creek','Ideas in the open air','Silent cinema on the dhow','Golden hour aboard','Creekside at sunset','Festival style in focus']
 })) {
   const html=await (await fetch(origin+path)).text()
   for(const phrase of phrases) assert(html.includes(phrase),`Missing revamp content on ${path}: ${phrase}`)

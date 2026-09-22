@@ -23,12 +23,14 @@ const photos: { source: keyof typeof assets, alt: string, caption: string, categ
   { source: 'aboutpage/W0700758.jpg.jpeg', alt: 'Passenger boat crossing the calm waters of Kilifi Creek', caption: 'Across Kilifi Creek', category: 'creek', layout: 'wide' },
   { source: 'drive-2026/community-audience.jpg', alt: 'Festival audience listening during a community programme', caption: 'Community at the centre', category: 'community', layout: 'standard' },
   { source: 'aboutpage/262A9843.jpg.jpeg', alt: 'Singer and guitarist performing together at the festival', caption: 'Sounds of the festival', category: 'festival', layout: 'wide' },
-  { source: 'screenings/262A9334.jpg (1).jpeg', alt: 'Audience watching a film at an open-air night screening', caption: 'Open-air cinema', category: 'screenings', layout: 'standard' },
+  { source: 'drive-gallery/dhow-silent-cinema.jpg', alt: 'Audience wearing illuminated headphones during a night screening aboard a dhow', caption: 'Silent cinema on the dhow', category: 'screenings', layout: 'landscape' },
   { source: 'aboutpage/W0701861.jpeg', alt: 'Festival creatives standing together for a group portrait', caption: 'Kilifi creatives', category: 'community', layout: 'wide' },
   { source: 'industry/W0701998.jpg.jpeg', alt: 'Filmmakers smiling during a festival question and answer session', caption: 'Filmmaker exchange', category: 'industry', layout: 'portrait' },
-  { source: 'screenings/W0700861.jpg.jpeg', alt: 'Audience seated in front of an outdoor film screen at night', caption: 'Stories after sunset', category: 'screenings', layout: 'standard' },
+  { source: 'drive-gallery/dhow-sunset-conversation.jpg', alt: 'Festival guests in conversation aboard a dhow at golden hour', caption: 'Golden hour aboard', category: 'creek', layout: 'wide' },
   { source: 'aboutpage/262A9259.jpg (3).jpeg', alt: 'Festival technical crew preparing projection equipment outdoors', caption: 'Behind the screens', category: 'industry', layout: 'standard' },
-  { source: 'drive-2026/industry-hero.jpg', alt: 'Filmmakers taking part in a relaxed open-air panel', caption: 'Ideas in the open air', category: 'industry', layout: 'wide' }
+  { source: 'drive-2026/industry-hero.jpg', alt: 'Filmmakers taking part in a relaxed open-air panel', caption: 'Ideas in the open air', category: 'industry', layout: 'wide' },
+  { source: 'drive-gallery/saltys-creekside-portrait.jpg', alt: 'Two festival guests seated together beside Kilifi Creek at sunset', caption: 'Creekside at sunset', category: 'community', layout: 'portrait' },
+  { source: 'drive-gallery/vipingo-performance-portrait.jpg', alt: 'Festival performer in a vivid pink costume under stage lighting', caption: 'Festival style in focus', category: 'festival', layout: 'portrait' }
 ]
 
 const filteredPhotos = computed(() => activeFilter.value === 'all' ? photos : photos.filter(photo => photo.category === activeFilter.value))

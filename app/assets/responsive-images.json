@@ -594,6 +594,144 @@
       }
     ]
   },
+  "/assets/drive-gallery/dhow-sunset-conversation.jpg": {
+    "width": 3000,
+    "height": 2000,
+    "sourceBytes": 2098395,
+    "variants": [
+      {
+        "src": "/assets/responsive/4cfa789c5a2b3f72-320.webp",
+        "width": 320,
+        "bytes": 6110
+      },
+      {
+        "src": "/assets/responsive/4cfa789c5a2b3f72-640.webp",
+        "width": 640,
+        "bytes": 17532
+      },
+      {
+        "src": "/assets/responsive/4cfa789c5a2b3f72-960.webp",
+        "width": 960,
+        "bytes": 41474
+      },
+      {
+        "src": "/assets/responsive/4cfa789c5a2b3f72-1440.webp",
+        "width": 1440,
+        "bytes": 111282
+      },
+      {
+        "src": "/assets/responsive/4cfa789c5a2b3f72-1920.webp",
+        "width": 1920,
+        "bytes": 273284
+      },
+      {
+        "src": "/assets/responsive/4cfa789c5a2b3f72-2048.webp",
+        "width": 2048,
+        "bytes": 334260
+      }
+    ]
+  },
+  "/assets/drive-gallery/dhow-silent-cinema.jpg": {
+    "width": 3000,
+    "height": 2250,
+    "sourceBytes": 2595841,
+    "variants": [
+      {
+        "src": "/assets/responsive/9d7ac3692be8ad5f-320.webp",
+        "width": 320,
+        "bytes": 8732
+      },
+      {
+        "src": "/assets/responsive/9d7ac3692be8ad5f-640.webp",
+        "width": 640,
+        "bytes": 27714
+      },
+      {
+        "src": "/assets/responsive/9d7ac3692be8ad5f-960.webp",
+        "width": 960,
+        "bytes": 66744
+      },
+      {
+        "src": "/assets/responsive/9d7ac3692be8ad5f-1440.webp",
+        "width": 1440,
+        "bytes": 174836
+      },
+      {
+        "src": "/assets/responsive/9d7ac3692be8ad5f-1920.webp",
+        "width": 1920,
+        "bytes": 421184
+      },
+      {
+        "src": "/assets/responsive/9d7ac3692be8ad5f-2048.webp",
+        "width": 2048,
+        "bytes": 502374
+      }
+    ]
+  },
+  "/assets/drive-gallery/saltys-creekside-portrait.jpg": {
+    "width": 2250,
+    "height": 3000,
+    "sourceBytes": 1801134,
+    "variants": [
+      {
+        "src": "/assets/responsive/a106b62a1900f902-320.webp",
+        "width": 320,
+        "bytes": 14210
+      },
+      {
+        "src": "/assets/responsive/a106b62a1900f902-640.webp",
+        "width": 640,
+        "bytes": 38696
+      },
+      {
+        "src": "/assets/responsive/a106b62a1900f902-960.webp",
+        "width": 960,
+        "bytes": 68822
+      },
+      {
+        "src": "/assets/responsive/a106b62a1900f902-1440.webp",
+        "width": 1440,
+        "bytes": 136532
+      },
+      {
+        "src": "/assets/responsive/a106b62a1900f902-1536.webp",
+        "width": 1536,
+        "bytes": 165162
+      }
+    ]
+  },
+  "/assets/drive-gallery/vipingo-performance-portrait.jpg": {
+    "width": 2250,
+    "height": 3000,
+    "sourceBytes": 1158611,
+    "variants": [
+      {
+        "src": "/assets/responsive/1e85986c73177be5-320.webp",
+        "width": 320,
+        "bytes": 13886
+      },
+      {
+        "src": "/assets/responsive/1e85986c73177be5-640.webp",
+        "width": 640,
+        "bytes": 34178
+      },
+      {
+        "src": "/assets/responsive/1e85986c73177be5-960.webp",
+        "width": 960,
+        "bytes": 59172
+      },
+      {
+        "src": "/assets/responsive/1e85986c73177be5-1440.webp",
+        "width": 1440,
+        "bytes": 93608
+      },
+      {
+        "src": "/assets/responsive/1e85986c73177be5-1536.webp",
+        "width": 1536,
+        "bytes": 103834
+      }
+    ]
+  },
   "/assets/aboutpage/W0701861.jpeg.webp": {
     "width": 4744,
     "height": 3558,
@@ -1812,12 +1950,12 @@
       {
         "src": "/assets/responsive/707a57cd0cd96adc-160.webp",
         "width": 160,
-        "bytes": 14658
+        "bytes": 14680
       },
       {
         "src": "/assets/responsive/707a57cd0cd96adc-320.webp",
         "width": 320,
-        "bytes": 34952
+        "bytes": 34932
       }
     ]
   },
@@ -1829,12 +1967,12 @@
       {
         "src": "/assets/responsive/79e52216b2f4973e-160.webp",
         "width": 160,
-        "bytes": 12888
+        "bytes": 12884
       },
       {
         "src": "/assets/responsive/79e52216b2f4973e-320.webp",
         "width": 320,
-        "bytes": 30344
+        "bytes": 29848
       }
     ]
   }
