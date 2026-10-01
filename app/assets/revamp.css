@@ -94,3 +94,4 @@
 @media(max-width:520px) {
   .revamp-card-grid,.metric-strip,.partner-logo-grid { grid-template-columns:1fr; }
 }
+.press-release-download { grid-template-columns:1fr; margin-top:30px; }
