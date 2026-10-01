@@ -27,7 +27,7 @@ const pages: Record<string, { title: string, description: string }> = {
   },
   '/press': {
     title: 'Press — Kilifi Creek Festival',
-    description: 'KCF press coverage from digital media outlets including Sanaa Post, Sinema Focus, The Star, The Coast, and Hapa Kenya.'
+    description: 'Press release: the second Kilifi Creek Festival returns 23–31 October 2026 with 260 film submissions, a new identity and a growing partner network.'
   },
   '/contact': {
     title: 'Contact — Kilifi Creek Festival',
