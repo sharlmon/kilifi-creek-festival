@@ -27,7 +27,7 @@ const pages: Record<string, { title: string, description: string }> = {
   },
   '/press': {
     title: 'Press — Kilifi Creek Festival',
-    description: 'Press release: the second Kilifi Creek Festival returns 23–31 October 2026 with 260 film submissions, a new identity and a growing partner network.'
+    description: 'Press releases: Kilifi Creek Festival returns 23–31 October 2026 with 92 films, Oscar contenders and a new VR Village. Download the latest release and media resources.'
   },
   '/contact': {
     title: 'Contact — Kilifi Creek Festival',
