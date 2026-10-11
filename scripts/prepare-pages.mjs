@@ -6,7 +6,7 @@ const base = process.env.NUXT_APP_BASE_URL || '/'
 const routes = ['', 'about', 'screenings', 'industry', 'team', 'press', 'contact', 'partners', 'visit', 'impact', 'why-kilifi', 'gallery']
 for (const route of routes) {
   const html = await readFile(new URL(route ? `${route}/index.html` : 'index.html', output), 'utf8')
-  assert(!/(?:src|href|srcset)="\/(?:assets|_nuxt)\//.test(html), `Unprefixed asset on ${route || 'home'}`)
+  if (base !== "/") assert(!/(?:src|href|srcset)="\/(?:assets|_nuxt)\//.test(html), `Unprefixed asset on ${route || 'home'}`)
   for (const [, src] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
     if (src.startsWith(base + 'assets/') || src.startsWith(base + '_nuxt/')) {
       await access(new URL(decodeURIComponent(src.slice(base.length)), output))
