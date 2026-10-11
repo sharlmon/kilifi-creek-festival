@@ -16,8 +16,8 @@ const photos = [
 
 <template>
   <section id="press-resources" class="revamp-section press-resources"><div class="revamp-inner">
-    <p class="eyebrow">PRESS RESOURCES</p><h2>Festival Logos and Photographs</h2>
-    <p class="revamp-lead">Download current Kilifi Creek Festival brand marks and selected festival photographs.</p>
+    <p class="eyebrow">PRESS RESOURCES</p><h2>Press Releases and Media Kit</h2>
+    <p class="revamp-lead">Download the latest Kilifi Creek Festival press releases, brand marks and selected festival photographs.</p>
     <article class="press-feature">
       <div class="press-feature-doc" aria-hidden="true"><img :src="siteBase('/assets/brand/logo-dark.png')" alt="" width="64" height="64" loading="lazy" /><span></span><span></span><span></span><span class="short"></span></div>
       <div class="press-feature-copy">

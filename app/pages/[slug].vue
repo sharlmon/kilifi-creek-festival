@@ -26,6 +26,7 @@ const presentation = computed(() => sectionNavigation(venueDetails(refreshedHtml
 const shortcuts = computed(() => {
   if (slug.value === 'screenings') return [{ id:'programme', label:'2026 PROGRAMME' }, presentation.value.items[0]!]
   if (slug.value === 'team') return [...presentation.value.items, ...teamAdditions.map(profile => ({ id:`team-${profile.id}`, label:profile.name }))]
+  if (slug.value === 'press') return [{ id:'press-resources', label:'Press Releases & Media Kit' }, ...presentation.value.items]
   return presentation.value.items
 })
 if(!page.value?.html) throw createError({statusCode:404,statusMessage:'Page not found'})
@@ -57,8 +58,8 @@ function submit(e: Event) {
     <div class="original-content interior-content page-screenings" v-html="responsiveHtml(screeningParts[1])"></div>
   </template>
   <div v-else-if="page" class="original-content interior-content" :class="'page-'+slug" @submit="submit">
+    <PressResources v-if="slug === 'press'" />
     <div v-html="responsiveHtml(presentation.html)"></div>
     <TeamProfileAdditions v-if="slug === 'team'" />
-    <PressResources v-if="slug === 'press'" />
   </div>
 </template>
