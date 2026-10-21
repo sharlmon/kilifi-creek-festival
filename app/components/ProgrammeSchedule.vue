@@ -248,17 +248,6 @@ const venueSummary = (day: Day) => day.venues.map(v => v.name).join(' · ')
           </div>
         </details>
       </div>
-
-      <aside class="donate" aria-labelledby="donate-title">
-        <div>
-          <p class="programme-kicker">SUPPORT THE FESTIVAL</p>
-          <h3 id="donate-title">KCF DONATION PAYMENT DETAILS</h3>
-        </div>
-        <dl>
-          <div><dt>Paybill</dt><dd>542542</dd></div>
-          <div><dt>Account</dt><dd>958885 <span>(Kilifi Creek Arts Festival)</span></dd></div>
-        </dl>
-      </aside>
     </div>
   </section>
 </template>
@@ -327,12 +316,4 @@ h2 { margin:0 0 16px; color:var(--heading); font-size:clamp(38px,5vw,64px); }
 .item-body strong { color:var(--heading); font-weight:700; }
 .star { margin-right:4px; color:var(--brand-yellow); }
 .item-by,.item-note { color:var(--muted); font-size:12px; }
-.donate { display:flex; align-items:center; justify-content:space-between; gap:32px; margin-top:28px; padding:26px 28px; border:1px solid var(--glass-border); border-radius:18px; background:var(--panel); box-shadow:var(--glass-shadow); }
-.donate h3 { margin:0; color:var(--heading); font-size:26px; }
-.donate dl { display:grid; gap:10px; margin:0; min-width:280px; }
-.donate dl div { display:flex; justify-content:space-between; gap:20px; font:500 12px/1.5 var(--font-label); }
-.donate dt { color:var(--muted); }
-.donate dd { margin:0; color:var(--text); text-align:right; font-weight:700; font-size:16px; }
-.donate dd span { display:block; color:var(--muted); font-size:11px; font-weight:500; }
-@media(max-width:680px) { .donate { flex-direction:column; align-items:flex-start; padding:22px 20px; gap:18px; } .donate dl { min-width:0; width:100%; } }
 </style>

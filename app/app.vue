@@ -104,7 +104,7 @@ useHead(() => ({
   }]
 }))
 </script>
-<template><CoastalBackground /><NuxtRouteAnnouncer /><SiteHeader /><main id="main-content" @click="expandPhoto" @keydown="expandPhoto"><NuxtPage /></main><SiteFooter /><PhotoViewer ref="photoViewer" /></template>
+<template><CoastalBackground /><NuxtRouteAnnouncer /><SiteHeader /><main id="main-content" @click="expandPhoto" @keydown="expandPhoto"><NuxtPage /></main><SiteFooter /><PhotoViewer ref="photoViewer" /><DonatePopup /></template>
 
 <style>
 img[data-expand-image] { cursor:zoom-in; }
